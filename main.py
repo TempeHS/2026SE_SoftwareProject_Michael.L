@@ -25,7 +25,14 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 load_dotenv()
 
-AUTH_DB = os.environ.get("AUTH_DB", "database.db")
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+DEFAULT_DB_PATH = os.path.join(BASE_DIR, "data", "database.db")
+AUTH_DB = os.environ.get("AUTH_DB", DEFAULT_DB_PATH)
+
+if not os.path.isabs(AUTH_DB):
+    AUTH_DB = os.path.join(BASE_DIR, AUTH_DB)
+
+os.makedirs(os.path.dirname(AUTH_DB), exist_ok=True)
 
 app_log = logging.getLogger(__name__)
 logging.basicConfig(
@@ -92,6 +99,19 @@ def get_db_conn():
     return conn
 
 
+def init_auth_db():
+    with get_db_conn() as conn:
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                email TEXT NOT NULL UNIQUE,
+                password_hash TEXT NOT NULL,
+                totp_secret TEXT
+            )
+            """)
+        conn.commit()
+
+
 def get_user_by_email(email: str):
     with get_db_conn() as conn:
         return conn.execute("SELECT * FROM users WHERE email = ?", (email,)).fetchone()
@@ -120,7 +140,23 @@ def verify_user(email: str, password: str):
     user = get_user_by_email(email)
     if not user:
         return None
-    return user if check_password_hash(user["password_hash"], password) else None
+
+    stored = user["password_hash"] or ""
+
+    if stored.startswith("pbkdf2:") or stored.startswith("scrypt:"):
+        return user if check_password_hash(stored, password) else None
+
+    if stored == password:
+        new_hash = generate_password_hash(password)
+        with get_db_conn() as conn:
+            conn.execute(
+                "UPDATE users SET password_hash = ? WHERE id = ?",
+                (new_hash, int(user["id"])),
+            )
+            conn.commit()
+        return get_user_by_id(int(user["id"]))
+
+    return None
 
 
 def ensure_totp_secret(user_id: int):
@@ -230,9 +266,7 @@ def two_factor_auth():
 
     secret = ensure_totp_secret(int(pending_user_id))
     totp = pyotp.TOTP(secret)
-    otp_uri = totp.provisioning_uri(
-        name=pending_user_email, issuer_name="WCA Predictor"
-    )
+    otp_uri = totp.provisioning_uri(name=pending_user_email, issuer_name="Huddle")
     qr_code_b64 = make_qr_code_base64(otp_uri)
 
     if request.method == "POST":
@@ -266,6 +300,8 @@ def csp_report():
     app.logger.critical(request.data.decode())
     return "done"
 
+
+init_auth_db()
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

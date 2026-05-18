@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
-    <title>{% block title %}WCA Predictor{% endblock %}</title>
+    <title>{% block title %}Huddle{% endblock %}</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
       <div class="container">
-        <a class="navbar-brand" href="/">WCA Predictor</a>
+        <a class="navbar-brand" href="/">Huddle</a>
         <div class="ms-auto d-flex gap-2">
           {% if session.get("2fa_verified") %}
           <span class="navbar-text me-2">{{ session.get("user_email") }}</span>
