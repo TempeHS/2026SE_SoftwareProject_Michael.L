@@ -1,0 +1,107 @@
+2026-04-30 00:12:18,647 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.126:5000
+2026-04-30 00:12:18,647 [33mPress CTRL+C to quit[0m
+2026-04-30 00:12:18,648  * Restarting with stat
+2026-04-30 00:12:19,049  * Debugger is active!
+2026-04-30 00:12:19,049  * Debugger PIN: 815-483-976
+2026-04-30 00:12:24,088 127.0.0.1 - - [30/Apr/2026 00:12:24] "GET / HTTP/1.1" 200 -
+2026-04-30 00:12:24,339 127.0.0.1 - - [30/Apr/2026 00:12:24] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-04-30 00:12:24,351 127.0.0.1 - - [30/Apr/2026 00:12:24] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-04-30 00:12:24,358 127.0.0.1 - - [30/Apr/2026 00:12:24] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2026-04-30 00:12:24,368 {"csp-report":{"document-uri":"https://bookish-telegram-qrr5pq4r9gvh99wv-5000.app.github.dev/","referrer":"https://bookish-telegram-qrr5pq4r9gvh99wv.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://bookish-telegram-qrr5pq4r9gvh99wv-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-04-30 00:12:24,368 127.0.0.1 - - [30/Apr/2026 00:12:24] "POST /csp_report HTTP/1.1" 200 -
+2026-04-30 00:12:24,523 127.0.0.1 - - [30/Apr/2026 00:12:24] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-04-30 00:12:24,549 127.0.0.1 - - [30/Apr/2026 00:12:24] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-04-30 00:12:24,578 127.0.0.1 - - [30/Apr/2026 00:12:24] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2026-04-30 00:12:24,581 127.0.0.1 - - [30/Apr/2026 00:12:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-04-30 00:12:24,686 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,688 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,692 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,693 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,699 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,705 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,706 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,707 127.0.0.1 - - [30/Apr/2026 00:12:24] "GET / HTTP/1.1" 200 -
+2026-04-30 00:12:24,708 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,712 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,713 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,716 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2026-04-30 00:12:24,729 127.0.0.1 - - [30/Apr/2026 00:12:24] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2026-04-30 00:36:22,283 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x034·5AN*\xadÌ&\x91\x93P\x00ã\x02\x14q8')
+2026-04-30 00:36:22,283 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x034·5AN*­Ì&\x91\x93P\x00ã\x02\x14q8\x1eEªÁ\x03\x8dZ'ß"\x93å1\x1a\x00\x00\x84\x003\x009\x005\x00/À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À­À£À\x9fÀ+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ$À(\x00k\x00jÀsÀw\x00Ä\x00ÃÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½À[0m" 400 -
+2026-04-30 00:36:22,345 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x03\x00\x8c\x01\x00\x00\x88\x03\x03iò¤\x06t\x7f\x8bgìö\x04w\x7få2Sº')
+2026-04-30 00:36:22,345 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('þÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì\xad\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00')
+2026-04-30 00:36:22,345 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('þÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì\xad\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x006\x00')
+2026-04-30 00:36:22,345 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('þÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì\xad\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00')
+2026-04-30 00:36:22,345 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x03\x00\x8c\x01\x00\x00\x88\x03\x03iò¤\x06t\x7f\x8bgìö\x04w\x7få2Sº ûdß)('ö\x94,jÇÊ+\x17\x00\x00\x1a\x13\x05\x13\x04\x13\x01\x13\x02\x13\x03À´Àµ\x00Ç\x00ÆÀ²À°À³À±\x01\x00\x00E\x00[0m" 400 -
+2026-04-30 00:36:22,346 127.0.0.1 - - [30/Apr/2026 00:36:22] "HEAD / HTTP/1.1" 200 -
+2026-04-30 00:36:22,346 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02iò¤\x06\x1e\x8ec7_ï%ÇÄ(Ìòßëc¦G &²Ï§ÿÚNjû\x91\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00[0m" 400 -
+2026-04-30 00:36:22,346 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('\x11æøY}îæ\x00\x00')
+2026-04-30 00:36:22,346 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03iò¤\x06\x04^\x12?S\x1báóÍ\x98m\x0b¾iøý\x1aÛÐcæÌú\x1c\x0cºKä\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x006\x00[0m" 400 -
+2026-04-30 00:36:22,346 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01iò¤\x06u­©\x81G\x9b\x86\x13o\x8b®}\x92Ez°6;\x91"c\x1bAØ\x80¤ld\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00[0m" 400 -
+2026-04-30 00:36:22,347 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x01\x00W\x01\x00\x00S\x03\x03iò¤\x06>¾µVpákó\x8fWé WdnÉP½\x0cÙ\x1d\x11æøY}îæ\x00\x00[0m" 400 -
+2026-04-30 00:36:22,447 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('\x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00')
+2026-04-30 00:36:22,447 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request syntax ('\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03iò¤\x06ùº¦\x80Õ3¼\x8c')
+2026-04-30 00:36:22,447 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('\x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00')
+2026-04-30 00:36:22,447 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01iò¤\x06þV\x1c\x99Ô«q2pV\x91.ÇÖkß£[ã\x1b\x10çeef\x16Ò8\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00[0m" 400 -
+2026-04-30 00:36:22,448 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03iò¤\x06ùº¦\x80Õ3¼\x8c[0m" 400 -
+2026-04-30 00:36:22,448 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02iò¤\x06ÉÝU\x9d \x9añ³\x898wa\x98þ<\x85\x80ýàW®Ayf\x0cPc+\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00[0m" 400 -
+2026-04-30 00:36:22,496 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('\x00/\x00')
+2026-04-30 00:36:22,496 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" 400 -
+2026-04-30 00:36:22,595 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request syntax ('\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01iò¤\x06O\x07¯\x1a\x8c£\x8cBqSç\x19±ÂØ\x12')
+2026-04-30 00:36:22,596 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('À#À¬À®À+À')
+2026-04-30 00:36:22,596 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01iò¤\x06O\x07¯\x1a\x8c£\x8cBqSç\x19±ÂØ\x12[0m" 400 -
+2026-04-30 00:36:22,596 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('À#À¬À®À+À')
+2026-04-30 00:36:22,596 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02iò¤\x06\x86\x07ë\x83»2£N.÷¡\x8fzùg6|DüO\x80ûå\x1c0õ\x81¿\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-04-30 00:36:22,596 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03iò¤\x06Jì$»¸Ó;\x10ûH7]Å\x8d\x88#\x1eê\x06¯<Þ p\x161\x93À\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-04-30 00:36:22,744 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('§\x13')
+2026-04-30 00:36:22,744 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x006\x00')
+2026-04-30 00:36:22,744 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03iò¤\x06]Ä®çÂ\x11<\x7f$§>Îö¡F6Ü\x87¸\x08~\x1a\x80ÆÆjª\x8e\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x006\x00[0m" 400 -
+2026-04-30 00:36:22,744 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01iò¤\x06\x86\x81\x9e\x09\x04ß³b#\x1d§\x13[0m" 400 -
+2026-04-30 00:36:22,744 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x00\x16\x00')
+2026-04-30 00:36:22,745 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02iò¤\x06¥@ZE\x0eg¡Ô\x06§\x05\x9d\x7fì.sÛ9$ÙÂ\x08Ü\x97à\x8cO#\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x00\x16\x00[0m" 400 -
+2026-04-30 00:36:22,892 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('\x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x00\x16\x00')
+2026-04-30 00:36:22,892 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02iò¤\x06gq®\x92is')
+2026-04-30 00:36:22,892 127.0.0.1 - - [30/Apr/2026 00:36:22] code 400, message Bad request version ('\x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x006\x00')
+2026-04-30 00:36:22,892 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01iò¤\x06#ë\x13ê¶\x9aËºªºÄp¸cd[É`O>é\x88\x05f_Ð\x92Ý\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x00\x16\x00[0m" 400 -
+2026-04-30 00:36:22,893 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02iò¤\x06gq®\x92is\x0dõ[0m" 400 -
+2026-04-30 00:36:22,893 127.0.0.1 - - [30/Apr/2026 00:36:22] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03iò¤\x06\x8d\x97ApGPÔ=\x01\x95Ù"\x8af­[5\x07®ð"T,\x91\x84\x0e|:\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x006\x00[0m" 400 -
+2026-04-30 00:36:23,042 127.0.0.1 - - [30/Apr/2026 00:36:23] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00½\x01\x00\x00¹\x03\x01iò¤\x07øóeÎy&È\x9b\x8b°\x890R')
+2026-04-30 00:36:23,042 127.0.0.1 - - [30/Apr/2026 00:36:23] "[31m[1m\x16\x03\x01\x00½\x01\x00\x00¹\x03\x01iò¤\x07øóeÎy&È\x9b\x8b°\x890R\x85î\x15&À²\x86û®$t\x8c\x13\x9f¶\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00­ÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00[0m" 400 -
+2026-04-30 00:36:23,043 127.0.0.1 - - [30/Apr/2026 00:36:23] code 400, message Bad request syntax ('\x16\x03\x02\x00½\x01\x00\x00¹\x03\x02iò¤\x07\x04²0Ó\x12\x08³ëzÄM-$Þ')
+2026-04-30 00:36:23,043 127.0.0.1 - - [30/Apr/2026 00:36:23] "[31m[1m\x16\x03\x02\x00½\x01\x00\x00¹\x03\x02iò¤\x07\x04²0Ó\x12\x08³ëzÄM-$Þ[0m" 400 -
+2026-04-30 00:36:23,043 127.0.0.1 - - [30/Apr/2026 00:36:23] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x03\x00Ý\x01\x00\x00Ù\x03\x03iò¤\x07ÝN@åìàH')
+2026-04-30 00:36:23,043 127.0.0.1 - - [30/Apr/2026 00:36:23] "[31m[1m\x16\x03\x03\x00Ý\x01\x00\x00Ù\x03\x03iò¤\x07ÝN@åìàH\x1c\x88çÿB¾ß\x15ú(µnÙhÕÿ\x87[0m" 400 -
+2026-04-30 00:36:27,447 127.0.0.1 - - [30/Apr/2026 00:36:27] code 400, message Bad request version ('þÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì\xad\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00')
+2026-04-30 00:36:27,448 127.0.0.1 - - [30/Apr/2026 00:36:27] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00iò¤\x06·Â\x0e¥\x1fêö\x01d\x849D\x01\x12\x1fu\x90iKrJkïi\x90s\x1aZ\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00[0m" 400 -
+2026-04-30 00:36:32,548 127.0.0.1 - - [30/Apr/2026 00:36:32] code 400, message Bad request version ('\x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00')
+2026-04-30 00:36:32,548 127.0.0.1 - - [30/Apr/2026 00:36:32] code 400, message Bad request version ('À#À¬À®À+À')
+2026-04-30 00:36:32,548 127.0.0.1 - - [30/Apr/2026 00:36:32] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00iò¤\x0b\x00Ø\x1a\x8d×Ñ\x1c³*Ïj^g \x9dþÔ\x89»8\x88:äd\x94¾\x1eX\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00[0m" 400 -
+2026-04-30 00:36:32,548 127.0.0.1 - - [30/Apr/2026 00:36:32] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00iò¤\x10_\x89\x15¤^ 5(n\x8cèZ7¹®\x15%ë^\x17è\x99ô=òñ[\x91\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-04-30 00:36:32,549 127.0.0.1 - - [30/Apr/2026 00:36:32] code 400, message Bad request syntax ('\x16\x03\x00\x00«\x01\x00\x00§\x03\x00iò¤\x10õ\x13¶\x18\x9eiÇÙää^BGÈZ%÷B')
+2026-04-30 00:36:32,549 127.0.0.1 - - [30/Apr/2026 00:36:32] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00iò¤\x10õ\x13¶\x18\x9eiÇÙää^BGÈZ%÷B[0m" 400 -
+2026-04-30 00:36:32,550 127.0.0.1 - - [30/Apr/2026 00:36:32] code 400, message Bad request syntax ('\x16\x03\x00\x00«\x01\x00\x00§\x03\x00iò¤\x10\x8cG\x80º×Ñxè\x82"')
+2026-04-30 00:36:32,550 127.0.0.1 - - [30/Apr/2026 00:36:32] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00iò¤\x10\x8cG\x80º×Ñxè\x82"[0m" 400 -
+2026-04-30 00:36:32,551 127.0.0.1 - - [30/Apr/2026 00:36:32] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x00\x00¥\x01\x00\x00¡\x03\x00iò¤\x10Â')
+2026-04-30 00:36:32,551 127.0.0.1 - - [30/Apr/2026 00:36:32] "[31m[1m\x16\x03\x00\x00¥\x01\x00\x00¡\x03\x00iò¤\x10Â æº3Bõ\x15*3\x8dy\x99^Ñ¤?\x10õ³:\x8cbþÏkÉ<\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00­ÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00[0m" 400 -
+2026-05-18 03:39:54,302 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.254:5000
+2026-05-18 03:39:54,303 [33mPress CTRL+C to quit[0m
+2026-05-18 03:39:54,303  * Restarting with stat
+2026-05-18 03:39:54,585  * Debugger is active!
+2026-05-18 03:39:54,586  * Debugger PIN: 101-911-047
+2026-05-18 03:40:00,519 127.0.0.1 - - [18/May/2026 03:40:00] "GET / HTTP/1.1" 200 -
+2026-05-18 03:40:00,865 127.0.0.1 - - [18/May/2026 03:40:00] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-05-18 03:40:00,866 127.0.0.1 - - [18/May/2026 03:40:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2026-05-18 03:40:00,888 127.0.0.1 - - [18/May/2026 03:40:00] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-18 03:40:00,901 {"csp-report":{"document-uri":"https://bookish-telegram-qrr5pq4r9gvh99wv-5000.app.github.dev/","referrer":"https://bookish-telegram-qrr5pq4r9gvh99wv.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://bookish-telegram-qrr5pq4r9gvh99wv-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-05-18 03:40:00,901 127.0.0.1 - - [18/May/2026 03:40:00] "POST /csp_report HTTP/1.1" 200 -
+2026-05-18 03:40:01,272 127.0.0.1 - - [18/May/2026 03:40:01] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-05-18 03:40:01,307 127.0.0.1 - - [18/May/2026 03:40:01] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-05-18 03:40:01,361 127.0.0.1 - - [18/May/2026 03:40:01] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2026-05-18 03:43:17,576  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-05-18 03:43:17,606  * Restarting with stat
