@@ -1,7 +1,8 @@
 -- database: ./database.db
 
--- CREATE TABLE id7-tusers(id INTEGER PRIMARY KEY autoincrement,username TEXT NOT NULL UNIQUE, password TEXT NOT NULL);
-
--- INSERT INTO id7-tusers(username,password) VALUES ("","");
-
--- SELECT * FROM extension;
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    totp_secret TEXT
+);

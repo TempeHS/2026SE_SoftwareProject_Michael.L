@@ -105,3 +105,58 @@
 2026-05-18 03:40:01,361 127.0.0.1 - - [18/May/2026 03:40:01] "GET /static/images/favicon.png HTTP/1.1" 200 -
 2026-05-18 03:43:17,576  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
 2026-05-18 03:43:17,606  * Restarting with stat
+2026-05-18 06:28:52,400 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.123:5000
+2026-05-18 06:28:52,400 [33mPress CTRL+C to quit[0m
+2026-05-18 06:28:52,401  * Restarting with stat
+2026-05-18 06:28:52,746  * Debugger is active!
+2026-05-18 06:28:52,746  * Debugger PIN: 107-548-508
+2026-05-18 06:28:56,248 127.0.0.1 - - [18/May/2026 06:28:56] "GET / HTTP/1.1" 200 -
+2026-05-18 06:28:56,471 127.0.0.1 - - [18/May/2026 06:28:56] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-18 06:28:56,485 127.0.0.1 - - [18/May/2026 06:28:56] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2026-05-18 06:28:56,492 127.0.0.1 - - [18/May/2026 06:28:56] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-05-18 06:28:56,522 {"csp-report":{"document-uri":"https://ubiquitous-telegram-j66pq5764qjcqx57-5000.app.github.dev/","referrer":"https://ubiquitous-telegram-j66pq5764qjcqx57.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://ubiquitous-telegram-j66pq5764qjcqx57-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-05-18 06:28:56,523 127.0.0.1 - - [18/May/2026 06:28:56] "POST /csp_report HTTP/1.1" 200 -
+2026-05-18 06:28:56,680 127.0.0.1 - - [18/May/2026 06:28:56] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-05-18 06:28:56,713 127.0.0.1 - - [18/May/2026 06:28:56] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-05-18 06:28:56,795 127.0.0.1 - - [18/May/2026 06:28:56] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2026-05-18 06:28:56,800 127.0.0.1 - - [18/May/2026 06:28:56] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-05-18 06:28:56,922 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,934 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,940 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,946 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,954 127.0.0.1 - - [18/May/2026 06:28:56] "GET / HTTP/1.1" 200 -
+2026-05-18 06:28:56,955 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,957 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,959 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,961 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,962 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,964 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,971 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2026-05-18 06:28:56,978 127.0.0.1 - - [18/May/2026 06:28:56] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2026-05-18 06:29:13,859 127.0.0.1 - - [18/May/2026 06:29:13] "GET / HTTP/1.1" 200 -
+2026-05-18 06:29:14,069 127.0.0.1 - - [18/May/2026 06:29:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-18 06:29:14,095 127.0.0.1 - - [18/May/2026 06:29:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-18 06:29:14,127 127.0.0.1 - - [18/May/2026 06:29:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-18 06:29:14,138 {"csp-report":{"document-uri":"https://ubiquitous-telegram-j66pq5764qjcqx57-5000.app.github.dev/?","referrer":"https://ubiquitous-telegram-j66pq5764qjcqx57-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://ubiquitous-telegram-j66pq5764qjcqx57-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-05-18 06:29:14,139 127.0.0.1 - - [18/May/2026 06:29:14] "POST /csp_report HTTP/1.1" 200 -
+2026-05-18 06:29:14,235 127.0.0.1 - - [18/May/2026 06:29:14] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-05-18 06:29:14,272 127.0.0.1 - - [18/May/2026 06:29:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-18 07:43:06,803 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.123:5000
+2026-05-18 07:43:06,803 [33mPress CTRL+C to quit[0m
+2026-05-18 07:43:06,804  * Restarting with stat
+2026-05-18 07:43:07,203  * Debugger is active!
+2026-05-18 07:43:07,203  * Debugger PIN: 107-548-508
+2026-05-18 07:43:08,347 127.0.0.1 - - [18/May/2026 07:43:08] "GET / HTTP/1.1" 200 -
+2026-05-18 07:43:08,566 127.0.0.1 - - [18/May/2026 07:43:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-18 07:43:08,585 127.0.0.1 - - [18/May/2026 07:43:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-18 07:43:08,592 127.0.0.1 - - [18/May/2026 07:43:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-18 07:43:08,622 {"csp-report":{"document-uri":"https://ubiquitous-telegram-j66pq5764qjcqx57-5000.app.github.dev/","referrer":"https://ubiquitous-telegram-j66pq5764qjcqx57.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://ubiquitous-telegram-j66pq5764qjcqx57-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-05-18 07:43:08,622 127.0.0.1 - - [18/May/2026 07:43:08] "POST /csp_report HTTP/1.1" 200 -
+2026-05-18 07:43:08,718 127.0.0.1 - - [18/May/2026 07:43:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-05-18 07:43:08,754 127.0.0.1 - - [18/May/2026 07:43:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -

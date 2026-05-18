@@ -1,0 +1,49 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  {% if is_done %}
+  <div class="alert alert-info">Signup Successful</div>
+  {% elif dupe %}
+  <div class="alert alert-danger">Email already registered</div>
+  {% endif %}
+  <form action="/signup.html" method="POST">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1>Sign up</h1>
+    </div>
+    <div class="col-auto">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        required
+      />
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="col-auto">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        type="password"
+        name="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        minlength="8"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+        title="Password must be at least 8 characters and include uppercase, lowercase, number, and special character (@$!%*?&)"
+        required
+      />
+      <div id="passwordHelp" class="form-text">
+        Must be at least 8 characters with uppercase, lowercase, number, and
+        special characters
+      </div>
+    </div>
+    <div class="mt-3">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  </form>
+</div>
+{% endblock %}
