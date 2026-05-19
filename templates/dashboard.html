@@ -1,0 +1,5 @@
+{% extends "layout.html" %} {% block content %}
+<h1>Dashboard</h1>
+<p>Welcome, {{ session.get('user_name', 'User') }}.</p>
+<p>This is your protected dashboard page.</p>
+{% endblock %}

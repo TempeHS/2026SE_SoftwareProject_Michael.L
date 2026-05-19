@@ -1,0 +1,6 @@
+{% extends "layout.html" %} {% block content %}
+<h1>Account</h1>
+<p>Name: {{ session.get('user_name', 'Unknown') }}</p>
+<p>Email: {{ session.get('user_email', 'Unknown') }}</p>
+<p>Manage your account settings here.</p>
+{% endblock %}

@@ -354,3 +354,469 @@
 2026-05-18 08:15:24,831 127.0.0.1 - - [18/May/2026 08:15:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
 2026-05-18 08:15:24,834 127.0.0.1 - - [18/May/2026 08:15:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
 2026-05-18 08:15:24,871 127.0.0.1 - - [18/May/2026 08:15:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:04:41,628 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.140:5000
+2026-05-19 01:04:41,630 [33mPress CTRL+C to quit[0m
+2026-05-19 01:04:41,631  * Restarting with stat
+2026-05-19 01:04:42,022  * Debugger is active!
+2026-05-19 01:04:42,022  * Debugger PIN: 229-752-987
+2026-05-19 01:05:04,852 127.0.0.1 - - [19/May/2026 01:05:04] "GET / HTTP/1.1" 200 -
+2026-05-19 01:05:05,260 127.0.0.1 - - [19/May/2026 01:05:05] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-19 01:05:05,261 127.0.0.1 - - [19/May/2026 01:05:05] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2026-05-19 01:05:05,263 127.0.0.1 - - [19/May/2026 01:05:05] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-05-19 01:05:05,601 127.0.0.1 - - [19/May/2026 01:05:05] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-05-19 01:05:05,657 127.0.0.1 - - [19/May/2026 01:05:05] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-05-19 01:05:05,670 127.0.0.1 - - [19/May/2026 01:05:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-19 01:05:05,765 127.0.0.1 - - [19/May/2026 01:05:05] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2026-05-19 01:05:05,781 127.0.0.1 - - [19/May/2026 01:05:05] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2026-05-19 01:05:05,787 127.0.0.1 - - [19/May/2026 01:05:05] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2026-05-19 01:05:05,789 127.0.0.1 - - [19/May/2026 01:05:05] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2026-05-19 01:05:05,800 127.0.0.1 - - [19/May/2026 01:05:05] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2026-05-19 01:05:05,823 127.0.0.1 - - [19/May/2026 01:05:05] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2026-05-19 01:05:05,831 127.0.0.1 - - [19/May/2026 01:05:05] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2026-05-19 01:05:24,329 127.0.0.1 - - [19/May/2026 01:05:24] "GET /signup.html HTTP/1.1" 200 -
+2026-05-19 01:05:24,388 127.0.0.1 - - [19/May/2026 01:05:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:05:24,391 127.0.0.1 - - [19/May/2026 01:05:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:05:24,393 127.0.0.1 - - [19/May/2026 01:05:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:05:24,643 127.0.0.1 - - [19/May/2026 01:05:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:05:52,527 127.0.0.1 - - [19/May/2026 01:05:52] "POST /signup.html HTTP/1.1" 200 -
+2026-05-19 01:05:52,599 127.0.0.1 - - [19/May/2026 01:05:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:05:52,603 127.0.0.1 - - [19/May/2026 01:05:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:05:52,606 127.0.0.1 - - [19/May/2026 01:05:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:05:52,652 127.0.0.1 - - [19/May/2026 01:05:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:05:55,956 127.0.0.1 - - [19/May/2026 01:05:55] "GET /login.html HTTP/1.1" 200 -
+2026-05-19 01:05:56,017 127.0.0.1 - - [19/May/2026 01:05:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:05:56,021 127.0.0.1 - - [19/May/2026 01:05:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:05:56,025 127.0.0.1 - - [19/May/2026 01:05:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:05:56,064 127.0.0.1 - - [19/May/2026 01:05:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:06:15,452 127.0.0.1 - - [19/May/2026 01:06:15] "POST /login.html HTTP/1.1" 200 -
+2026-05-19 01:06:15,514 127.0.0.1 - - [19/May/2026 01:06:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:06:15,519 127.0.0.1 - - [19/May/2026 01:06:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:06:15,522 127.0.0.1 - - [19/May/2026 01:06:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:06:15,575 127.0.0.1 - - [19/May/2026 01:06:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:06:35,311 127.0.0.1 - - [19/May/2026 01:06:35] "GET /login.html HTTP/1.1" 200 -
+2026-05-19 01:06:35,365 127.0.0.1 - - [19/May/2026 01:06:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:06:35,367 127.0.0.1 - - [19/May/2026 01:06:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:06:35,382 127.0.0.1 - - [19/May/2026 01:06:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:06:35,423 127.0.0.1 - - [19/May/2026 01:06:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:06:39,935 127.0.0.1 - - [19/May/2026 01:06:39] "GET /signup.html HTTP/1.1" 200 -
+2026-05-19 01:06:39,990 127.0.0.1 - - [19/May/2026 01:06:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:06:39,992 127.0.0.1 - - [19/May/2026 01:06:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:06:39,995 127.0.0.1 - - [19/May/2026 01:06:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:06:40,033 127.0.0.1 - - [19/May/2026 01:06:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:06:58,580 127.0.0.1 - - [19/May/2026 01:06:58] "POST /signup.html HTTP/1.1" 200 -
+2026-05-19 01:06:58,646 127.0.0.1 - - [19/May/2026 01:06:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:06:58,649 127.0.0.1 - - [19/May/2026 01:06:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:06:58,654 127.0.0.1 - - [19/May/2026 01:06:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:06:58,700 127.0.0.1 - - [19/May/2026 01:06:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:07:34,423 127.0.0.1 - - [19/May/2026 01:07:34] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-05-19 01:07:34,551 127.0.0.1 - - [19/May/2026 01:07:34] "GET /2fa.html HTTP/1.1" 200 -
+2026-05-19 01:07:34,617 127.0.0.1 - - [19/May/2026 01:07:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:07:34,620 127.0.0.1 - - [19/May/2026 01:07:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:07:34,622 127.0.0.1 - - [19/May/2026 01:07:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:07:34,674 127.0.0.1 - - [19/May/2026 01:07:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:08:47,313 127.0.0.1 - - [19/May/2026 01:08:47] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-05-19 01:08:47,491 127.0.0.1 - - [19/May/2026 01:08:47] "GET / HTTP/1.1" 200 -
+2026-05-19 01:08:47,669 127.0.0.1 - - [19/May/2026 01:08:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:08:47,671 127.0.0.1 - - [19/May/2026 01:08:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:08:47,697 127.0.0.1 - - [19/May/2026 01:08:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:08:47,878 127.0.0.1 - - [19/May/2026 01:08:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:17:28,147 127.0.0.1 - - [19/May/2026 01:17:28] "GET / HTTP/1.1" 200 -
+2026-05-19 01:17:28,323 127.0.0.1 - - [19/May/2026 01:17:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:17:28,338 127.0.0.1 - - [19/May/2026 01:17:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:17:28,342 127.0.0.1 - - [19/May/2026 01:17:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-19 01:17:28,473 127.0.0.1 - - [19/May/2026 01:17:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:18:04,080 127.0.0.1 - - [19/May/2026 01:18:04] "GET / HTTP/1.1" 200 -
+2026-05-19 01:18:04,130 127.0.0.1 - - [19/May/2026 01:18:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:18:04,132 127.0.0.1 - - [19/May/2026 01:18:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:18:04,192 127.0.0.1 - - [19/May/2026 01:18:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:18:04,224 127.0.0.1 - - [19/May/2026 01:18:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:18:21,631 127.0.0.1 - - [19/May/2026 01:18:21] "GET / HTTP/1.1" 200 -
+2026-05-19 01:18:21,685 127.0.0.1 - - [19/May/2026 01:18:21] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-19 01:18:21,689 127.0.0.1 - - [19/May/2026 01:18:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:18:21,691 127.0.0.1 - - [19/May/2026 01:18:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:18:21,723 127.0.0.1 - - [19/May/2026 01:18:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:19:56,900 127.0.0.1 - - [19/May/2026 01:19:56] "GET / HTTP/1.1" 200 -
+2026-05-19 01:19:57,216 127.0.0.1 - - [19/May/2026 01:19:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:19:57,220 127.0.0.1 - - [19/May/2026 01:19:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:19:57,224 127.0.0.1 - - [19/May/2026 01:19:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:19:57,408 127.0.0.1 - - [19/May/2026 01:19:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:24:28,875 127.0.0.1 - - [19/May/2026 01:24:28] "GET / HTTP/1.1" 200 -
+2026-05-19 01:24:29,399 127.0.0.1 - - [19/May/2026 01:24:29] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-05-19 01:24:29,400 127.0.0.1 - - [19/May/2026 01:24:29] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2026-05-19 01:24:29,427 127.0.0.1 - - [19/May/2026 01:24:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-19 01:24:29,708 127.0.0.1 - - [19/May/2026 01:24:29] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-05-19 01:24:29,824 127.0.0.1 - - [19/May/2026 01:24:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-19 01:24:29,949 127.0.0.1 - - [19/May/2026 01:24:29] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-05-19 01:24:30,123 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,130 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,136 127.0.0.1 - - [19/May/2026 01:24:30] "GET / HTTP/1.1" 200 -
+2026-05-19 01:24:30,141 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,146 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,150 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,182 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,184 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,187 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,202 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,209 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,211 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2026-05-19 01:24:30,221 127.0.0.1 - - [19/May/2026 01:24:30] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2026-05-19 01:24:59,437 127.0.0.1 - - [19/May/2026 01:24:59] "GET /login.html HTTP/1.1" 200 -
+2026-05-19 01:24:59,588 127.0.0.1 - - [19/May/2026 01:24:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:24:59,608 127.0.0.1 - - [19/May/2026 01:24:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:24:59,615 127.0.0.1 - - [19/May/2026 01:24:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:24:59,722 127.0.0.1 - - [19/May/2026 01:24:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:25:02,489 127.0.0.1 - - [19/May/2026 01:25:02] "GET / HTTP/1.1" 200 -
+2026-05-19 01:25:02,540 127.0.0.1 - - [19/May/2026 01:25:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:25:02,543 127.0.0.1 - - [19/May/2026 01:25:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:25:02,546 127.0.0.1 - - [19/May/2026 01:25:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:25:02,572 127.0.0.1 - - [19/May/2026 01:25:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:37:42,902 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.140:5000
+2026-05-19 01:37:42,902 [33mPress CTRL+C to quit[0m
+2026-05-19 01:37:42,903  * Restarting with stat
+2026-05-19 01:37:43,240  * Debugger is active!
+2026-05-19 01:37:43,241  * Debugger PIN: 229-752-987
+2026-05-19 01:37:44,078 127.0.0.1 - - [19/May/2026 01:37:44] "GET / HTTP/1.1" 200 -
+2026-05-19 01:37:44,283 127.0.0.1 - - [19/May/2026 01:37:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:37:44,285 127.0.0.1 - - [19/May/2026 01:37:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:37:44,287 127.0.0.1 - - [19/May/2026 01:37:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:37:44,392 127.0.0.1 - - [19/May/2026 01:37:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:38:52,358 127.0.0.1 - - [19/May/2026 01:38:52] "GET / HTTP/1.1" 200 -
+2026-05-19 01:38:52,411 127.0.0.1 - - [19/May/2026 01:38:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:38:52,416 127.0.0.1 - - [19/May/2026 01:38:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:38:52,474 127.0.0.1 - - [19/May/2026 01:38:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:38:52,516 127.0.0.1 - - [19/May/2026 01:38:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:39:01,504 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.140:5000
+2026-05-19 01:39:01,505 [33mPress CTRL+C to quit[0m
+2026-05-19 01:39:01,505  * Restarting with stat
+2026-05-19 01:39:01,895  * Debugger is active!
+2026-05-19 01:39:01,896  * Debugger PIN: 229-752-987
+2026-05-19 01:39:02,558 127.0.0.1 - - [19/May/2026 01:39:02] "GET / HTTP/1.1" 200 -
+2026-05-19 01:39:02,624 127.0.0.1 - - [19/May/2026 01:39:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:39:02,624 127.0.0.1 - - [19/May/2026 01:39:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:39:02,625 127.0.0.1 - - [19/May/2026 01:39:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:39:02,668 127.0.0.1 - - [19/May/2026 01:39:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:32,926 127.0.0.1 - - [19/May/2026 01:40:32] "GET / HTTP/1.1" 200 -
+2026-05-19 01:40:32,979 127.0.0.1 - - [19/May/2026 01:40:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:33,065 127.0.0.1 - - [19/May/2026 01:40:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:33,069 127.0.0.1 - - [19/May/2026 01:40:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:33,169 127.0.0.1 - - [19/May/2026 01:40:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:37,081 127.0.0.1 - - [19/May/2026 01:40:37] "[32mGET /dashboard.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:37,106 127.0.0.1 - - [19/May/2026 01:40:37] "GET /login.html?next=/dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:40:37,153 127.0.0.1 - - [19/May/2026 01:40:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:37,156 127.0.0.1 - - [19/May/2026 01:40:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:37,158 127.0.0.1 - - [19/May/2026 01:40:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:37,187 127.0.0.1 - - [19/May/2026 01:40:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:38,148 127.0.0.1 - - [19/May/2026 01:40:38] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:38,171 127.0.0.1 - - [19/May/2026 01:40:38] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-05-19 01:40:38,216 127.0.0.1 - - [19/May/2026 01:40:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:38,219 127.0.0.1 - - [19/May/2026 01:40:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:38,221 127.0.0.1 - - [19/May/2026 01:40:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:38,248 127.0.0.1 - - [19/May/2026 01:40:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:38,658 127.0.0.1 - - [19/May/2026 01:40:38] "[32mGET /dashboard.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:38,682 127.0.0.1 - - [19/May/2026 01:40:38] "GET /login.html?next=/dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:40:38,726 127.0.0.1 - - [19/May/2026 01:40:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:38,729 127.0.0.1 - - [19/May/2026 01:40:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:38,731 127.0.0.1 - - [19/May/2026 01:40:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:38,758 127.0.0.1 - - [19/May/2026 01:40:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:38,979 127.0.0.1 - - [19/May/2026 01:40:38] "GET / HTTP/1.1" 200 -
+2026-05-19 01:40:39,021 127.0.0.1 - - [19/May/2026 01:40:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:39,023 127.0.0.1 - - [19/May/2026 01:40:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:39,026 127.0.0.1 - - [19/May/2026 01:40:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:39,053 127.0.0.1 - - [19/May/2026 01:40:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:39,747 127.0.0.1 - - [19/May/2026 01:40:39] "GET /help.html HTTP/1.1" 200 -
+2026-05-19 01:40:39,786 127.0.0.1 - - [19/May/2026 01:40:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:39,791 127.0.0.1 - - [19/May/2026 01:40:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:39,792 127.0.0.1 - - [19/May/2026 01:40:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:39,822 127.0.0.1 - - [19/May/2026 01:40:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:40,218 127.0.0.1 - - [19/May/2026 01:40:40] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:40,239 127.0.0.1 - - [19/May/2026 01:40:40] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-05-19 01:40:40,288 127.0.0.1 - - [19/May/2026 01:40:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:40,291 127.0.0.1 - - [19/May/2026 01:40:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:40,294 127.0.0.1 - - [19/May/2026 01:40:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:40,321 127.0.0.1 - - [19/May/2026 01:40:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:40,667 127.0.0.1 - - [19/May/2026 01:40:40] "GET /privacy.html HTTP/1.1" 200 -
+2026-05-19 01:40:40,716 127.0.0.1 - - [19/May/2026 01:40:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:40,720 127.0.0.1 - - [19/May/2026 01:40:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:40,722 127.0.0.1 - - [19/May/2026 01:40:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:40,750 127.0.0.1 - - [19/May/2026 01:40:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,121 127.0.0.1 - - [19/May/2026 01:40:41] "GET /help.html HTTP/1.1" 200 -
+2026-05-19 01:40:41,164 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,167 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,169 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,198 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,515 127.0.0.1 - - [19/May/2026 01:40:41] "GET /privacy.html HTTP/1.1" 200 -
+2026-05-19 01:40:41,562 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,565 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,567 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,593 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,921 127.0.0.1 - - [19/May/2026 01:40:41] "GET /help.html HTTP/1.1" 200 -
+2026-05-19 01:40:41,969 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,972 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:41,976 127.0.0.1 - - [19/May/2026 01:40:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,005 127.0.0.1 - - [19/May/2026 01:40:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,331 127.0.0.1 - - [19/May/2026 01:40:42] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:42,352 127.0.0.1 - - [19/May/2026 01:40:42] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-05-19 01:40:42,397 127.0.0.1 - - [19/May/2026 01:40:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,400 127.0.0.1 - - [19/May/2026 01:40:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,402 127.0.0.1 - - [19/May/2026 01:40:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,444 127.0.0.1 - - [19/May/2026 01:40:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,755 127.0.0.1 - - [19/May/2026 01:40:42] "[32mGET /dashboard.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:42,777 127.0.0.1 - - [19/May/2026 01:40:42] "GET /login.html?next=/dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:40:42,819 127.0.0.1 - - [19/May/2026 01:40:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,821 127.0.0.1 - - [19/May/2026 01:40:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,824 127.0.0.1 - - [19/May/2026 01:40:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,849 127.0.0.1 - - [19/May/2026 01:40:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:42,958 127.0.0.1 - - [19/May/2026 01:40:42] "GET / HTTP/1.1" 200 -
+2026-05-19 01:40:43,003 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,006 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,010 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,036 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,197 127.0.0.1 - - [19/May/2026 01:40:43] "[32mGET /dashboard.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:43,222 127.0.0.1 - - [19/May/2026 01:40:43] "GET /login.html?next=/dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:40:43,269 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,272 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,274 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,300 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,914 127.0.0.1 - - [19/May/2026 01:40:43] "[32mGET /dashboard.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:43,937 127.0.0.1 - - [19/May/2026 01:40:43] "GET /login.html?next=/dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:40:43,986 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,989 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:43,992 127.0.0.1 - - [19/May/2026 01:40:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:44,026 127.0.0.1 - - [19/May/2026 01:40:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:44,489 127.0.0.1 - - [19/May/2026 01:40:44] "GET / HTTP/1.1" 200 -
+2026-05-19 01:40:44,530 127.0.0.1 - - [19/May/2026 01:40:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:44,533 127.0.0.1 - - [19/May/2026 01:40:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:44,535 127.0.0.1 - - [19/May/2026 01:40:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:44,560 127.0.0.1 - - [19/May/2026 01:40:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:45,299 127.0.0.1 - - [19/May/2026 01:40:45] "[32mGET /dashboard.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:45,319 127.0.0.1 - - [19/May/2026 01:40:45] "GET /login.html?next=/dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:40:45,363 127.0.0.1 - - [19/May/2026 01:40:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:45,366 127.0.0.1 - - [19/May/2026 01:40:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:45,368 127.0.0.1 - - [19/May/2026 01:40:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:45,395 127.0.0.1 - - [19/May/2026 01:40:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:46,898 127.0.0.1 - - [19/May/2026 01:40:46] "GET / HTTP/1.1" 200 -
+2026-05-19 01:40:46,945 127.0.0.1 - - [19/May/2026 01:40:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:46,948 127.0.0.1 - - [19/May/2026 01:40:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:46,951 127.0.0.1 - - [19/May/2026 01:40:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:46,988 127.0.0.1 - - [19/May/2026 01:40:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:50,579 127.0.0.1 - - [19/May/2026 01:40:50] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-05-19 01:40:50,601 127.0.0.1 - - [19/May/2026 01:40:50] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-05-19 01:40:50,645 127.0.0.1 - - [19/May/2026 01:40:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:50,649 127.0.0.1 - - [19/May/2026 01:40:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:40:50,652 127.0.0.1 - - [19/May/2026 01:40:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:40:50,682 127.0.0.1 - - [19/May/2026 01:40:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:41:03,225 127.0.0.1 - - [19/May/2026 01:41:03] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-05-19 01:41:03,266 127.0.0.1 - - [19/May/2026 01:41:03] "GET /2fa.html HTTP/1.1" 200 -
+2026-05-19 01:41:03,314 127.0.0.1 - - [19/May/2026 01:41:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:41:03,317 127.0.0.1 - - [19/May/2026 01:41:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:41:03,319 127.0.0.1 - - [19/May/2026 01:41:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:41:03,352 127.0.0.1 - - [19/May/2026 01:41:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:41:14,288 127.0.0.1 - - [19/May/2026 01:41:14] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-05-19 01:41:14,311 127.0.0.1 - - [19/May/2026 01:41:14] "GET / HTTP/1.1" 200 -
+2026-05-19 01:41:14,354 127.0.0.1 - - [19/May/2026 01:41:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:41:14,357 127.0.0.1 - - [19/May/2026 01:41:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:41:14,359 127.0.0.1 - - [19/May/2026 01:41:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:41:14,387 127.0.0.1 - - [19/May/2026 01:41:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:41:16,369 127.0.0.1 - - [19/May/2026 01:41:16] "GET /account.html HTTP/1.1" 200 -
+2026-05-19 01:41:16,411 127.0.0.1 - - [19/May/2026 01:41:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:41:16,413 127.0.0.1 - - [19/May/2026 01:41:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:41:16,415 127.0.0.1 - - [19/May/2026 01:41:16] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:41:16,444 127.0.0.1 - - [19/May/2026 01:41:16] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:41:18,907 127.0.0.1 - - [19/May/2026 01:41:18] "GET /dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:41:18,968 127.0.0.1 - - [19/May/2026 01:41:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:41:18,979 127.0.0.1 - - [19/May/2026 01:41:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:41:18,985 127.0.0.1 - - [19/May/2026 01:41:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:41:19,030 127.0.0.1 - - [19/May/2026 01:41:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:43:44,163 127.0.0.1 - - [19/May/2026 01:43:44] "GET / HTTP/1.1" 200 -
+2026-05-19 01:43:44,330 127.0.0.1 - - [19/May/2026 01:43:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:43:44,342 127.0.0.1 - - [19/May/2026 01:43:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:43:44,360 127.0.0.1 - - [19/May/2026 01:43:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:43:44,440 127.0.0.1 - - [19/May/2026 01:43:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:43:46,161 127.0.0.1 - - [19/May/2026 01:43:46] "[32mGET /logout.html HTTP/1.1[0m" 302 -
+2026-05-19 01:43:46,185 127.0.0.1 - - [19/May/2026 01:43:46] "GET / HTTP/1.1" 200 -
+2026-05-19 01:43:46,240 127.0.0.1 - - [19/May/2026 01:43:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:43:46,242 127.0.0.1 - - [19/May/2026 01:43:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:43:46,244 127.0.0.1 - - [19/May/2026 01:43:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:43:46,271 127.0.0.1 - - [19/May/2026 01:43:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:43:47,664 127.0.0.1 - - [19/May/2026 01:43:47] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-05-19 01:43:47,695 127.0.0.1 - - [19/May/2026 01:43:47] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-05-19 01:43:47,739 127.0.0.1 - - [19/May/2026 01:43:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:43:47,742 127.0.0.1 - - [19/May/2026 01:43:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:43:47,744 127.0.0.1 - - [19/May/2026 01:43:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:43:47,769 127.0.0.1 - - [19/May/2026 01:43:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:45:15,011 127.0.0.1 - - [19/May/2026 01:45:15] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-05-19 01:45:15,037 127.0.0.1 - - [19/May/2026 01:45:15] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-05-19 01:45:15,104 127.0.0.1 - - [19/May/2026 01:45:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:45:15,111 127.0.0.1 - - [19/May/2026 01:45:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:45:15,172 127.0.0.1 - - [19/May/2026 01:45:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:45:15,266 127.0.0.1 - - [19/May/2026 01:45:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:45:31,050 127.0.0.1 - - [19/May/2026 01:45:31] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-05-19 01:45:31,089 127.0.0.1 - - [19/May/2026 01:45:31] "GET /2fa.html HTTP/1.1" 200 -
+2026-05-19 01:45:31,139 127.0.0.1 - - [19/May/2026 01:45:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:45:31,141 127.0.0.1 - - [19/May/2026 01:45:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:45:31,143 127.0.0.1 - - [19/May/2026 01:45:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:45:31,169 127.0.0.1 - - [19/May/2026 01:45:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:45:57,524 127.0.0.1 - - [19/May/2026 01:45:57] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-05-19 01:45:57,553 127.0.0.1 - - [19/May/2026 01:45:57] "GET / HTTP/1.1" 200 -
+2026-05-19 01:45:57,596 127.0.0.1 - - [19/May/2026 01:45:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:45:57,599 127.0.0.1 - - [19/May/2026 01:45:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:45:57,610 127.0.0.1 - - [19/May/2026 01:45:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:45:57,643 127.0.0.1 - - [19/May/2026 01:45:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:45:59,007 127.0.0.1 - - [19/May/2026 01:45:59] "GET /account.html HTTP/1.1" 200 -
+2026-05-19 01:45:59,049 127.0.0.1 - - [19/May/2026 01:45:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:45:59,052 127.0.0.1 - - [19/May/2026 01:45:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:45:59,055 127.0.0.1 - - [19/May/2026 01:45:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:45:59,082 127.0.0.1 - - [19/May/2026 01:45:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:46:01,479 127.0.0.1 - - [19/May/2026 01:46:01] "GET /dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:46:01,524 127.0.0.1 - - [19/May/2026 01:46:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:46:01,527 127.0.0.1 - - [19/May/2026 01:46:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:46:01,529 127.0.0.1 - - [19/May/2026 01:46:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:46:01,554 127.0.0.1 - - [19/May/2026 01:46:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:47:42,458  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-05-19 01:47:42,503  * Restarting with stat
+2026-05-19 01:47:42,850  * Debugger is active!
+2026-05-19 01:47:42,851  * Debugger PIN: 229-752-987
+2026-05-19 01:47:53,107  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-05-19 01:47:53,141  * Restarting with stat
+2026-05-19 01:47:53,460  * Debugger is active!
+2026-05-19 01:47:53,460  * Debugger PIN: 229-752-987
+2026-05-19 01:48:12,886  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-05-19 01:48:12,924  * Restarting with stat
+2026-05-19 01:48:13,242  * Debugger is active!
+2026-05-19 01:48:13,242  * Debugger PIN: 229-752-987
+2026-05-19 01:48:37,768  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-05-19 01:48:37,806  * Restarting with stat
+2026-05-19 01:48:38,136  * Debugger is active!
+2026-05-19 01:48:38,136  * Debugger PIN: 229-752-987
+2026-05-19 01:48:51,454  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-05-19 01:48:51,495  * Restarting with stat
+2026-05-19 01:48:51,810  * Debugger is active!
+2026-05-19 01:48:51,810  * Debugger PIN: 229-752-987
+2026-05-19 01:49:36,852  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-05-19 01:49:37,022  * Restarting with stat
+2026-05-19 01:49:37,542  * Debugger is active!
+2026-05-19 01:49:37,543  * Debugger PIN: 229-752-987
+2026-05-19 01:49:52,924  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-05-19 01:49:52,966  * Restarting with stat
+2026-05-19 01:49:53,301  * Debugger is active!
+2026-05-19 01:49:53,301  * Debugger PIN: 229-752-987
+2026-05-19 01:50:01,551  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-05-19 01:50:01,590  * Restarting with stat
+2026-05-19 01:50:01,932  * Debugger is active!
+2026-05-19 01:50:01,932  * Debugger PIN: 229-752-987
+2026-05-19 01:50:22,554 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.140:5000
+2026-05-19 01:50:22,554 [33mPress CTRL+C to quit[0m
+2026-05-19 01:50:22,555  * Restarting with stat
+2026-05-19 01:50:23,019  * Debugger is active!
+2026-05-19 01:50:23,020  * Debugger PIN: 229-752-987
+2026-05-19 01:50:23,876 127.0.0.1 - - [19/May/2026 01:50:23] "GET / HTTP/1.1" 200 -
+2026-05-19 01:50:24,068 127.0.0.1 - - [19/May/2026 01:50:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:24,081 127.0.0.1 - - [19/May/2026 01:50:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:24,099 127.0.0.1 - - [19/May/2026 01:50:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:24,205 127.0.0.1 - - [19/May/2026 01:50:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:26,454 127.0.0.1 - - [19/May/2026 01:50:26] "GET /dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:50:26,499 127.0.0.1 - - [19/May/2026 01:50:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:26,505 127.0.0.1 - - [19/May/2026 01:50:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:26,507 127.0.0.1 - - [19/May/2026 01:50:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:26,591 127.0.0.1 - - [19/May/2026 01:50:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:29,973 127.0.0.1 - - [19/May/2026 01:50:29] "GET /account.html HTTP/1.1" 200 -
+2026-05-19 01:50:30,012 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,015 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,017 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,041 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,396 127.0.0.1 - - [19/May/2026 01:50:30] "GET /dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:50:30,436 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,439 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,441 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,468 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,742 127.0.0.1 - - [19/May/2026 01:50:30] "GET /account.html HTTP/1.1" 200 -
+2026-05-19 01:50:30,784 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,788 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,790 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:30,815 127.0.0.1 - - [19/May/2026 01:50:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:35,311 127.0.0.1 - - [19/May/2026 01:50:35] "[32mGET /logout.html HTTP/1.1[0m" 302 -
+2026-05-19 01:50:35,333 127.0.0.1 - - [19/May/2026 01:50:35] "GET / HTTP/1.1" 200 -
+2026-05-19 01:50:35,380 127.0.0.1 - - [19/May/2026 01:50:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:35,384 127.0.0.1 - - [19/May/2026 01:50:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:35,387 127.0.0.1 - - [19/May/2026 01:50:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:35,415 127.0.0.1 - - [19/May/2026 01:50:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:36,676 127.0.0.1 - - [19/May/2026 01:50:36] "GET /login.html?next=/ HTTP/1.1" 200 -
+2026-05-19 01:50:36,718 127.0.0.1 - - [19/May/2026 01:50:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:36,721 127.0.0.1 - - [19/May/2026 01:50:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:36,723 127.0.0.1 - - [19/May/2026 01:50:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:36,751 127.0.0.1 - - [19/May/2026 01:50:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:37,405 127.0.0.1 - - [19/May/2026 01:50:37] "GET /signup.html HTTP/1.1" 200 -
+2026-05-19 01:50:37,449 127.0.0.1 - - [19/May/2026 01:50:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:37,457 127.0.0.1 - - [19/May/2026 01:50:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:50:37,460 127.0.0.1 - - [19/May/2026 01:50:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:50:37,488 127.0.0.1 - - [19/May/2026 01:50:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:51:20,583 127.0.0.1 - - [19/May/2026 01:51:20] "POST /signup.html HTTP/1.1" 200 -
+2026-05-19 01:51:20,627 127.0.0.1 - - [19/May/2026 01:51:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:51:20,629 127.0.0.1 - - [19/May/2026 01:51:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:51:20,631 127.0.0.1 - - [19/May/2026 01:51:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:51:20,658 127.0.0.1 - - [19/May/2026 01:51:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:51:33,331 127.0.0.1 - - [19/May/2026 01:51:33] "GET /signup.html HTTP/1.1" 200 -
+2026-05-19 01:51:33,371 127.0.0.1 - - [19/May/2026 01:51:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:51:33,373 127.0.0.1 - - [19/May/2026 01:51:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:51:33,376 127.0.0.1 - - [19/May/2026 01:51:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:51:33,401 127.0.0.1 - - [19/May/2026 01:51:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:51:48,000 127.0.0.1 - - [19/May/2026 01:51:48] "POST /signup.html HTTP/1.1" 200 -
+2026-05-19 01:51:48,044 127.0.0.1 - - [19/May/2026 01:51:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:51:48,046 127.0.0.1 - - [19/May/2026 01:51:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:51:48,049 127.0.0.1 - - [19/May/2026 01:51:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:51:48,077 127.0.0.1 - - [19/May/2026 01:51:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:01,877 127.0.0.1 - - [19/May/2026 01:52:01] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-05-19 01:52:01,938 127.0.0.1 - - [19/May/2026 01:52:01] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-05-19 01:52:02,002 127.0.0.1 - - [19/May/2026 01:52:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:02,004 127.0.0.1 - - [19/May/2026 01:52:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:02,006 127.0.0.1 - - [19/May/2026 01:52:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:02,060 127.0.0.1 - - [19/May/2026 01:52:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:02,396 127.0.0.1 - - [19/May/2026 01:52:02] "[32mGET /dashboard.html HTTP/1.1[0m" 302 -
+2026-05-19 01:52:02,436 127.0.0.1 - - [19/May/2026 01:52:02] "GET /login.html?next=/dashboard.html HTTP/1.1" 200 -
+2026-05-19 01:52:02,492 127.0.0.1 - - [19/May/2026 01:52:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:02,499 127.0.0.1 - - [19/May/2026 01:52:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:02,501 127.0.0.1 - - [19/May/2026 01:52:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:02,539 127.0.0.1 - - [19/May/2026 01:52:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:15,202 127.0.0.1 - - [19/May/2026 01:52:15] "GET / HTTP/1.1" 200 -
+2026-05-19 01:52:15,255 127.0.0.1 - - [19/May/2026 01:52:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:15,258 127.0.0.1 - - [19/May/2026 01:52:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:15,260 127.0.0.1 - - [19/May/2026 01:52:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:15,304 127.0.0.1 - - [19/May/2026 01:52:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:18,489 127.0.0.1 - - [19/May/2026 01:52:18] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-05-19 01:52:18,510 127.0.0.1 - - [19/May/2026 01:52:18] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-05-19 01:52:18,555 127.0.0.1 - - [19/May/2026 01:52:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:18,560 127.0.0.1 - - [19/May/2026 01:52:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:18,560 127.0.0.1 - - [19/May/2026 01:52:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:18,596 127.0.0.1 - - [19/May/2026 01:52:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:20,215 127.0.0.1 - - [19/May/2026 01:52:20] "GET /signup.html HTTP/1.1" 200 -
+2026-05-19 01:52:20,258 127.0.0.1 - - [19/May/2026 01:52:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:20,261 127.0.0.1 - - [19/May/2026 01:52:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:52:20,264 127.0.0.1 - - [19/May/2026 01:52:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:52:20,296 127.0.0.1 - - [19/May/2026 01:52:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:53:22,773 127.0.0.1 - - [19/May/2026 01:53:22] "GET /signup.html HTTP/1.1" 200 -
+2026-05-19 01:53:22,815 127.0.0.1 - - [19/May/2026 01:53:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:53:22,819 127.0.0.1 - - [19/May/2026 01:53:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:53:22,822 127.0.0.1 - - [19/May/2026 01:53:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:53:22,845 127.0.0.1 - - [19/May/2026 01:53:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:53:50,361 127.0.0.1 - - [19/May/2026 01:53:50] "POST /signup.html HTTP/1.1" 200 -
+2026-05-19 01:53:50,413 127.0.0.1 - - [19/May/2026 01:53:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:53:50,415 127.0.0.1 - - [19/May/2026 01:53:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:53:50,418 127.0.0.1 - - [19/May/2026 01:53:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:53:50,447 127.0.0.1 - - [19/May/2026 01:53:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-19 01:53:55,250 127.0.0.1 - - [19/May/2026 01:53:55] "GET /login.html?next=/signup.html HTTP/1.1" 200 -
+2026-05-19 01:53:55,293 127.0.0.1 - - [19/May/2026 01:53:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-19 01:53:55,297 127.0.0.1 - - [19/May/2026 01:53:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-05-19 01:53:55,301 127.0.0.1 - - [19/May/2026 01:53:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-05-19 01:53:55,329 127.0.0.1 - - [19/May/2026 01:53:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -

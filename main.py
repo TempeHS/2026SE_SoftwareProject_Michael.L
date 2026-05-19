@@ -104,11 +104,22 @@ def init_auth_db():
         conn.execute("""
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+                full_name TEXT NOT NULL,
                 email TEXT NOT NULL UNIQUE,
                 password_hash TEXT NOT NULL,
                 totp_secret TEXT
             )
-            """)
+        """)
+
+        # Migration for existing dbs created before full_name existed
+        cols = {
+            row["name"] for row in conn.execute("PRAGMA table_info(users)").fetchall()
+        }
+        if "full_name" not in cols:
+            conn.execute(
+                "ALTER TABLE users ADD COLUMN full_name TEXT NOT NULL DEFAULT ''"
+            )
+
         conn.commit()
 
 
@@ -122,13 +133,13 @@ def get_user_by_id(user_id: int):
         return conn.execute("SELECT * FROM users WHERE id = ?", (user_id,)).fetchone()
 
 
-def create_user(email: str, password: str) -> bool:
+def create_user(email: str, password: str, full_name: str) -> bool:
     password_hash = generate_password_hash(password)
     try:
         with get_db_conn() as conn:
             conn.execute(
-                "INSERT INTO users (email, password_hash) VALUES (?, ?)",
-                (email, password_hash),
+                "INSERT INTO users (full_name, email, password_hash) VALUES (?, ?, ?)",
+                (full_name.strip(), email.strip().lower(), password_hash),
             )
             conn.commit()
         return True
@@ -205,26 +216,44 @@ def privacy():
     return render_template("privacy.html")
 
 
+@app.route("/dashboard.html", methods=["GET"])
+@login_required_2fa
+def dashboard():
+    return render_template("dashboard.html")
+
+
+@app.route("/account.html", methods=["GET"])
+@login_required_2fa
+def account():
+    return render_template("account.html")
+
+
+@app.route("/help.html", methods=["GET"])
+def help_page():
+    return render_template("help.html")
+
+
 @app.route("/signup.html", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
-        email = (request.form.get("email") or "").strip().lower()
-        password = request.form.get("password") or ""
+        full_name = request.form.get("full_name", "").strip()
+        email = request.form.get("email", "").strip().lower()
+        password = request.form.get("password", "")
 
-        if not email or not password:
-            return render_template("signup.html", error="Missing fields")
+        ok = create_user(email=email, password=password, full_name=full_name)
+        if not ok:
+            return render_template("signup.html", is_done=False, dupe=True)
 
-        if len(password) < 8:
-            return render_template(
-                "signup.html", error="Password must be at least 8 characters"
-            )
+        user = get_user_by_email(email)
+        session["user_id"] = user["id"]
+        session["user_email"] = user["email"]
+        session["user_name"] = user["full_name"]
+        session["2fa_verified"] = False
+        session.permanent = True
 
-        if create_user(email, password):
-            return render_template("login.html", is_done=True)
+        return redirect(url_for("two_fa"))  # use your actual 2FA view function name
 
-        return render_template("signup.html", dupe=True)
-
-    return render_template("signup.html")
+    return render_template("signup.html", is_done=False, dupe=False, error=None)
 
 
 @app.route("/login.html", methods=["POST", "GET"])
@@ -238,11 +267,9 @@ def login():
 
         user = verify_user(email, password)
         if user:
-            session.clear()
-            session["pending_user_id"] = int(user["id"])
-            session["pending_user_email"] = user["email"]
-            if is_safe_next(next_url):
-                session["next_url"] = next_url
+            session["user_id"] = user["id"]
+            session["user_email"] = user["email"]
+            session["user_name"] = (user["full_name"] or "").strip() or user["email"]
             session["SID"] = secrets.token_urlsafe(32)
             session.permanent = False
             return redirect("/2fa.html")
