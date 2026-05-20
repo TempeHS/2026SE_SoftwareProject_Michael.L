@@ -1,11 +1,40 @@
-{% extends 'layout.html' %}
-{% block content %}
-<div class="container">
-    <div class="row">
-        <h1 class="display-1">Hello world!</h1>
+{% extends "layout.html" %} {% block content %}
+<div class="container py-4">
+  <div class="row mb-3">
+    <div class="col">
+      <h1 class="display-4">Huddle</h1>
+      <p class="lead mb-0">Friend group activity and updates in one place.</p>
     </div>
-    <div class="row">
+  </div>
 
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-between align-items-center">
+      <h2 class="h5 text-muted mb-0">Dashboard</h2>
+      <a class="btn btn-primary btn-sm" href="{{ url_for('your_huddle') }}"
+        >Go to Your Huddle</a
+      >
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      {% if is_logged_in %} {% if dashboard_updates %}
+      <ul class="list-group">
+        {% for update in dashboard_updates %}
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <span>{{ update.message }}</span>
+          <small class="text-muted">{{ update.time }}</small>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <div class="alert alert-secondary mb-0">No live notifications yet.</div>
+      {% endif %} {% else %}
+      <p><a href="{{ url_for('login') }}">Log in</a> to view your dashboard.</p>
+      {% endif %}
+    </div>
+  </div>
 </div>
 {% endblock %}

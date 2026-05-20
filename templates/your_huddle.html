@@ -1,0 +1,30 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container py-4">
+  <div class="row mb-3">
+    <div class="col">
+      <h1 class="display-6">Your Huddle</h1>
+      <p class="text-muted mb-0">Recent activity from your friend group.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      {% if group_activity %}
+      <div class="list-group">
+        {% for item in group_activity %}
+        <div class="list-group-item">
+          <div class="d-flex w-100 justify-content-between">
+            <h2 class="h6 mb-1">{{ item.user }}</h2>
+            <small class="text-muted">{{ item.time }}</small>
+          </div>
+          <p class="mb-0">{{ item.action }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="alert alert-secondary mb-0">No friend activity yet.</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

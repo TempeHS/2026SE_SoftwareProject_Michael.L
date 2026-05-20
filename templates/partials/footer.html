@@ -1,9 +1,29 @@
-<div class="container-fluid">
-    <hr/>
-</div>
-<div class="container">
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container text-center">
+    <hr />
     <div class="row">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="form.html">Secure Form Template</a>
+      <div class="col">
+        <a
+          href="{{ url_for('help_page') }}"
+          class="text-decoration-none text-muted mx-2"
+          >Help</a
+        >
+        <a
+          href="{{ url_for('privacy') }}"
+          class="text-decoration-none text-muted mx-2"
+          >Privacy</a
+        >
+        <a
+          href="{{ url_for('secure_form') }}"
+          class="text-decoration-none text-muted mx-2"
+          >Secure Form Template</a
+        >
+      </div>
     </div>
-</div>
+    <div class="row mt-2">
+      <div class="col">
+        <small class="text-muted">© 2026 Huddle. All rights reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
