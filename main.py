@@ -90,7 +90,20 @@ def root():
     }
 )
 def index():
-    return render_template("/index.html")
+    is_logged_in = "user_id" in session and session.get("2fa_verified", False)
+
+    dashboard_updates = []
+    if is_logged_in:
+        dashboard_updates = [
+            {"message": "New invite from Alex", "time": "2m ago"},
+            {"message": "Sam accepted your event", "time": "10m ago"},
+        ]
+
+    return render_template(
+        "index.html",
+        dashboard_updates=dashboard_updates,
+        is_logged_in=is_logged_in,
+    )
 
 
 def get_db_conn():
@@ -216,10 +229,9 @@ def privacy():
     return render_template("privacy.html")
 
 
-@app.route("/dashboard.html", methods=["GET"])
-@login_required_2fa
-def dashboard():
-    return render_template("dashboard.html")
+@app.route("/secure-form")
+def secure_form():
+    return render_template("secure-form.html")
 
 
 @app.route("/account.html", methods=["GET"])
@@ -231,6 +243,26 @@ def account():
 @app.route("/help.html", methods=["GET"])
 def help_page():
     return render_template("help.html")
+
+
+@app.route("/your-huddle")
+@login_required_2fa
+def your_huddle():
+    group_activity = [
+        {
+            "user": "Alex",
+            "action": "shared a new plan for Friday night.",
+            "time": "5m ago",
+        },
+        {"user": "Mia", "action": "joined the hiking huddle.", "time": "20m ago"},
+        {"user": "Arnav", "action": "commented: I have no money", "time": "always"},
+        {
+            "user": "Jordan",
+            "action": "commented: “I can bring snacks.”",
+            "time": "1h ago",
+        },
+    ]
+    return render_template("your_huddle.html", group_activity=group_activity)
 
 
 @app.route("/signup.html", methods=["GET", "POST"])
@@ -245,13 +277,16 @@ def signup():
             return render_template("signup.html", is_done=False, dupe=True)
 
         user = get_user_by_email(email)
-        session["user_id"] = user["id"]
-        session["user_email"] = user["email"]
-        session["user_name"] = user["full_name"]
+
+        # Stage identity for 2FA verification (do not fully log in yet)
+        session["pending_user_id"] = int(user["id"])
+        session["pending_user_email"] = user["email"]
+        session["pending_user_name"] = user["full_name"]
         session["2fa_verified"] = False
         session.permanent = True
 
-        return redirect(url_for("two_fa"))  # use your actual 2FA view function name
+        # Correct endpoint name
+        return redirect(url_for("two_factor_auth"))
 
     return render_template("signup.html", is_done=False, dupe=False, error=None)
 
@@ -267,9 +302,12 @@ def login():
 
         user = verify_user(email, password)
         if user:
-            session["user_id"] = user["id"]
-            session["user_email"] = user["email"]
-            session["user_name"] = (user["full_name"] or "").strip() or user["email"]
+            session["pending_user_id"] = int(user["id"])
+            session["pending_user_email"] = user["email"]
+            session["pending_user_name"] = (user["full_name"] or "").strip() or user[
+                "email"
+            ]
+            session["2fa_verified"] = False
             session["SID"] = secrets.token_urlsafe(32)
             session.permanent = False
             return redirect("/2fa.html")
@@ -287,6 +325,7 @@ def login():
 def two_factor_auth():
     pending_user_id = session.get("pending_user_id")
     pending_user_email = session.get("pending_user_email")
+    pending_user_name = session.get("pending_user_name")
 
     if not pending_user_id or not pending_user_email:
         return redirect("/login.html")
@@ -301,10 +340,12 @@ def two_factor_auth():
         if totp.verify(otp_input, valid_window=1):
             session["user_id"] = int(pending_user_id)
             session["user_email"] = pending_user_email
+            session["user_name"] = pending_user_name or pending_user_email
             session["2fa_verified"] = True
             next_url = session.pop("next_url", "/")
             session.pop("pending_user_id", None)
             session.pop("pending_user_email", None)
+            session.pop("pending_user_name", None)
             return redirect(next_url if is_safe_next(next_url) else "/")
 
         return render_template(
@@ -317,7 +358,7 @@ def two_factor_auth():
 @app.route("/logout.html", methods=["GET", "POST"])
 def logout():
     session.clear()
-    return redirect("/")
+    return redirect("/login.html")
 
 
 # Endpoint for logging CSP violations
