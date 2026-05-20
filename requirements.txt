@@ -3,3 +3,10 @@ bcrypt
 flask_wtf
 flask-csp
 requests
+dotenv
+qrcode
+pyotp
+vscode-icons
+autopep8
+
+# make sure you add the .env file which holds your secret keys and database credentials.

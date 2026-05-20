@@ -2281,3 +2281,17 @@
 2026-05-20 02:29:24,954 127.0.0.1 - - [20/May/2026 02:29:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
 2026-05-20 02:29:24,957 127.0.0.1 - - [20/May/2026 02:29:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2026-05-20 02:29:25,002 127.0.0.1 - - [20/May/2026 02:29:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-05-20 02:57:13,651 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.18:5000
+2026-05-20 02:57:13,651 [33mPress CTRL+C to quit[0m
+2026-05-20 02:57:13,653  * Restarting with stat
+2026-05-20 02:57:13,953  * Debugger is active!
+2026-05-20 02:57:13,954  * Debugger PIN: 430-214-369
+2026-05-20 02:57:18,075 127.0.0.1 - - [20/May/2026 02:57:18] "GET / HTTP/1.1" 200 -
+2026-05-20 02:57:19,600 127.0.0.1 - - [20/May/2026 02:57:19] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-20 02:57:19,750 127.0.0.1 - - [20/May/2026 02:57:19] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-05-20 02:57:19,750 127.0.0.1 - - [20/May/2026 02:57:19] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2026-05-20 02:57:20,130 127.0.0.1 - - [20/May/2026 02:57:20] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-05-20 02:57:20,414 127.0.0.1 - - [20/May/2026 02:57:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
