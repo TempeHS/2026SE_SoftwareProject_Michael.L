@@ -216,7 +216,10 @@ def login_required_2fa(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         if "user_id" not in session:
-            return redirect(f"/login.html?next={request.path}")
+            next_path = request.path or "/"
+            if not is_safe_next(next_path):
+                next_path = "/"
+            return redirect(f"/login.html?next={next_path}")
         if not session.get("2fa_verified", False):
             return redirect("/2fa.html")
         return f(*args, **kwargs)
