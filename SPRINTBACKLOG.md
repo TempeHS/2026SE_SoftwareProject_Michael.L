@@ -55,4 +55,26 @@
 
 **Sprint Goal:** Implement core event proposal and voting logic, and group creation/joining.
 
-to be done ✍️(◔◡◔)
+**Committed Items (from Product Backlog):**
+
+| PB ID | User Story |
+|-------|------------|
+| PB-004 | Create a new friend group |
+| PB-005 | Join a group using an invite code |
+| PB-006 | Propose an event with name, date/time, and location |
+| PB-007 | Vote Yes/No/Maybe on a proposed event |
+
+**Sprint Plan:**
+
+| # | Task | PB ID |
+|---|------|-------|
+| 1 | Build group creation form (group name input, generate 6-char invite code, save to DB) | PB-004 |
+| 2 | Build group joining flow (invite code input, validate against DB, link user to group) | PB-005 |
+| 3 | Build event proposal form (name max 30 chars, date/time picker, location max 100 chars) | PB-006 |
+| 4 | Display proposed events in group event feed | PB-006 |
+| 5 | Build Yes/No/Maybe voting buttons per event | PB-007 |
+| 6 | Implement real-time vote tally (percentage breakdown, updates within 2 seconds) | PB-007 |
+
+**Unit Test Summary Table:**
+
+to be done ✍️(◔◡◔) 
