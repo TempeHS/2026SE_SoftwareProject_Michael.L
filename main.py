@@ -133,6 +133,29 @@ def init_auth_db():
                 "ALTER TABLE users ADD COLUMN full_name TEXT NOT NULL DEFAULT ''"
             )
 
+        # New huddle Groups
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS huddle_groups (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                invite_code TEXT NOT NULL UNIQUE,
+                created_by INTEGER NOT NULL,
+                created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (created_by) REFERENCES users(id)
+            )
+        """)
+
+        # Only one group membership per user
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS huddle_memberships (
+                user_id INTEGER NOT NULL UNIQUE,
+                group_id INTEGER NOT NULL,
+                joined_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (user_id, group_id),
+                FOREIGN KEY (user_id) REFERENCES users(id),
+                FOREIGN KEY (group_id) REFERENCES huddle_groups(id)
+            )
+        """)
         conn.commit()
 
 
@@ -212,6 +235,57 @@ def is_safe_next(next_url: str) -> bool:
     return parsed.scheme == "" and parsed.netloc == "" and next_url.startswith("/")
 
 
+INVITE_CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
+
+
+def generate_invite_code(length: int = 6) -> str:
+    return "".join(secrets.choice(INVITE_CODE_ALPHABET) for _ in range(length))
+
+
+def get_group_for_user(user_id: int):
+    with get_db_conn() as conn:
+        return conn.execute(
+            """SELECT g.* FROM huddle_groups g INNER JOIN huddle_memberships m ON m.group_id = g.id WHERE m.user_id = ? LIMIT 1 """,
+            (user_id,),
+        ).fetchone()
+
+
+def create_group_for_user(user_id: int, group_name: str):
+    with get_db_conn() as conn:
+        existing = conn.execute(
+            "SELECT 1 FROM huddle_memberships WHERE user_id = ?",
+            (user_id,),
+        ).fetchone()
+        if existing:
+            return None
+
+        for _ in range(
+            10
+        ):  # makes it retry if there is a rate invite code collision edge case
+            code = generate_invite_code()
+            try:
+                cur = conn.execute(
+                    """
+                    INSERT INTO huddle_groups (name, invite_code, created_by)
+                    VALUES (?, ?, ?)
+                    """,
+                    (group_name, code, user_id),
+                )
+                group_id = cur.lastrowid
+                conn.execute(
+                    "INSERT INTO huddle_memberships (user_id, group_id) VALUES (?, ?)",
+                    (user_id, group_id),
+                )
+                conn.commit()
+                return conn.execute(
+                    "SELECT * FROM huddle_groups WHERE id = ?",
+                    (group_id,),
+                ).fetchone()
+            except sqlite3.IntegrityError:
+                conn.rollback()
+    return None
+
+
 def login_required_2fa(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -251,6 +325,18 @@ def help_page():
 @app.route("/your-huddle")
 @login_required_2fa
 def your_huddle():
+    user_id = int(session["user_id"])
+    group = get_group_for_user(user_id)
+
+    if not group:
+        return render_template(
+            "your_huddle.html",
+            in_group=False,
+            group_activity=[],
+            group_name=None,
+            invite_code=None,
+        )
+
     group_activity = [
         {
             "user": "Alex",
@@ -265,7 +351,41 @@ def your_huddle():
             "time": "1h ago",
         },
     ]
-    return render_template("your_huddle.html", group_activity=group_activity)
+    return render_template(
+        "your_huddle.html",
+        in_group=True,
+        group_name=group["name"],
+        invite_code=group["invite_code"],
+        group_activity=group_activity,
+    )
+
+
+@app.route("/huddle/create", methods=["GET", "POST"])
+@login_required_2fa
+def create_huddle():
+    user_id = int(session["user_id"])
+
+    # fixed function name
+    if get_group_for_user(user_id):
+        return redirect("/your-huddle")
+
+    error = None
+    if request.method == "POST":
+        group_name = (request.form.get("group_name") or "").strip()
+        if len(group_name) < 2 or len(group_name) > 50:
+            error = "Group name must be between 2 and 50 characters."
+        else:
+            created = create_group_for_user(user_id, group_name)
+            if created:
+                return redirect("/your-huddle")
+            error = "Could not create your huddle. Please try again."
+    return render_template("create_huddle.html", error=error)
+
+
+@app.route("/huddle/join", methods=["GET"])
+@login_required_2fa
+def join_huddle():
+    return "Join huddle form coming next."
 
 
 @app.route("/signup.html", methods=["GET", "POST"])
