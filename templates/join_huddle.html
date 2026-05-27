@@ -1,0 +1,39 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container py-4" style="max-width: 680px">
+  <h1 class="display-6 mb-3">Join a Huddle</h1>
+  <p class="text-muted">
+    Enter the 6-character invite code shared by your group creator.
+  </p>
+
+  {% if error %}
+  <div class="alert alert-danger">{{ error }}</div>
+  {% endif %}
+
+  <form method="POST" action="{{ url_for('join_huddle') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    <div class="mb-3">
+      <label for="invite_code" class="form-label">Invite Code</label>
+      <input
+        type="text"
+        id="invite_code"
+        name="invite_code"
+        class="form-control text-uppercase"
+        maxlength="6"
+        minlength="6"
+        pattern="[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{6}"
+        title="6 characters using A–Z (no I or O) and 2–9"
+        required
+        placeholder="e.g. K7P2QX"
+        autocomplete="off"
+      />
+      <div class="form-text">
+        Codes use A–Z (excluding I and O) and digits 2–9.
+      </div>
+    </div>
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">Join Huddle</button>
+      <a href="/your-huddle" class="btn btn-outline-secondary">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

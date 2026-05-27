@@ -286,6 +286,38 @@ def create_group_for_user(user_id: int, group_name: str):
     return None
 
 
+def join_group_by_code(user_id: int, invite_code: str):
+    code = (invite_code or "").strip().upper()
+    if len(code) != 6 or any(c not in INVITE_CODE_ALPHABET for c in code):
+        return None, "Invalid invite code format."
+
+    with get_db_conn() as conn:
+        existing = conn.execute(
+            "SELECT group_id FROM huddle_memberships WHERE user_id = ?",
+            (user_id,),
+        ).fetchone()
+        if existing:
+            return None, "You are already in a Huddle."
+
+        group = conn.execute(
+            "SELECT * FROM huddle_groups WHERE invite_code = ?",
+            (code,),
+        ).fetchone()
+        if not group:
+            return None, "Invite code not found."
+
+        try:
+            conn.execute(
+                "INSERT INTO huddle_memberships (user_id, group_id) VALUES (?, ?)",
+                (user_id, int(group["id"])),
+            )
+            conn.commit()
+        except sqlite3.IntegrityError:
+            return None, "Could not join this huddle. Please try again."
+
+        return group, None
+
+
 def login_required_2fa(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -367,10 +399,22 @@ def create_huddle():
     return render_template("create_huddle.html", error=error)
 
 
-@app.route("/huddle/join", methods=["GET"])
+@app.route("/huddle/join", methods=["GET", "POST"])
 @login_required_2fa
 def join_huddle():
-    return "Join huddle form coming next."
+    user_id = int(session["user_id"])
+
+    if get_group_for_user(user_id):
+        return redirect("/your-huddle")
+
+    error = None
+    if request.method == "POST":
+        invite_code = (request.form.get("invite_code") or "").strip()
+        group, error = join_group_by_code(user_id, invite_code)
+        if group:
+            return redirect("/your-huddle")
+
+    return render_template("join_huddle.html", error=error)
 
 
 @app.route("/signup.html", methods=["GET", "POST"])
