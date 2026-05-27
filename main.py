@@ -336,27 +336,12 @@ def your_huddle():
             group_name=None,
             invite_code=None,
         )
-
-    group_activity = [
-        {
-            "user": "Alex",
-            "action": "shared a new plan for Friday night.",
-            "time": "5m ago",
-        },
-        {"user": "Mia", "action": "joined the hiking huddle.", "time": "20m ago"},
-        {"user": "Arnav", "action": "commented: I have no money", "time": "always"},
-        {
-            "user": "Jordan",
-            "action": "commented: “I can bring snacks.”",
-            "time": "1h ago",
-        },
-    ]
     return render_template(
         "your_huddle.html",
         in_group=True,
         group_name=group["name"],
         invite_code=group["invite_code"],
-        group_activity=group_activity,
+        group_activity=[],
     )
 
 
