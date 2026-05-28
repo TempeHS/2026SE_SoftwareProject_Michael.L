@@ -124,7 +124,7 @@ def init_auth_db():
             )
         """)
 
-        # Migration for existing dbs created before full_name existed
+        # migration for existing dbs created before full_name existed
         cols = {
             row["name"] for row in conn.execute("PRAGMA table_info(users)").fetchall()
         }
@@ -133,7 +133,7 @@ def init_auth_db():
                 "ALTER TABLE users ADD COLUMN full_name TEXT NOT NULL DEFAULT ''"
             )
 
-        # New huddle Groups
+        # neu huddle Groups
         conn.execute("""
             CREATE TABLE IF NOT EXISTS huddle_groups (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -145,10 +145,10 @@ def init_auth_db():
             )
         """)
 
-        # Only one group membership per user
+        # allow many memberships per user (unique pair only)
         conn.execute("""
             CREATE TABLE IF NOT EXISTS huddle_memberships (
-                user_id INTEGER NOT NULL UNIQUE,
+                user_id INTEGER NOT NULL,
                 group_id INTEGER NOT NULL,
                 joined_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY (user_id, group_id),
@@ -156,6 +156,34 @@ def init_auth_db():
                 FOREIGN KEY (group_id) REFERENCES huddle_groups(id)
             )
         """)
+
+        # move old schema where user_id had UNIQUE (one huddle per user) --> should technically have more for UI purposes
+        row = conn.execute(
+            "SELECT sql FROM sqlite_master WHERE type='table' AND name='huddle_memberships'"
+        ).fetchone()
+        table_sql = (row["sql"] or "").upper().replace("\n", " ") if row else ""
+        if "USER_ID INTEGER NOT NULL UNIQUE" in table_sql:
+            conn.execute("PRAGMA foreign_keys=OFF")
+            conn.execute("""
+                CREATE TABLE huddle_memberships_new (
+                    user_id INTEGER NOT NULL,
+                    group_id INTEGER NOT NULL,
+                    joined_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                    PRIMARY KEY (user_id, group_id),
+                    FOREIGN KEY (user_id) REFERENCES users(id),
+                    FOREIGN KEY (group_id) REFERENCES huddle_groups(id)
+                )
+            """)
+            conn.execute("""
+                INSERT OR IGNORE INTO huddle_memberships_new (user_id, group_id, joined_at)
+                SELECT user_id, group_id, joined_at FROM huddle_memberships
+            """)
+            conn.execute("DROP TABLE huddle_memberships")
+            conn.execute(
+                "ALTER TABLE huddle_memberships_new RENAME TO huddle_memberships"
+            )
+            conn.execute("PRAGMA foreign_keys=ON")
+
         conn.commit()
 
 
@@ -242,26 +270,37 @@ def generate_invite_code(length: int = 6) -> str:
     return "".join(secrets.choice(INVITE_CODE_ALPHABET) for _ in range(length))
 
 
-def get_group_for_user(user_id: int):
+def get_groups_for_user(user_id: int):
     with get_db_conn() as conn:
         return conn.execute(
-            """SELECT g.* FROM huddle_groups g INNER JOIN huddle_memberships m ON m.group_id = g.id WHERE m.user_id = ? LIMIT 1 """,
+            """
+            SELECT g.*, m.joined_at
+            FROM huddle_groups g
+            INNER JOIN huddle_memberships m ON m.group_id = g.id
+            WHERE m.user_id = ?
+            ORDER BY datetime(m.joined_at) DESC, g.id DESC
+            """,
             (user_id,),
+        ).fetchall()
+
+
+def get_user_group_by_id(user_id: int, group_id: int):
+    with get_db_conn() as conn:
+        return conn.execute(
+            """
+            SELECT g.*, m.joined_at
+            FROM huddle_groups g
+            INNER JOIN huddle_memberships m ON m.group_id = g.id
+            WHERE m.user_id = ? AND g.id = ?
+            LIMIT 1
+            """,
+            (user_id, group_id),
         ).fetchone()
 
 
 def create_group_for_user(user_id: int, group_name: str):
     with get_db_conn() as conn:
-        existing = conn.execute(
-            "SELECT 1 FROM huddle_memberships WHERE user_id = ?",
-            (user_id,),
-        ).fetchone()
-        if existing:
-            return None
-
-        for _ in range(
-            10
-        ):  # makes it retry if there is a rate invite code collision edge case
+        for _ in range(10):  # retry invite code collision edge case
             code = generate_invite_code()
             try:
                 cur = conn.execute(
@@ -292,19 +331,19 @@ def join_group_by_code(user_id: int, invite_code: str):
         return None, "Invalid invite code format."
 
     with get_db_conn() as conn:
-        existing = conn.execute(
-            "SELECT group_id FROM huddle_memberships WHERE user_id = ?",
-            (user_id,),
-        ).fetchone()
-        if existing:
-            return None, "You are already in a Huddle."
-
         group = conn.execute(
             "SELECT * FROM huddle_groups WHERE invite_code = ?",
             (code,),
         ).fetchone()
         if not group:
             return None, "Invite code not found."
+
+        already = conn.execute(
+            "SELECT 1 FROM huddle_memberships WHERE user_id = ? AND group_id = ?",
+            (user_id, int(group["id"])),
+        ).fetchone()
+        if already:
+            return None, "You are already in this Huddle."
 
         try:
             conn.execute(
@@ -358,33 +397,29 @@ def help_page():
 @login_required_2fa
 def your_huddle():
     user_id = int(session["user_id"])
-    group = get_group_for_user(user_id)
+    groups = get_groups_for_user(user_id)
 
-    if not group:
-        return render_template(
-            "your_huddle.html",
-            in_group=False,
-            group_activity=[],
-            group_name=None,
-            invite_code=None,
-        )
     return render_template(
         "your_huddle.html",
-        in_group=True,
-        group_name=group["name"],
-        invite_code=group["invite_code"],
-        group_activity=[],
+        in_group=len(groups) > 0,
+        groups=groups,
     )
+
+
+@app.route("/huddle/<int:group_id>", methods=["GET"])
+@login_required_2fa
+def view_huddle(group_id: int):
+    user_id = int(session["user_id"])
+    group = get_user_group_by_id(user_id, group_id)
+    if not group:
+        return redirect("/your-huddle")
+    return render_template("huddle_detail.html", group=group)
 
 
 @app.route("/huddle/create", methods=["GET", "POST"])
 @login_required_2fa
 def create_huddle():
     user_id = int(session["user_id"])
-
-    # fixed function name
-    if get_group_for_user(user_id):
-        return redirect("/your-huddle")
 
     error = None
     if request.method == "POST":
@@ -403,9 +438,6 @@ def create_huddle():
 @login_required_2fa
 def join_huddle():
     user_id = int(session["user_id"])
-
-    if get_group_for_user(user_id):
-        return redirect("/your-huddle")
 
     error = None
     if request.method == "POST":
