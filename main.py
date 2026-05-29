@@ -124,7 +124,7 @@ def init_auth_db():
             )
         """)
 
-        # migration for existing dbs created before full_name existed
+        # moving existing dbs created before full_name existed
         cols = {
             row["name"] for row in conn.execute("PRAGMA table_info(users)").fetchall()
         }
@@ -154,6 +154,25 @@ def init_auth_db():
                 PRIMARY KEY (user_id, group_id),
                 FOREIGN KEY (user_id) REFERENCES users(id),
                 FOREIGN KEY (group_id) REFERENCES huddle_groups(id)
+            )
+        """)
+
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS huddle_events (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                group_id INTEGER NOT NULL,
+                created_by INTEGER NOT NULL,
+                name TEXT NOT NULL,
+                location TEXT NOT NULL,
+                start_date TEXT NOT NULL,
+                end_date TEXT,
+                arrival_time TEXT,
+                description TEXT,
+                category TEXT,
+                price_estimate REAL,
+                created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (group_id) REFERENCES huddle_groups(id),
+                FOREIGN KEY (created_by) REFERENCES users(id)
             )
         """)
 
@@ -357,6 +376,55 @@ def join_group_by_code(user_id: int, invite_code: str):
         return group, None
 
 
+EVENT_CATEGORIES = [
+    "Food",
+    "Drinks",
+    "Sports",
+    "Movie",
+    "Trip",
+    "Party",
+    "Study",
+    "Gaming",
+    "Outdoors",
+    "Miscellaneous",
+    "Other",
+]
+
+
+def create_event(group_id, user_id, data):
+    with get_db_conn() as conn:
+        cur = conn.execute(
+            """
+            INSERT INTO huddle_events
+                (group_id, created_by, name, location, start_date, end_date, arrival_time, description, category, price_estimate)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                group_id,
+                user_id,
+                data["name"],
+                data["location"],
+                data["start_date"],
+                data["end_date"],
+                data["arrival_time"],
+                data["description"],
+                data["category"],
+                data["price_estimate"],
+            ),
+        )
+        conn.commit()
+        return cur.lastrowid
+
+
+# gets the events for the groups and orders them from closest to furthest
+def get_events_for_group(group_id):
+    with get_db_conn() as conn:
+        return conn.execute(
+            "SELECT * FROM huddle_events WHERE group_id = ? ORDER BY datetime(start_date) ASC",
+            (group_id,),
+        ).fetchall()
+
+
 def login_required_2fa(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -370,6 +438,79 @@ def login_required_2fa(f):
         return f(*args, **kwargs)
 
     return decorated
+
+
+@app.route("/huddle/<int:group_id>/propose", methods=["GET", "POST"])
+@login_required_2fa
+def propose_event(group_id):
+    user_id = int(session["user_id"])
+    group = get_user_group_by_id(user_id, group_id)
+    if not group:
+        return redirect("/your-huddle")
+
+    error = None
+    form = {}
+
+    if request.method == "POST":
+        form = {
+            "name": (request.form.get("name") or "").strip(),
+            "location": (request.form.get("location") or "").strip(),
+            "start_date": (request.form.get("start_date") or "").strip(),
+            "end_date": (request.form.get("end_date") or "").strip() or None,
+            "arrival_time": (request.form.get("arrival_time") or "").strip() or None,
+            "description": (request.form.get("description") or "").strip() or None,
+            "category": (request.form.get("category") or "").strip() or None,
+            "price_estimate": (request.form.get("price_estimate") or "").strip(),
+        }
+
+        # validate letter inputs
+        if not (1 <= len(form["name"]) <= 30):
+            error = "Event name must be 1–30 characters."
+        elif not (1 <= len(form["location"]) <= 100):
+            error = "Location must be 1–100 characters."
+        elif not form["start_date"]:
+            error = "Start date is required."
+        elif form["description"] and len(form["description"]) > 500:
+            error = "Description must be 500 characters or fewer."
+        elif form["category"] and form["category"] not in EVENT_CATEGORIES:
+            error = "Invalid category."
+
+        # validate the date
+        if not error:
+            try:
+                start_dt = datetime.fromisoformat(form["start_date"])
+                if form["end_date"]:
+                    end_dt = datetime.fromisoformat(form["end_date"])
+                    if end_dt < start_dt:
+                        error = "End date cannot be before start date."
+            except ValueError:
+                error = "Invalid date format."
+
+        # validate the price
+        if not error:
+            if form["price_estimate"]:
+                try:
+                    price = float(form["price_estimate"])
+                    if price < 0 or price > 100000:
+                        error = "Price estimate must be between 0 and 100000."
+                    else:
+                        form["price_estimate"] = price
+                except ValueError:
+                    error = "Price estimate must be a number."
+            else:
+                form["price_estimate"] = None
+
+        if not error:
+            create_event(group_id, user_id, form)
+            return redirect(url_for("view_huddle", group_id=group_id))
+
+    return render_template(
+        "propose_event.html",
+        group=group,
+        categories=EVENT_CATEGORIES,
+        error=error,
+        form=form,
+    )
 
 
 @app.route("/privacy.html", methods=["GET"])
@@ -413,7 +554,8 @@ def view_huddle(group_id: int):
     group = get_user_group_by_id(user_id, group_id)
     if not group:
         return redirect("/your-huddle")
-    return render_template("huddle_detail.html", group=group)
+    events = get_events_for_group(group_id)
+    return render_template("huddle_detail.html", group=group, events=events)
 
 
 @app.route("/huddle/create", methods=["GET", "POST"])

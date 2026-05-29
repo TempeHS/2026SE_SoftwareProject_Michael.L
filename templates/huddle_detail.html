@@ -5,12 +5,48 @@
     Invite code: <code>{{ group.invite_code }}</code>
   </p>
 
-  <div class="alert alert-secondary">
-    Huddle activity view can be added here next.
+  <div class="d-flex gap-2 mb-4">
+    <a
+      href="{{ url_for('propose_event', group_id=group.id) }}"
+      class="btn btn-primary"
+      >Propose an Event</a
+    >
+    <a href="{{ url_for('your_huddle') }}" class="btn btn-outline-secondary">
+      Back to Your Huddles
+    </a>
   </div>
 
-  <a href="{{ url_for('your_huddle') }}" class="btn btn-outline-secondary"
-    >Back to Your Huddles</a
-  >
+  <h2 class="h5 mb-3">Proposed Events</h2>
+  {% if events and events|length > 0 %}
+  <div class="list-group">
+    {% for ev in events %}
+    <div class="list-group-item">
+      <div class="d-flex justify-content-between align-items-start">
+        <div>
+          <div class="fw-semibold">
+            {{ ev.name }} {% if ev.category %}
+            <span class="badge bg-secondary ms-1">{{ ev.category }}</span>
+            {% endif %}
+          </div>
+          <div class="small text-muted">
+            📍 {{ ev.location }} &middot; 🗓 {{ ev.start_date }} {% if
+            ev.end_date %} → {{ ev.end_date }}{% endif %}
+          </div>
+          {% if ev.description %}
+          <p class="mb-0 mt-2 small">{{ ev.description }}</p>
+          {% endif %}
+        </div>
+        {% if ev.price_estimate is not none %}
+        <span class="badge bg-light text-dark"
+          >~${{ "%.2f"|format(ev.price_estimate) }}</span
+        >
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="alert alert-secondary">No events proposed yet.</div>
+  {% endif %}
 </div>
 {% endblock %}
