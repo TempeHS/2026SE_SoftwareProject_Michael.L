@@ -29,8 +29,8 @@
             {% endif %}
           </div>
           <div class="small text-muted">
-            📍 {{ ev.location }} &middot; 🗓 {{ ev.start_date }} {% if
-            ev.end_date %} → {{ ev.end_date }}{% endif %}
+            📍 {{ ev.location }} &middot; 🗓 {{ ev.start_date|prettydt }} {% if
+            ev.end_date %} → {{ ev.end_date|prettydt }}{% endif %}
           </div>
           {% if ev.description %}
           <p class="mb-0 mt-2 small">{{ ev.description }}</p>

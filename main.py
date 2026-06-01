@@ -695,6 +695,17 @@ def csp_report():
     return "done"
 
 
+@app.template_filter("prettydt")
+def prettydt(value):
+    if not value:
+        return ""
+    try:
+        dt = datetime.fromisoformat(value)
+        return dt.strftime("%b %d, %Y · %I:%M %P")
+    except (ValueError, TypeError):
+        return value
+
+
 init_auth_db()
 
 if __name__ == "__main__":
