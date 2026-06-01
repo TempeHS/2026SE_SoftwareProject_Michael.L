@@ -1,0 +1,21 @@
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-06-01, feature: 4	Display proposed events in group event feed	PB-006 comepletedgit add -A🍾🍾🥂 datetime looked a little funky when displaying the time of the event so it was fixed. end commit
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-29,feature: 3	Build event proposal form (name max 30 chars, date/time picker, location max 100 chars)	PB-006 from SPRINTBACKLOG has been completed. group members can now propse events and input criteria based on cliet recomendations. note: the huddle_detail.html screen was primarily made using github copilot ai.
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-28,feature: Group Joining Flow - invite code input, validation against db, links user to a group. PB-005 ✅
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-27,WIP: joining a huddle. needs troubleshooting
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-27,feature: sprint plan PB-004 complete. Can now create a huddle group. next will be to join a huddle group
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-27,WIP: got feedback from client about what to add to the event creation screen
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-26,feature: create huddle has been implemented. Only can create it with a name. Join huddle is not active.
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-25,Update SPRINTBACKLOG with Sprint 2 details
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-25,Add initial sprint backlog for Sprint 1 and Sprint 2
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-25,Add initial product backlog and changelog
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-25,Update README.md
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-25,Revise README for Huddle PWA project
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-20,feature: added .env so the new merged main branch has the secret key and database stuff
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-20,Merge pull request #1 from TempeHS/Sprint-1---Database-+-skeleton
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-20,Potential fix for pull request finding 'CodeQL / URL redirection from remote source'
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-20,feature: sprint 1 complete - basic login/logout/2fA authentication skeleton complete. empty route and menu pages as per sprint 1 documentation
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-19,feature: stuff
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-18,Feature: working login/signup page works. 2FA google authenticator works as well with totp
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-18,ongoing: login and signup testing needs to be done
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-18,Feature: final main change b4 branches
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-18,feature: clean up before branch split
