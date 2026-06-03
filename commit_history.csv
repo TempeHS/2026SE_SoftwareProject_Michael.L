@@ -1,4 +1,4 @@
-Michael.L,126206742+MLiondis@users.noreply.github.com,2026-06-01, feature: 4	Display proposed events in group event feed	PB-006 comepletedgit add -A🍾🍾🥂 datetime looked a little funky when displaying the time of the event so it was fixed. end commit
+Michael.L,126206742+MLiondis@users.noreply.github.com,2026-06-01, feature: 4	Display proposed events in group event feed	PB-006 comepleted git add -A🍾🍾🥂 datetime looked a little funky when displaying the time of the event so it was fixed. end commit
 Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-29,feature: 3	Build event proposal form (name max 30 chars, date/time picker, location max 100 chars)	PB-006 from SPRINTBACKLOG has been completed. group members can now propse events and input criteria based on cliet recomendations. note: the huddle_detail.html screen was primarily made using github copilot ai.
 Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-28,feature: Group Joining Flow - invite code input, validation against db, links user to a group. PB-005 ✅
 Michael.L,126206742+MLiondis@users.noreply.github.com,2026-05-27,WIP: joining a huddle. needs troubleshooting

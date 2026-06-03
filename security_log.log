@@ -4148,3 +4148,128 @@
 2026-06-01 03:57:49,006 127.0.0.1 - - [01/Jun/2026 03:57:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
 2026-06-01 03:57:49,007 127.0.0.1 - - [01/Jun/2026 03:57:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2026-06-01 03:57:49,029 127.0.0.1 - - [01/Jun/2026 03:57:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:04:38,562 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.125:5000
+2026-06-03 01:04:38,588 [33mPress CTRL+C to quit[0m
+2026-06-03 01:04:38,589  * Restarting with stat
+2026-06-03 01:04:38,913  * Debugger is active!
+2026-06-03 01:04:38,913  * Debugger PIN: 493-402-702
+2026-06-03 01:04:41,363 127.0.0.1 - - [03/Jun/2026 01:04:41] "GET / HTTP/1.1" 200 -
+2026-06-03 01:04:41,511 127.0.0.1 - - [03/Jun/2026 01:04:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:04:41,527 127.0.0.1 - - [03/Jun/2026 01:04:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:04:41,540 127.0.0.1 - - [03/Jun/2026 01:04:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:04:41,640 127.0.0.1 - - [03/Jun/2026 01:04:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:04:41,753 127.0.0.1 - - [03/Jun/2026 01:04:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-03 01:04:42,884 127.0.0.1 - - [03/Jun/2026 01:04:42] "GET /login.html?next=/ HTTP/1.1" 200 -
+2026-06-03 01:04:42,934 127.0.0.1 - - [03/Jun/2026 01:04:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:04:42,939 127.0.0.1 - - [03/Jun/2026 01:04:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:04:42,941 127.0.0.1 - - [03/Jun/2026 01:04:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:04:42,977 127.0.0.1 - - [03/Jun/2026 01:04:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:04:44,925 127.0.0.1 - - [03/Jun/2026 01:04:44] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-06-03 01:04:44,972 127.0.0.1 - - [03/Jun/2026 01:04:44] "GET /2fa.html HTTP/1.1" 200 -
+2026-06-03 01:04:45,024 127.0.0.1 - - [03/Jun/2026 01:04:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:04:45,027 127.0.0.1 - - [03/Jun/2026 01:04:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:04:45,029 127.0.0.1 - - [03/Jun/2026 01:04:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:04:45,064 127.0.0.1 - - [03/Jun/2026 01:04:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:09,643 127.0.0.1 - - [03/Jun/2026 01:05:09] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-06-03 01:05:09,672 127.0.0.1 - - [03/Jun/2026 01:05:09] "GET / HTTP/1.1" 200 -
+2026-06-03 01:05:09,739 127.0.0.1 - - [03/Jun/2026 01:05:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:09,743 127.0.0.1 - - [03/Jun/2026 01:05:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:09,745 127.0.0.1 - - [03/Jun/2026 01:05:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:09,785 127.0.0.1 - - [03/Jun/2026 01:05:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:22,913 127.0.0.1 - - [03/Jun/2026 01:05:22] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 01:05:22,956 127.0.0.1 - - [03/Jun/2026 01:05:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:22,959 127.0.0.1 - - [03/Jun/2026 01:05:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:22,961 127.0.0.1 - - [03/Jun/2026 01:05:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:23,009 127.0.0.1 - - [03/Jun/2026 01:05:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:26,660 127.0.0.1 - - [03/Jun/2026 01:05:26] "GET /huddle/2 HTTP/1.1" 200 -
+2026-06-03 01:05:26,701 127.0.0.1 - - [03/Jun/2026 01:05:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:26,705 127.0.0.1 - - [03/Jun/2026 01:05:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:26,707 127.0.0.1 - - [03/Jun/2026 01:05:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:26,749 127.0.0.1 - - [03/Jun/2026 01:05:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:26,774 127.0.0.1 - - [03/Jun/2026 01:05:26] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:05:28,315 127.0.0.1 - - [03/Jun/2026 01:05:28] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 01:05:28,367 127.0.0.1 - - [03/Jun/2026 01:05:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:28,372 127.0.0.1 - - [03/Jun/2026 01:05:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:28,378 127.0.0.1 - - [03/Jun/2026 01:05:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:28,403 127.0.0.1 - - [03/Jun/2026 01:05:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:29,595 127.0.0.1 - - [03/Jun/2026 01:05:29] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:05:29,646 127.0.0.1 - - [03/Jun/2026 01:05:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:29,649 127.0.0.1 - - [03/Jun/2026 01:05:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:29,651 127.0.0.1 - - [03/Jun/2026 01:05:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:05:29,693 127.0.0.1 - - [03/Jun/2026 01:05:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:05:29,718 127.0.0.1 - - [03/Jun/2026 01:05:29] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:14:53,283  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-06-03 01:14:53,334  * Restarting with stat
+2026-06-03 01:26:04,323 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.125:5000
+2026-06-03 01:26:04,323 [33mPress CTRL+C to quit[0m
+2026-06-03 01:26:04,324  * Restarting with stat
+2026-06-03 01:26:04,652  * Debugger is active!
+2026-06-03 01:26:04,652  * Debugger PIN: 493-402-702
+2026-06-03 01:26:06,435 127.0.0.1 - - [03/Jun/2026 01:26:06] "GET / HTTP/1.1" 200 -
+2026-06-03 01:26:06,619 127.0.0.1 - - [03/Jun/2026 01:26:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:26:06,636 127.0.0.1 - - [03/Jun/2026 01:26:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:26:06,639 127.0.0.1 - - [03/Jun/2026 01:26:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:26:06,742 127.0.0.1 - - [03/Jun/2026 01:26:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:26:08,784 127.0.0.1 - - [03/Jun/2026 01:26:08] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 01:26:08,830 127.0.0.1 - - [03/Jun/2026 01:26:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:26:08,834 127.0.0.1 - - [03/Jun/2026 01:26:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:26:08,836 127.0.0.1 - - [03/Jun/2026 01:26:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:26:08,862 127.0.0.1 - - [03/Jun/2026 01:26:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:26:10,655 127.0.0.1 - - [03/Jun/2026 01:26:10] "[35m[1mGET /huddle/1 HTTP/1.1[0m" 500 -
+2026-06-03 01:26:10,701 127.0.0.1 - - [03/Jun/2026 01:26:10] "GET /huddle/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-06-03 01:26:10,704 127.0.0.1 - - [03/Jun/2026 01:26:10] "GET /huddle/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-06-03 01:26:10,753 127.0.0.1 - - [03/Jun/2026 01:26:10] "GET /huddle/1?__debugger__=yes&cmd=resource&f=console.png&s=XXUhcQsB12eZVOwEmZyP HTTP/1.1" 200 -
+2026-06-03 01:26:10,775 127.0.0.1 - - [03/Jun/2026 01:26:10] "GET /huddle/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-06-03 01:29:42,998  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-06-03 01:29:43,057  * Restarting with stat
+2026-06-03 01:29:43,434  * Debugger is active!
+2026-06-03 01:29:43,434  * Debugger PIN: 493-402-702
+2026-06-03 01:30:44,223 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.125:5000
+2026-06-03 01:30:44,224 [33mPress CTRL+C to quit[0m
+2026-06-03 01:30:44,224  * Restarting with stat
+2026-06-03 01:30:44,590  * Debugger is active!
+2026-06-03 01:30:44,590  * Debugger PIN: 493-402-702
+2026-06-03 01:30:44,703 127.0.0.1 - - [03/Jun/2026 01:30:44] "GET / HTTP/1.1" 200 -
+2026-06-03 01:30:44,910 127.0.0.1 - - [03/Jun/2026 01:30:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:30:44,915 127.0.0.1 - - [03/Jun/2026 01:30:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:30:44,928 127.0.0.1 - - [03/Jun/2026 01:30:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:30:45,016 127.0.0.1 - - [03/Jun/2026 01:30:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:30:46,013 127.0.0.1 - - [03/Jun/2026 01:30:46] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 01:30:46,055 127.0.0.1 - - [03/Jun/2026 01:30:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:30:46,058 127.0.0.1 - - [03/Jun/2026 01:30:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:30:46,060 127.0.0.1 - - [03/Jun/2026 01:30:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:30:46,152 127.0.0.1 - - [03/Jun/2026 01:30:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:30:46,932 127.0.0.1 - - [03/Jun/2026 01:30:46] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:30:46,977 127.0.0.1 - - [03/Jun/2026 01:30:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:30:46,982 127.0.0.1 - - [03/Jun/2026 01:30:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:30:46,987 127.0.0.1 - - [03/Jun/2026 01:30:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:30:47,032 127.0.0.1 - - [03/Jun/2026 01:30:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:30:47,060 127.0.0.1 - - [03/Jun/2026 01:30:47] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:30:53,279 127.0.0.1 - - [03/Jun/2026 01:30:53] "GET /huddle/1/members HTTP/1.1" 200 -
+2026-06-03 01:30:53,329 127.0.0.1 - - [03/Jun/2026 01:30:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:30:53,332 127.0.0.1 - - [03/Jun/2026 01:30:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:30:53,335 127.0.0.1 - - [03/Jun/2026 01:30:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:30:53,368 127.0.0.1 - - [03/Jun/2026 01:30:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:30:53,407 127.0.0.1 - - [03/Jun/2026 01:30:53] "[33mGET /huddle/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:30:58,121 127.0.0.1 - - [03/Jun/2026 01:30:58] "[35m[1mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 500 -
+2026-06-03 01:30:58,162 127.0.0.1 - - [03/Jun/2026 01:30:58] "GET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-06-03 01:30:58,165 127.0.0.1 - - [03/Jun/2026 01:30:58] "GET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-06-03 01:30:58,209 127.0.0.1 - - [03/Jun/2026 01:30:58] "GET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=console.png&s=mIFFzNuRlrZR4Rhb8Nyf HTTP/1.1" 200 -
+2026-06-03 01:30:58,229 127.0.0.1 - - [03/Jun/2026 01:30:58] "GET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-06-03 01:31:01,778 127.0.0.1 - - [03/Jun/2026 01:31:01] "[35m[1mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 500 -
+2026-06-03 01:31:01,813 127.0.0.1 - - [03/Jun/2026 01:31:01] "[36mGET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-06-03 01:31:01,815 127.0.0.1 - - [03/Jun/2026 01:31:01] "[36mGET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:31:01,840 127.0.0.1 - - [03/Jun/2026 01:31:01] "[36mGET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=console.png&s=mIFFzNuRlrZR4Rhb8Nyf HTTP/1.1[0m" 304 -
+2026-06-03 01:31:05,313 127.0.0.1 - - [03/Jun/2026 01:31:05] "[35m[1mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 500 -
+2026-06-03 01:31:05,360 127.0.0.1 - - [03/Jun/2026 01:31:05] "[36mGET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:31:05,366 127.0.0.1 - - [03/Jun/2026 01:31:05] "[36mGET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-06-03 01:31:05,393 127.0.0.1 - - [03/Jun/2026 01:31:05] "[36mGET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=console.png&s=mIFFzNuRlrZR4Rhb8Nyf HTTP/1.1[0m" 304 -

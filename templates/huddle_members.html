@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container py-4">
+  <h1 class="display-6 mb-2">Members of {{ group.name }}</h1>
+  <p class="text-muted mb-3">
+    {{ members|length }} member{{ '' if members|length == 1 else 's' }}
+  </p>
+
+  <div class="d-flex gap-2 mb-4">
+    <a
+      href="{{ url_for('view_huddle', group_id=group.id) }}"
+      class="btn btn-outline-secondary"
+      >Back to Huddle</a
+    >
+  </div>
+
+  {% if members and members|length > 0 %}
+  <div class="list-group">
+    {% for m in members %}
+    <div
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <div>
+        <div class="fw-semibold">{{ m.full_name }}</div>
+        <div class="small text-muted">{{ m.email }}</div>
+      </div>
+      <small class="text-muted">Joined {{ m.joined_at }}</small>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="alert alert-secondary">No members yet.</div>
+  {% endif %}
+</div>
+{% endblock %}

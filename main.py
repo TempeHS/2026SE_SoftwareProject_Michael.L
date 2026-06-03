@@ -176,6 +176,18 @@ def init_auth_db():
             )
         """)
 
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS huddle_votes (
+                event_id INTEGER NOT NULL,
+                user_id INTEGER NOT NULL,
+                choice TEXT NOT NULL CHECK(choice IN ('yes','no','maybe')),
+                voted_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (event_id, user_id),
+                FOREIGN KEY (event_id) REFERENCES huddle_events(id),
+                FOREIGN KEY (user_id) REFERENCES users(id)
+            )
+        """)
+
         # move old schema where user_id had UNIQUE (one huddle per user) --> should technically have more for UI purposes
         row = conn.execute(
             "SELECT sql FROM sqlite_master WHERE type='table' AND name='huddle_memberships'"
@@ -425,6 +437,76 @@ def get_events_for_group(group_id):
         ).fetchall()
 
 
+def get_event_in_group(event_id, group_id):
+    with get_db_conn() as conn:
+        return conn.execute(
+            "SELECT * FROM huddle_Events WHERE group_id = ? ORDER BY datetime(start_date) ASC",
+            (
+                event_id,
+                group_id,
+            ),
+        ).fetchall()
+
+
+def cast_vote(event_id, user_id, choice):
+    if choice not in ("yes", "no", "maybe"):
+        return False
+    with get_db_conn() as conn:
+        conn.execute(
+            """
+            INSERT INTO huddle_votes (event_id, user_id, choice)
+            VALUES (?, ?, ?)
+            ON CONFLICT(event_id, user_id) DO UPDATE SET
+                choice = excluded.choice,
+                voted_at = CURRENT_TIMESTAMP
+            """,
+            (event_id, user_id, choice),
+        )
+        conn.commit()
+        return True
+
+
+def get_vote_tallies_for_events(event_ids, user_id):
+    """Returns dict of {event_id: {'yes': n, 'no': n, 'maybe': n, 'my_vote': str|None}}"""
+    if not event_ids:
+        return {}
+    placeholders = ",".join("?" for _ in event_ids)
+    tallies = {
+        eid: {"yes": 0, "no": 0, "maybe": 0, "my_vote": None} for eid in event_ids
+    }
+    with get_db_conn() as conn:
+        rows = conn.execute(
+            f"SELECT event_id, choice, COUNT(*) AS c FROM huddle_votes "
+            f"WHERE event_id IN ({placeholders}) GROUP BY event_id, choice",
+            event_ids,
+        ).fetchall()
+        for r in rows:
+            tallies[r["event_id"]][r["choice"]] = r["c"]
+
+        my_rows = conn.execute(
+            f"SELECT event_id, choice FROM huddle_votes "
+            f"WHERE user_id = ? AND event_id IN ({placeholders})",
+            [user_id, *event_ids],
+        ).fetchall()
+        for r in my_rows:
+            tallies[r["event_id"]]["my_vote"] = r["choice"]
+    return tallies
+
+
+def get_members_of_group(group_id):
+    with get_db_conn() as conn:
+        return conn.execute(
+            """
+            SELECT u.id, u.full_name, u.email, m.joined_at
+            FROM users u
+            INNER JOIN huddle_memberships m ON m.user_id = u.id
+            WHERE m.group_id = ?
+            ORDER BY u.full_name COLLATE NOCASE ASC
+            """,
+            (group_id,),
+        ).fetchall()
+
+
 def login_required_2fa(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -555,7 +637,10 @@ def view_huddle(group_id: int):
     if not group:
         return redirect("/your-huddle")
     events = get_events_for_group(group_id)
-    return render_template("huddle_detail.html", group=group, events=events)
+    tallies = get_vote_tallies_for_events([e["id"] for e in events], user_id)
+    return render_template(
+        "huddle_detail.html", group=group, events=events, tallies=tallies
+    )
 
 
 @app.route("/huddle/create", methods=["GET", "POST"])
@@ -589,6 +674,34 @@ def join_huddle():
             return redirect("/your-huddle")
 
     return render_template("join_huddle.html", error=error)
+
+
+@app.route("/huddle/<int:group_id>/event/<int:event_id>/vote", methods=["POST"])
+@login_required_2fa
+def vote_event(group_id: int, event_id: int):
+    user_id = int(session["user_id"])
+    group = get_user_group_by_id(user_id, group_id)
+    if not group:
+        return redirect("/your-huddle")
+
+    event = get_event_in_group(event_id, group_id)
+    if not event:
+        return redirect(url_for("view_huddle", group_id=group_id))
+
+    choice = (request.form.get("choice") or "").strip().lower()
+    cast_vote(event_id, user_id, choice)
+    return redirect(url_for("view_huddle", group_id=group_id))
+
+
+@app.route("/huddle/<int:group_id>/members", methods=["GET"])
+@login_required_2fa
+def view_members(group_id: int):
+    user_id = int(session["user_id"])
+    group = get_user_group_by_id(user_id, group_id)
+    if not group:
+        return redirect("/your-huddle")
+    members = get_members_of_group(group_id)
+    return render_template("huddle_members.html", group=group, members=members)
 
 
 @app.route("/signup.html", methods=["GET", "POST"])
