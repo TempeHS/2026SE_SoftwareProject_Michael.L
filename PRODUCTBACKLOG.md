@@ -1,8 +1,8 @@
-# Huddle — Product Backlog
+# Huddle - Product Backlog
 
 ## Vision
 
-To make it easier for friend groups to organise and commit to social plans by providing a simple platform where users can propose activities, vote on them, and confirm attendance — without relying on messy group chats or inconsistent responses.
+To make it easier for friend groups to organise and commit to social plans by providing a simple platform where users can propose activities, vote on them, and confirm attendance - without relying on messy group chats or inconsistent responses.
 
 ---
 
