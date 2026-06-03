@@ -4273,3 +4273,604 @@
 2026-06-03 01:31:05,360 127.0.0.1 - - [03/Jun/2026 01:31:05] "[36mGET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
 2026-06-03 01:31:05,366 127.0.0.1 - - [03/Jun/2026 01:31:05] "[36mGET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
 2026-06-03 01:31:05,393 127.0.0.1 - - [03/Jun/2026 01:31:05] "[36mGET /huddle/1/event/3/vote?__debugger__=yes&cmd=resource&f=console.png&s=mIFFzNuRlrZR4Rhb8Nyf HTTP/1.1[0m" 304 -
+2026-06-03 01:33:21,613 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.125:5000
+2026-06-03 01:33:21,614 [33mPress CTRL+C to quit[0m
+2026-06-03 01:33:21,614  * Restarting with stat
+2026-06-03 01:33:21,931  * Debugger is active!
+2026-06-03 01:33:21,931  * Debugger PIN: 493-402-702
+2026-06-03 01:33:22,868 127.0.0.1 - - [03/Jun/2026 01:33:22] "GET / HTTP/1.1" 200 -
+2026-06-03 01:33:23,059 127.0.0.1 - - [03/Jun/2026 01:33:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:23,061 127.0.0.1 - - [03/Jun/2026 01:33:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:23,062 127.0.0.1 - - [03/Jun/2026 01:33:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:23,194 127.0.0.1 - - [03/Jun/2026 01:33:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:24,783 127.0.0.1 - - [03/Jun/2026 01:33:24] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 01:33:24,828 127.0.0.1 - - [03/Jun/2026 01:33:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:24,831 127.0.0.1 - - [03/Jun/2026 01:33:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:24,833 127.0.0.1 - - [03/Jun/2026 01:33:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:24,876 127.0.0.1 - - [03/Jun/2026 01:33:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:26,375 127.0.0.1 - - [03/Jun/2026 01:33:26] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:33:26,424 127.0.0.1 - - [03/Jun/2026 01:33:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:26,425 127.0.0.1 - - [03/Jun/2026 01:33:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:26,430 127.0.0.1 - - [03/Jun/2026 01:33:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:26,474 127.0.0.1 - - [03/Jun/2026 01:33:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:26,499 127.0.0.1 - - [03/Jun/2026 01:33:26] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:33:27,325 127.0.0.1 - - [03/Jun/2026 01:33:27] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:33:27,346 127.0.0.1 - - [03/Jun/2026 01:33:27] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:33:27,389 127.0.0.1 - - [03/Jun/2026 01:33:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:27,392 127.0.0.1 - - [03/Jun/2026 01:33:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:27,394 127.0.0.1 - - [03/Jun/2026 01:33:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:27,419 127.0.0.1 - - [03/Jun/2026 01:33:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:27,446 127.0.0.1 - - [03/Jun/2026 01:33:27] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:33:29,084 127.0.0.1 - - [03/Jun/2026 01:33:29] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:33:29,105 127.0.0.1 - - [03/Jun/2026 01:33:29] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:33:29,152 127.0.0.1 - - [03/Jun/2026 01:33:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:29,155 127.0.0.1 - - [03/Jun/2026 01:33:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:29,158 127.0.0.1 - - [03/Jun/2026 01:33:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:29,191 127.0.0.1 - - [03/Jun/2026 01:33:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:29,215 127.0.0.1 - - [03/Jun/2026 01:33:29] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:33:29,716 127.0.0.1 - - [03/Jun/2026 01:33:29] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:33:29,739 127.0.0.1 - - [03/Jun/2026 01:33:29] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:33:29,790 127.0.0.1 - - [03/Jun/2026 01:33:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:29,792 127.0.0.1 - - [03/Jun/2026 01:33:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:29,796 127.0.0.1 - - [03/Jun/2026 01:33:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:29,819 127.0.0.1 - - [03/Jun/2026 01:33:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:29,843 127.0.0.1 - - [03/Jun/2026 01:33:29] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:33:30,180 127.0.0.1 - - [03/Jun/2026 01:33:30] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:33:30,202 127.0.0.1 - - [03/Jun/2026 01:33:30] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:33:30,255 127.0.0.1 - - [03/Jun/2026 01:33:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:30,258 127.0.0.1 - - [03/Jun/2026 01:33:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:30,261 127.0.0.1 - - [03/Jun/2026 01:33:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:30,284 127.0.0.1 - - [03/Jun/2026 01:33:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:30,309 127.0.0.1 - - [03/Jun/2026 01:33:30] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:33:30,791 127.0.0.1 - - [03/Jun/2026 01:33:30] "[32mPOST /huddle/1/event/1/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:33:30,812 127.0.0.1 - - [03/Jun/2026 01:33:30] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:33:30,858 127.0.0.1 - - [03/Jun/2026 01:33:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:30,861 127.0.0.1 - - [03/Jun/2026 01:33:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:30,865 127.0.0.1 - - [03/Jun/2026 01:33:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:30,887 127.0.0.1 - - [03/Jun/2026 01:33:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:30,912 127.0.0.1 - - [03/Jun/2026 01:33:30] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:33:31,692 127.0.0.1 - - [03/Jun/2026 01:33:31] "[32mPOST /huddle/1/event/1/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:33:31,714 127.0.0.1 - - [03/Jun/2026 01:33:31] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:33:31,796 127.0.0.1 - - [03/Jun/2026 01:33:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:31,800 127.0.0.1 - - [03/Jun/2026 01:33:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:31,802 127.0.0.1 - - [03/Jun/2026 01:33:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:31,828 127.0.0.1 - - [03/Jun/2026 01:33:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:31,850 127.0.0.1 - - [03/Jun/2026 01:33:31] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:33:32,494 127.0.0.1 - - [03/Jun/2026 01:33:32] "[32mPOST /huddle/1/event/2/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:33:32,516 127.0.0.1 - - [03/Jun/2026 01:33:32] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:33:32,558 127.0.0.1 - - [03/Jun/2026 01:33:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:32,563 127.0.0.1 - - [03/Jun/2026 01:33:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:32,565 127.0.0.1 - - [03/Jun/2026 01:33:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:33:32,592 127.0.0.1 - - [03/Jun/2026 01:33:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:33:32,620 127.0.0.1 - - [03/Jun/2026 01:33:32] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,189 127.0.0.1 - - [03/Jun/2026 01:34:14] "GET / HTTP/1.1" 200 -
+2026-06-03 01:34:14,356 127.0.0.1 - - [03/Jun/2026 01:34:14] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-03 01:34:14,364 127.0.0.1 - - [03/Jun/2026 01:34:14] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-06-03 01:34:14,457 127.0.0.1 - - [03/Jun/2026 01:34:14] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2026-06-03 01:34:14,609 127.0.0.1 - - [03/Jun/2026 01:34:14] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-06-03 01:34:14,714 127.0.0.1 - - [03/Jun/2026 01:34:14] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-03 01:34:14,798 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,812 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,815 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,816 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,818 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,821 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,827 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,827 127.0.0.1 - - [03/Jun/2026 01:34:14] "GET / HTTP/1.1" 200 -
+2026-06-03 01:34:14,828 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,830 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,831 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,836 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2026-06-03 01:34:14,838 127.0.0.1 - - [03/Jun/2026 01:34:14] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2026-06-03 01:34:17,126 127.0.0.1 - - [03/Jun/2026 01:34:17] "GET /login.html?next=/ HTTP/1.1" 200 -
+2026-06-03 01:34:17,290 127.0.0.1 - - [03/Jun/2026 01:34:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:17,297 127.0.0.1 - - [03/Jun/2026 01:34:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:17,304 127.0.0.1 - - [03/Jun/2026 01:34:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:17,393 127.0.0.1 - - [03/Jun/2026 01:34:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:21,161 127.0.0.1 - - [03/Jun/2026 01:34:21] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-06-03 01:34:21,205 127.0.0.1 - - [03/Jun/2026 01:34:21] "GET /2fa.html HTTP/1.1" 200 -
+2026-06-03 01:34:21,251 127.0.0.1 - - [03/Jun/2026 01:34:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:21,255 127.0.0.1 - - [03/Jun/2026 01:34:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:21,258 127.0.0.1 - - [03/Jun/2026 01:34:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:21,288 127.0.0.1 - - [03/Jun/2026 01:34:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:36,480 127.0.0.1 - - [03/Jun/2026 01:34:36] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-06-03 01:34:36,500 127.0.0.1 - - [03/Jun/2026 01:34:36] "GET / HTTP/1.1" 200 -
+2026-06-03 01:34:36,545 127.0.0.1 - - [03/Jun/2026 01:34:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:36,550 127.0.0.1 - - [03/Jun/2026 01:34:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:36,554 127.0.0.1 - - [03/Jun/2026 01:34:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:36,592 127.0.0.1 - - [03/Jun/2026 01:34:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:38,367 127.0.0.1 - - [03/Jun/2026 01:34:38] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 01:34:38,414 127.0.0.1 - - [03/Jun/2026 01:34:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:38,416 127.0.0.1 - - [03/Jun/2026 01:34:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:38,419 127.0.0.1 - - [03/Jun/2026 01:34:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:38,454 127.0.0.1 - - [03/Jun/2026 01:34:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:39,586 127.0.0.1 - - [03/Jun/2026 01:34:39] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:39,626 127.0.0.1 - - [03/Jun/2026 01:34:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:39,630 127.0.0.1 - - [03/Jun/2026 01:34:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:39,631 127.0.0.1 - - [03/Jun/2026 01:34:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:39,673 127.0.0.1 - - [03/Jun/2026 01:34:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:39,694 127.0.0.1 - - [03/Jun/2026 01:34:39] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:42,197 127.0.0.1 - - [03/Jun/2026 01:34:42] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:42,216 127.0.0.1 - - [03/Jun/2026 01:34:42] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:42,268 127.0.0.1 - - [03/Jun/2026 01:34:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:42,275 127.0.0.1 - - [03/Jun/2026 01:34:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:42,278 127.0.0.1 - - [03/Jun/2026 01:34:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:42,310 127.0.0.1 - - [03/Jun/2026 01:34:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:42,329 127.0.0.1 - - [03/Jun/2026 01:34:42] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:43,773 127.0.0.1 - - [03/Jun/2026 01:34:43] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:43,795 127.0.0.1 - - [03/Jun/2026 01:34:43] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:43,846 127.0.0.1 - - [03/Jun/2026 01:34:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:43,850 127.0.0.1 - - [03/Jun/2026 01:34:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:43,852 127.0.0.1 - - [03/Jun/2026 01:34:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:43,877 127.0.0.1 - - [03/Jun/2026 01:34:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:43,897 127.0.0.1 - - [03/Jun/2026 01:34:43] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:44,428 127.0.0.1 - - [03/Jun/2026 01:34:44] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:44,449 127.0.0.1 - - [03/Jun/2026 01:34:44] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:44,498 127.0.0.1 - - [03/Jun/2026 01:34:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:44,503 127.0.0.1 - - [03/Jun/2026 01:34:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:44,506 127.0.0.1 - - [03/Jun/2026 01:34:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:44,530 127.0.0.1 - - [03/Jun/2026 01:34:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:44,549 127.0.0.1 - - [03/Jun/2026 01:34:44] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:44,876 127.0.0.1 - - [03/Jun/2026 01:34:44] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:44,899 127.0.0.1 - - [03/Jun/2026 01:34:44] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:44,940 127.0.0.1 - - [03/Jun/2026 01:34:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:44,943 127.0.0.1 - - [03/Jun/2026 01:34:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:44,946 127.0.0.1 - - [03/Jun/2026 01:34:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:44,970 127.0.0.1 - - [03/Jun/2026 01:34:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:44,992 127.0.0.1 - - [03/Jun/2026 01:34:44] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:45,125 127.0.0.1 - - [03/Jun/2026 01:34:45] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:45,145 127.0.0.1 - - [03/Jun/2026 01:34:45] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:45,194 127.0.0.1 - - [03/Jun/2026 01:34:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:45,200 127.0.0.1 - - [03/Jun/2026 01:34:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:45,202 127.0.0.1 - - [03/Jun/2026 01:34:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:45,235 127.0.0.1 - - [03/Jun/2026 01:34:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:45,260 127.0.0.1 - - [03/Jun/2026 01:34:45] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:45,836 127.0.0.1 - - [03/Jun/2026 01:34:45] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:45,857 127.0.0.1 - - [03/Jun/2026 01:34:45] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:45,913 127.0.0.1 - - [03/Jun/2026 01:34:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:45,917 127.0.0.1 - - [03/Jun/2026 01:34:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:45,919 127.0.0.1 - - [03/Jun/2026 01:34:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:45,945 127.0.0.1 - - [03/Jun/2026 01:34:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:45,971 127.0.0.1 - - [03/Jun/2026 01:34:45] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:46,172 127.0.0.1 - - [03/Jun/2026 01:34:46] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:46,197 127.0.0.1 - - [03/Jun/2026 01:34:46] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:46,252 127.0.0.1 - - [03/Jun/2026 01:34:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:46,253 127.0.0.1 - - [03/Jun/2026 01:34:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:46,254 127.0.0.1 - - [03/Jun/2026 01:34:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:46,278 127.0.0.1 - - [03/Jun/2026 01:34:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:46,301 127.0.0.1 - - [03/Jun/2026 01:34:46] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:46,886 127.0.0.1 - - [03/Jun/2026 01:34:46] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:46,907 127.0.0.1 - - [03/Jun/2026 01:34:46] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:46,953 127.0.0.1 - - [03/Jun/2026 01:34:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:46,956 127.0.0.1 - - [03/Jun/2026 01:34:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:46,958 127.0.0.1 - - [03/Jun/2026 01:34:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:46,984 127.0.0.1 - - [03/Jun/2026 01:34:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:47,003 127.0.0.1 - - [03/Jun/2026 01:34:47] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:47,340 127.0.0.1 - - [03/Jun/2026 01:34:47] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:47,362 127.0.0.1 - - [03/Jun/2026 01:34:47] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:47,410 127.0.0.1 - - [03/Jun/2026 01:34:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:47,413 127.0.0.1 - - [03/Jun/2026 01:34:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:47,417 127.0.0.1 - - [03/Jun/2026 01:34:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:47,443 127.0.0.1 - - [03/Jun/2026 01:34:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:47,467 127.0.0.1 - - [03/Jun/2026 01:34:47] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:47,776 127.0.0.1 - - [03/Jun/2026 01:34:47] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:47,803 127.0.0.1 - - [03/Jun/2026 01:34:47] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:47,855 127.0.0.1 - - [03/Jun/2026 01:34:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:47,858 127.0.0.1 - - [03/Jun/2026 01:34:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:47,860 127.0.0.1 - - [03/Jun/2026 01:34:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:47,890 127.0.0.1 - - [03/Jun/2026 01:34:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:47,914 127.0.0.1 - - [03/Jun/2026 01:34:47] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:48,654 127.0.0.1 - - [03/Jun/2026 01:34:48] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:48,673 127.0.0.1 - - [03/Jun/2026 01:34:48] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:48,714 127.0.0.1 - - [03/Jun/2026 01:34:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:48,718 127.0.0.1 - - [03/Jun/2026 01:34:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:48,720 127.0.0.1 - - [03/Jun/2026 01:34:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:48,743 127.0.0.1 - - [03/Jun/2026 01:34:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:48,766 127.0.0.1 - - [03/Jun/2026 01:34:48] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:49,139 127.0.0.1 - - [03/Jun/2026 01:34:49] "[32mPOST /huddle/1/event/1/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:49,165 127.0.0.1 - - [03/Jun/2026 01:34:49] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:49,214 127.0.0.1 - - [03/Jun/2026 01:34:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:49,218 127.0.0.1 - - [03/Jun/2026 01:34:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:49,220 127.0.0.1 - - [03/Jun/2026 01:34:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:49,245 127.0.0.1 - - [03/Jun/2026 01:34:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:49,268 127.0.0.1 - - [03/Jun/2026 01:34:49] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:49,851 127.0.0.1 - - [03/Jun/2026 01:34:49] "[32mPOST /huddle/1/event/2/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:49,884 127.0.0.1 - - [03/Jun/2026 01:34:49] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:49,939 127.0.0.1 - - [03/Jun/2026 01:34:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:49,942 127.0.0.1 - - [03/Jun/2026 01:34:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:49,943 127.0.0.1 - - [03/Jun/2026 01:34:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:49,967 127.0.0.1 - - [03/Jun/2026 01:34:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:49,987 127.0.0.1 - - [03/Jun/2026 01:34:49] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:50,127 127.0.0.1 - - [03/Jun/2026 01:34:50] "[32mPOST /huddle/1/event/2/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:50,156 127.0.0.1 - - [03/Jun/2026 01:34:50] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:50,201 127.0.0.1 - - [03/Jun/2026 01:34:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:50,204 127.0.0.1 - - [03/Jun/2026 01:34:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:50,207 127.0.0.1 - - [03/Jun/2026 01:34:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:50,235 127.0.0.1 - - [03/Jun/2026 01:34:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:50,258 127.0.0.1 - - [03/Jun/2026 01:34:50] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:53,004 127.0.0.1 - - [03/Jun/2026 01:34:53] "[32mPOST /huddle/1/event/1/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:53,025 127.0.0.1 - - [03/Jun/2026 01:34:53] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:53,066 127.0.0.1 - - [03/Jun/2026 01:34:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:53,071 127.0.0.1 - - [03/Jun/2026 01:34:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:53,075 127.0.0.1 - - [03/Jun/2026 01:34:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:53,109 127.0.0.1 - - [03/Jun/2026 01:34:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:53,137 127.0.0.1 - - [03/Jun/2026 01:34:53] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:54,355 127.0.0.1 - - [03/Jun/2026 01:34:54] "[32mPOST /huddle/1/event/1/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:54,375 127.0.0.1 - - [03/Jun/2026 01:34:54] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:54,418 127.0.0.1 - - [03/Jun/2026 01:34:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:54,420 127.0.0.1 - - [03/Jun/2026 01:34:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:54,423 127.0.0.1 - - [03/Jun/2026 01:34:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:54,450 127.0.0.1 - - [03/Jun/2026 01:34:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:54,474 127.0.0.1 - - [03/Jun/2026 01:34:54] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:56,049 127.0.0.1 - - [03/Jun/2026 01:34:56] "[32mPOST /huddle/1/event/1/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:56,072 127.0.0.1 - - [03/Jun/2026 01:34:56] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:56,121 127.0.0.1 - - [03/Jun/2026 01:34:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:56,141 127.0.0.1 - - [03/Jun/2026 01:34:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:56,152 127.0.0.1 - - [03/Jun/2026 01:34:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:56,180 127.0.0.1 - - [03/Jun/2026 01:34:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:56,205 127.0.0.1 - - [03/Jun/2026 01:34:56] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:34:59,669 127.0.0.1 - - [03/Jun/2026 01:34:59] "[32mPOST /huddle/1/event/2/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:34:59,688 127.0.0.1 - - [03/Jun/2026 01:34:59] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:34:59,734 127.0.0.1 - - [03/Jun/2026 01:34:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:59,737 127.0.0.1 - - [03/Jun/2026 01:34:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:59,740 127.0.0.1 - - [03/Jun/2026 01:34:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:34:59,771 127.0.0.1 - - [03/Jun/2026 01:34:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:34:59,792 127.0.0.1 - - [03/Jun/2026 01:34:59] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:35:01,426 127.0.0.1 - - [03/Jun/2026 01:35:01] "[32mPOST /huddle/1/event/2/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:35:01,446 127.0.0.1 - - [03/Jun/2026 01:35:01] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:35:01,495 127.0.0.1 - - [03/Jun/2026 01:35:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:01,513 127.0.0.1 - - [03/Jun/2026 01:35:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:01,514 127.0.0.1 - - [03/Jun/2026 01:35:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:01,544 127.0.0.1 - - [03/Jun/2026 01:35:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:01,568 127.0.0.1 - - [03/Jun/2026 01:35:01] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:35:03,228 127.0.0.1 - - [03/Jun/2026 01:35:03] "[32mPOST /huddle/1/event/1/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:35:03,250 127.0.0.1 - - [03/Jun/2026 01:35:03] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:35:03,297 127.0.0.1 - - [03/Jun/2026 01:35:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:03,300 127.0.0.1 - - [03/Jun/2026 01:35:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:03,303 127.0.0.1 - - [03/Jun/2026 01:35:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:03,329 127.0.0.1 - - [03/Jun/2026 01:35:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:03,348 127.0.0.1 - - [03/Jun/2026 01:35:03] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:35:03,906 127.0.0.1 - - [03/Jun/2026 01:35:03] "[32mPOST /huddle/1/event/1/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:35:03,928 127.0.0.1 - - [03/Jun/2026 01:35:03] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:35:03,969 127.0.0.1 - - [03/Jun/2026 01:35:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:03,972 127.0.0.1 - - [03/Jun/2026 01:35:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:03,974 127.0.0.1 - - [03/Jun/2026 01:35:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:04,002 127.0.0.1 - - [03/Jun/2026 01:35:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:04,023 127.0.0.1 - - [03/Jun/2026 01:35:04] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:35:06,767 127.0.0.1 - - [03/Jun/2026 01:35:06] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:35:06,788 127.0.0.1 - - [03/Jun/2026 01:35:06] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:35:06,831 127.0.0.1 - - [03/Jun/2026 01:35:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:06,834 127.0.0.1 - - [03/Jun/2026 01:35:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:06,836 127.0.0.1 - - [03/Jun/2026 01:35:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:06,862 127.0.0.1 - - [03/Jun/2026 01:35:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:06,885 127.0.0.1 - - [03/Jun/2026 01:35:06] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:35:15,502 127.0.0.1 - - [03/Jun/2026 01:35:15] "GET / HTTP/1.1" 200 -
+2026-06-03 01:35:15,557 127.0.0.1 - - [03/Jun/2026 01:35:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:15,561 127.0.0.1 - - [03/Jun/2026 01:35:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:15,562 127.0.0.1 - - [03/Jun/2026 01:35:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:15,610 127.0.0.1 - - [03/Jun/2026 01:35:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:17,644 127.0.0.1 - - [03/Jun/2026 01:35:17] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 01:35:17,686 127.0.0.1 - - [03/Jun/2026 01:35:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:17,692 127.0.0.1 - - [03/Jun/2026 01:35:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:17,693 127.0.0.1 - - [03/Jun/2026 01:35:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:17,725 127.0.0.1 - - [03/Jun/2026 01:35:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:18,966 127.0.0.1 - - [03/Jun/2026 01:35:18] "[32mGET /logout.html HTTP/1.1[0m" 302 -
+2026-06-03 01:35:18,987 127.0.0.1 - - [03/Jun/2026 01:35:18] "GET /login.html HTTP/1.1" 200 -
+2026-06-03 01:35:19,029 127.0.0.1 - - [03/Jun/2026 01:35:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:19,032 127.0.0.1 - - [03/Jun/2026 01:35:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:19,035 127.0.0.1 - - [03/Jun/2026 01:35:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:19,064 127.0.0.1 - - [03/Jun/2026 01:35:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:21,345 127.0.0.1 - - [03/Jun/2026 01:35:21] "GET /login.html?next=/login.html HTTP/1.1" 200 -
+2026-06-03 01:35:21,392 127.0.0.1 - - [03/Jun/2026 01:35:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:21,396 127.0.0.1 - - [03/Jun/2026 01:35:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:21,398 127.0.0.1 - - [03/Jun/2026 01:35:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:21,424 127.0.0.1 - - [03/Jun/2026 01:35:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:23,291 127.0.0.1 - - [03/Jun/2026 01:35:23] "GET /signup.html HTTP/1.1" 200 -
+2026-06-03 01:35:23,331 127.0.0.1 - - [03/Jun/2026 01:35:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:23,336 127.0.0.1 - - [03/Jun/2026 01:35:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:23,338 127.0.0.1 - - [03/Jun/2026 01:35:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:23,362 127.0.0.1 - - [03/Jun/2026 01:35:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:58,490 127.0.0.1 - - [03/Jun/2026 01:35:58] "[32mPOST /signup.html HTTP/1.1[0m" 302 -
+2026-06-03 01:35:58,526 127.0.0.1 - - [03/Jun/2026 01:35:58] "GET /2fa.html HTTP/1.1" 200 -
+2026-06-03 01:35:58,573 127.0.0.1 - - [03/Jun/2026 01:35:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:35:58,576 127.0.0.1 - - [03/Jun/2026 01:35:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:58,579 127.0.0.1 - - [03/Jun/2026 01:35:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:35:58,606 127.0.0.1 - - [03/Jun/2026 01:35:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:14,515 127.0.0.1 - - [03/Jun/2026 01:36:14] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-06-03 01:36:14,538 127.0.0.1 - - [03/Jun/2026 01:36:14] "GET /login.html HTTP/1.1" 200 -
+2026-06-03 01:36:14,594 127.0.0.1 - - [03/Jun/2026 01:36:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:14,596 127.0.0.1 - - [03/Jun/2026 01:36:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:14,600 127.0.0.1 - - [03/Jun/2026 01:36:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:14,625 127.0.0.1 - - [03/Jun/2026 01:36:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:17,849 127.0.0.1 - - [03/Jun/2026 01:36:17] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 01:36:17,893 127.0.0.1 - - [03/Jun/2026 01:36:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:17,896 127.0.0.1 - - [03/Jun/2026 01:36:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:17,899 127.0.0.1 - - [03/Jun/2026 01:36:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:17,926 127.0.0.1 - - [03/Jun/2026 01:36:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:20,602 127.0.0.1 - - [03/Jun/2026 01:36:20] "GET /huddle/join HTTP/1.1" 200 -
+2026-06-03 01:36:20,640 127.0.0.1 - - [03/Jun/2026 01:36:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:20,642 127.0.0.1 - - [03/Jun/2026 01:36:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:20,645 127.0.0.1 - - [03/Jun/2026 01:36:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:20,668 127.0.0.1 - - [03/Jun/2026 01:36:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:20,693 127.0.0.1 - - [03/Jun/2026 01:36:20] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:36:28,660 127.0.0.1 - - [03/Jun/2026 01:36:28] "[32mPOST /huddle/join HTTP/1.1[0m" 302 -
+2026-06-03 01:36:28,682 127.0.0.1 - - [03/Jun/2026 01:36:28] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 01:36:28,729 127.0.0.1 - - [03/Jun/2026 01:36:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:28,732 127.0.0.1 - - [03/Jun/2026 01:36:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:28,735 127.0.0.1 - - [03/Jun/2026 01:36:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:28,764 127.0.0.1 - - [03/Jun/2026 01:36:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:30,314 127.0.0.1 - - [03/Jun/2026 01:36:30] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:36:30,361 127.0.0.1 - - [03/Jun/2026 01:36:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:30,365 127.0.0.1 - - [03/Jun/2026 01:36:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:30,367 127.0.0.1 - - [03/Jun/2026 01:36:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:30,406 127.0.0.1 - - [03/Jun/2026 01:36:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:30,428 127.0.0.1 - - [03/Jun/2026 01:36:30] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:36:35,125 127.0.0.1 - - [03/Jun/2026 01:36:35] "GET /huddle/1/members HTTP/1.1" 200 -
+2026-06-03 01:36:35,166 127.0.0.1 - - [03/Jun/2026 01:36:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:35,170 127.0.0.1 - - [03/Jun/2026 01:36:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:35,173 127.0.0.1 - - [03/Jun/2026 01:36:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:35,200 127.0.0.1 - - [03/Jun/2026 01:36:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:35,224 127.0.0.1 - - [03/Jun/2026 01:36:35] "[33mGET /huddle/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:36:42,388 127.0.0.1 - - [03/Jun/2026 01:36:42] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:36:42,428 127.0.0.1 - - [03/Jun/2026 01:36:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:42,432 127.0.0.1 - - [03/Jun/2026 01:36:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:42,434 127.0.0.1 - - [03/Jun/2026 01:36:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:42,461 127.0.0.1 - - [03/Jun/2026 01:36:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:42,486 127.0.0.1 - - [03/Jun/2026 01:36:42] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:36:45,376 127.0.0.1 - - [03/Jun/2026 01:36:45] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:36:45,397 127.0.0.1 - - [03/Jun/2026 01:36:45] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:36:45,442 127.0.0.1 - - [03/Jun/2026 01:36:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:45,446 127.0.0.1 - - [03/Jun/2026 01:36:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:45,448 127.0.0.1 - - [03/Jun/2026 01:36:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:45,473 127.0.0.1 - - [03/Jun/2026 01:36:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:45,495 127.0.0.1 - - [03/Jun/2026 01:36:45] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:36:47,501 127.0.0.1 - - [03/Jun/2026 01:36:47] "[32mPOST /huddle/1/event/1/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:36:47,522 127.0.0.1 - - [03/Jun/2026 01:36:47] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:36:47,565 127.0.0.1 - - [03/Jun/2026 01:36:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:47,570 127.0.0.1 - - [03/Jun/2026 01:36:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:47,571 127.0.0.1 - - [03/Jun/2026 01:36:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:47,602 127.0.0.1 - - [03/Jun/2026 01:36:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:47,625 127.0.0.1 - - [03/Jun/2026 01:36:47] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:36:50,188 127.0.0.1 - - [03/Jun/2026 01:36:50] "[32mPOST /huddle/1/event/2/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:36:50,209 127.0.0.1 - - [03/Jun/2026 01:36:50] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:36:50,253 127.0.0.1 - - [03/Jun/2026 01:36:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:50,257 127.0.0.1 - - [03/Jun/2026 01:36:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:36:50,259 127.0.0.1 - - [03/Jun/2026 01:36:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:50,282 127.0.0.1 - - [03/Jun/2026 01:36:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:36:50,306 127.0.0.1 - - [03/Jun/2026 01:36:50] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:46:59,233 127.0.0.1 - - [03/Jun/2026 01:46:59] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:46:59,316 127.0.0.1 - - [03/Jun/2026 01:46:59] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:46:59,499 127.0.0.1 - - [03/Jun/2026 01:46:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:46:59,504 127.0.0.1 - - [03/Jun/2026 01:46:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:46:59,516 127.0.0.1 - - [03/Jun/2026 01:46:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:46:59,601 127.0.0.1 - - [03/Jun/2026 01:46:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:46:59,626 127.0.0.1 - - [03/Jun/2026 01:46:59] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:01,120 127.0.0.1 - - [03/Jun/2026 01:47:01] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:01,142 127.0.0.1 - - [03/Jun/2026 01:47:01] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:01,189 127.0.0.1 - - [03/Jun/2026 01:47:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:01,192 127.0.0.1 - - [03/Jun/2026 01:47:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:01,195 127.0.0.1 - - [03/Jun/2026 01:47:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:01,217 127.0.0.1 - - [03/Jun/2026 01:47:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:01,239 127.0.0.1 - - [03/Jun/2026 01:47:01] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:02,144 127.0.0.1 - - [03/Jun/2026 01:47:02] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:02,167 127.0.0.1 - - [03/Jun/2026 01:47:02] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:02,208 127.0.0.1 - - [03/Jun/2026 01:47:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:02,214 127.0.0.1 - - [03/Jun/2026 01:47:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:02,215 127.0.0.1 - - [03/Jun/2026 01:47:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:02,243 127.0.0.1 - - [03/Jun/2026 01:47:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:02,272 127.0.0.1 - - [03/Jun/2026 01:47:02] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:02,775 127.0.0.1 - - [03/Jun/2026 01:47:02] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:02,802 127.0.0.1 - - [03/Jun/2026 01:47:02] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:02,853 127.0.0.1 - - [03/Jun/2026 01:47:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:02,857 127.0.0.1 - - [03/Jun/2026 01:47:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:02,860 127.0.0.1 - - [03/Jun/2026 01:47:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:02,884 127.0.0.1 - - [03/Jun/2026 01:47:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:02,904 127.0.0.1 - - [03/Jun/2026 01:47:02] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:03,535 127.0.0.1 - - [03/Jun/2026 01:47:03] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:03,556 127.0.0.1 - - [03/Jun/2026 01:47:03] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:03,596 127.0.0.1 - - [03/Jun/2026 01:47:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:03,600 127.0.0.1 - - [03/Jun/2026 01:47:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:03,603 127.0.0.1 - - [03/Jun/2026 01:47:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:03,628 127.0.0.1 - - [03/Jun/2026 01:47:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:03,649 127.0.0.1 - - [03/Jun/2026 01:47:03] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:03,990 127.0.0.1 - - [03/Jun/2026 01:47:03] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:04,010 127.0.0.1 - - [03/Jun/2026 01:47:04] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:04,054 127.0.0.1 - - [03/Jun/2026 01:47:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:04,055 127.0.0.1 - - [03/Jun/2026 01:47:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:04,058 127.0.0.1 - - [03/Jun/2026 01:47:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:04,083 127.0.0.1 - - [03/Jun/2026 01:47:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:04,108 127.0.0.1 - - [03/Jun/2026 01:47:04] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:04,726 127.0.0.1 - - [03/Jun/2026 01:47:04] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:04,746 127.0.0.1 - - [03/Jun/2026 01:47:04] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:04,792 127.0.0.1 - - [03/Jun/2026 01:47:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:04,793 127.0.0.1 - - [03/Jun/2026 01:47:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:04,796 127.0.0.1 - - [03/Jun/2026 01:47:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:04,825 127.0.0.1 - - [03/Jun/2026 01:47:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:04,849 127.0.0.1 - - [03/Jun/2026 01:47:04] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:05,109 127.0.0.1 - - [03/Jun/2026 01:47:05] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:05,129 127.0.0.1 - - [03/Jun/2026 01:47:05] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:05,171 127.0.0.1 - - [03/Jun/2026 01:47:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:05,173 127.0.0.1 - - [03/Jun/2026 01:47:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:05,176 127.0.0.1 - - [03/Jun/2026 01:47:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:05,198 127.0.0.1 - - [03/Jun/2026 01:47:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:05,221 127.0.0.1 - - [03/Jun/2026 01:47:05] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:05,784 127.0.0.1 - - [03/Jun/2026 01:47:05] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:05,805 127.0.0.1 - - [03/Jun/2026 01:47:05] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:05,853 127.0.0.1 - - [03/Jun/2026 01:47:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:05,856 127.0.0.1 - - [03/Jun/2026 01:47:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:05,860 127.0.0.1 - - [03/Jun/2026 01:47:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:05,889 127.0.0.1 - - [03/Jun/2026 01:47:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:05,917 127.0.0.1 - - [03/Jun/2026 01:47:05] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:06,136 127.0.0.1 - - [03/Jun/2026 01:47:06] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:06,158 127.0.0.1 - - [03/Jun/2026 01:47:06] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:06,206 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,209 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,211 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,238 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,262 127.0.0.1 - - [03/Jun/2026 01:47:06] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:06,403 127.0.0.1 - - [03/Jun/2026 01:47:06] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:06,423 127.0.0.1 - - [03/Jun/2026 01:47:06] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:06,465 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,469 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,470 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,498 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,519 127.0.0.1 - - [03/Jun/2026 01:47:06] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:06,699 127.0.0.1 - - [03/Jun/2026 01:47:06] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:06,721 127.0.0.1 - - [03/Jun/2026 01:47:06] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:06,768 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,771 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,774 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,797 127.0.0.1 - - [03/Jun/2026 01:47:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:06,821 127.0.0.1 - - [03/Jun/2026 01:47:06] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:07,018 127.0.0.1 - - [03/Jun/2026 01:47:07] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:07,042 127.0.0.1 - - [03/Jun/2026 01:47:07] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:07,089 127.0.0.1 - - [03/Jun/2026 01:47:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:07,092 127.0.0.1 - - [03/Jun/2026 01:47:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:07,094 127.0.0.1 - - [03/Jun/2026 01:47:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:07,120 127.0.0.1 - - [03/Jun/2026 01:47:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:07,141 127.0.0.1 - - [03/Jun/2026 01:47:07] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 01:47:07,583 127.0.0.1 - - [03/Jun/2026 01:47:07] "[32mPOST /huddle/1/event/3/vote HTTP/1.1[0m" 302 -
+2026-06-03 01:47:07,604 127.0.0.1 - - [03/Jun/2026 01:47:07] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 01:47:07,651 127.0.0.1 - - [03/Jun/2026 01:47:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:07,654 127.0.0.1 - - [03/Jun/2026 01:47:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:07,656 127.0.0.1 - - [03/Jun/2026 01:47:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 01:47:07,679 127.0.0.1 - - [03/Jun/2026 01:47:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 01:47:07,702 127.0.0.1 - - [03/Jun/2026 01:47:07] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 02:03:26,692 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x035ÂËt\x9fr\x15\x94\x19\x19Õ\x92\x82$\x90*\x83R)4³\x03êÞÔ³')
+2026-06-03 02:03:26,692 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x035ÂËt\x9fr\x15\x94\x19\x19Õ\x92\x82$\x90*\x83R)4³\x03êÞÔ³\x09\x1eU·Üî\x00\x00\x84\x003\x009\x005\x00/À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À­À£À\x9fÀ+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ$À(\x00k\x00jÀsÀw\x00Ä\x00ÃÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½À[0m" 400 -
+2026-06-03 02:03:26,727 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('\x89;\x91ZÊû\x05=\x00\x00')
+2026-06-03 02:03:26,727 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version (']tbzä\xad\x00\x00\x1a\x13\x05\x13\x04\x13\x01\x13\x02\x13\x03À´Àµ\x00Ç\x00ÆÀ²À°À³À±\x01\x00\x00E\x00+\x00\x03\x02\x03\x04\x00')
+2026-06-03 02:03:26,727 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('þÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì\xad\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x006\x00')
+2026-06-03 02:03:26,727 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('þÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì\xad\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00')
+2026-06-03 02:03:26,728 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x01\x00W\x01\x00\x00S\x03\x03j\x1f\x8bnµ\x81\x1eSÙÌ\x1a\x83\x14Î\x9bímJþo\x11\x16H\x1d\x89;\x91ZÊû\x05=\x00\x00[0m" 400 -
+2026-06-03 02:03:26,728 127.0.0.1 - - [03/Jun/2026 02:03:26] "HEAD / HTTP/1.1" 200 -
+2026-06-03 02:03:26,728 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x03\x00\x8c\x01\x00\x00\x88\x03\x03j\x1f\x8bnñÒUkã\x97\x91Yÿ3½f\x0cµ\x1fë\x94>öX\x06\x1d]tbzä­\x00\x00\x1a\x13\x05\x13\x04\x13\x01\x13\x02\x13\x03À´Àµ\x00Ç\x00ÆÀ²À°À³À±\x01\x00\x00E\x00+\x00\x03\x02\x03\x04\x00[0m" 400 -
+2026-06-03 02:03:26,728 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j\x1f\x8bnI\x9eþ\x12\x1a4\x98\x85s\x80A¤+ªL|\x98©8\x97\x08{\x87ïuYy\x17\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x006\x00[0m" 400 -
+2026-06-03 02:03:26,728 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j\x1f\x8bnM¿óTcÈ#«TkãtÀôþ¸\x17]f"Å^èHïâ³R\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00[0m" 400 -
+2026-06-03 02:03:26,729 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('þÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì\xad\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00')
+2026-06-03 02:03:26,730 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j\x1f\x8bn2¿±\x8bÅI\x99\x85åæUÝN\x93\x9f?2\x19s¾\x1b{^:\x9a\x8475\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00[0m" 400 -
+2026-06-03 02:03:26,829 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('\x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00')
+2026-06-03 02:03:26,829 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('\x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00')
+2026-06-03 02:03:26,829 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('\x00/\x00')
+2026-06-03 02:03:26,829 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('\x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x006\x00')
+2026-06-03 02:03:26,829 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j\x1f\x8bnÇ[}\x8eû\x1e/ª÷\x058æ~\x95\x0e7\x13Ùç\x99\\¸\x81\x90Ú\x9d\x7f2\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00[0m" 400 -
+2026-06-03 02:03:26,830 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j\x1f\x8bnt+AA}\x07ýgð ®Lè¨gûYÝu;Ë¿í4fæ)Õ\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00[0m" 400 -
+2026-06-03 02:03:26,830 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" 400 -
+2026-06-03 02:03:26,830 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j\x1f\x8bn\x88¦\x95½(îßZjoºY\x17ÙþÊs­ñ¡g\x99æ\x8a\x7f9D\x03\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x006\x00[0m" 400 -
+2026-06-03 02:03:26,978 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('À#À¬À®À+À')
+2026-06-03 02:03:26,978 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j')
+2026-06-03 02:03:26,978 127.0.0.1 - - [03/Jun/2026 02:03:26] code 400, message Bad request version ('À#À¬À®À+À')
+2026-06-03 02:03:26,978 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j\x1f\x8bn\x91\x099j#ô\x98E¼uÊ\x82Ö\x1d\x80(è3-¡¤Ú\x1a¬UÓ\x93\x90\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-06-03 02:03:26,978 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j\x1f\x8bnè\x8fµn\x1a\x11V(X­HÂD\x01ÅÈ¯£8[0m" 400 -
+2026-06-03 02:03:26,978 127.0.0.1 - - [03/Jun/2026 02:03:26] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j\x1f\x8bn!)\x19ý¹À\x13p3ò¶4\x8f[\x16ÍøaÞ¡\\rìDJ\x83öî\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-06-03 02:03:27,127 127.0.0.1 - - [03/Jun/2026 02:03:27] code 400, message Bad request version ('\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x00\x16\x00')
+2026-06-03 02:03:27,127 127.0.0.1 - - [03/Jun/2026 02:03:27] code 400, message Bad request version ('\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x00\x16\x00')
+2026-06-03 02:03:27,127 127.0.0.1 - - [03/Jun/2026 02:03:27] code 400, message Bad request version ('\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x006\x00')
+2026-06-03 02:03:27,127 127.0.0.1 - - [03/Jun/2026 02:03:27] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j\x1f\x8bo=ö½¹è\x05Áúd\x09ð¶\x90x«§MÎ×Æ²#vÙÒ\x0fo0\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x00\x16\x00[0m" 400 -
+2026-06-03 02:03:27,128 127.0.0.1 - - [03/Jun/2026 02:03:27] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j\x1f\x8boûµÂÂìòö\x99\x9cl\x07 ¸SÜ\x19ùLÁQO\x04\x9b&Gõ*È\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x00\x16\x00[0m" 400 -
+2026-06-03 02:03:27,128 127.0.0.1 - - [03/Jun/2026 02:03:27] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j\x1f\x8bo9ç1#äQ\x87ÆÉ\x01Á£¨&!û¬úrfæ#µ%%ç\x99Ð\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x006\x00[0m" 400 -
+2026-06-03 02:03:27,275 127.0.0.1 - - [03/Jun/2026 02:03:27] code 400, message Bad request version ('\x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x00\x16\x00')
+2026-06-03 02:03:27,275 127.0.0.1 - - [03/Jun/2026 02:03:27] code 400, message Bad request version ('\x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x00\x16\x00')
+2026-06-03 02:03:27,276 127.0.0.1 - - [03/Jun/2026 02:03:27] code 400, message Bad request version ('\x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x006\x00')
+2026-06-03 02:03:27,276 127.0.0.1 - - [03/Jun/2026 02:03:27] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j\x1f\x8bo4R\x05£S½®½\x10îOÆQU\x9ax§g\x13!ÇÕ\x09\x04P-ü\x0f\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x00\x16\x00[0m" 400 -
+2026-06-03 02:03:27,276 127.0.0.1 - - [03/Jun/2026 02:03:27] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j\x1f\x8bo\x8d0êïª\x88\x84íÿ\x01!Q\x82mn)OÉ!"ôIÒ«7­?\x17\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x00\x16\x00[0m" 400 -
+2026-06-03 02:03:27,276 127.0.0.1 - - [03/Jun/2026 02:03:27] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j\x1f\x8boÀ¦¿\x8e`Û\x12¾¬hðû*ÈéäÛ\x15\x9aS«;\x18½3¹\x04\x97\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x006\x00[0m" 400 -
+2026-06-03 02:03:27,424 127.0.0.1 - - [03/Jun/2026 02:03:27] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00½\x01\x00\x00¹\x03\x01j')
+2026-06-03 02:03:27,424 127.0.0.1 - - [03/Jun/2026 02:03:27] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x02\x00½\x01\x00\x00¹\x03\x02j')
+2026-06-03 02:03:27,424 127.0.0.1 - - [03/Jun/2026 02:03:27] code 400, message Bad request version ('Â;¨Í\x91Ñù\x94Ì%8Ë\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00\xadÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00')
+2026-06-03 02:03:27,424 127.0.0.1 - - [03/Jun/2026 02:03:27] "[31m[1m\x16\x03\x01\x00½\x01\x00\x00¹\x03\x01j\x1f\x8bo\x14/ß'·¦<ÑFx\x9fZ\x90e(\x17\x87TÛ\x84èÞ\x05®Ý\x02­ý\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00­ÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00[0m" 400 -
+2026-06-03 02:03:27,424 127.0.0.1 - - [03/Jun/2026 02:03:27] "[31m[1m\x16\x03\x02\x00½\x01\x00\x00¹\x03\x02j\x1f\x8bobÏ\x05ëºtÐ}A\x95é,&=/¶\x89»îúØ¬L£Gþô§\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00­ÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00[0m" 400 -
+2026-06-03 02:03:27,425 127.0.0.1 - - [03/Jun/2026 02:03:27] "[31m[1m\x16\x03\x03\x00Ý\x01\x00\x00Ù\x03\x03j\x1f\x8boNÇ\x15¯{Ûø\x8e4\x94Ð+`Út\x1fÂ;¨Í\x91Ñù\x94Ì%8Ë\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00­ÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00[0m" 400 -
+2026-06-03 02:03:31,829 127.0.0.1 - - [03/Jun/2026 02:03:31] code 400, message Bad request version ('þÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì\xad\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00')
+2026-06-03 02:03:31,829 127.0.0.1 - - [03/Jun/2026 02:03:31] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j\x1f\x8bn2T®:*°\x7f\x06\x08ûýÃ{\x0f«/¾«pt?\x1c$\x80.ð=\x09\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00[0m" 400 -
+2026-06-03 02:03:36,930 127.0.0.1 - - [03/Jun/2026 02:03:36] code 400, message Bad request version ('\x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00')
+2026-06-03 02:03:36,930 127.0.0.1 - - [03/Jun/2026 02:03:36] code 400, message Bad request version ('À#À¬À®À+À')
+2026-06-03 02:03:36,930 127.0.0.1 - - [03/Jun/2026 02:03:36] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j\x1f\x8bs­Iùø\x85³\x1f\x04\x8bg¼OY\x90¥ÅZ#Ô\x91\x1f\x84ê>`¯\x17$\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00[0m" 400 -
+2026-06-03 02:03:36,930 127.0.0.1 - - [03/Jun/2026 02:03:36] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j\x1f\x8bxpÄlãÒH£y£kö\x1f(ùw\x8d#&\x00\x9cY7k\x99\x0f¹ÿÝ\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-06-03 02:03:42,032 127.0.0.1 - - [03/Jun/2026 02:03:42] code 400, message Bad request version ('\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00')
+2026-06-03 02:03:42,032 127.0.0.1 - - [03/Jun/2026 02:03:42] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j\x1f\x8bx\x0d\x8c#ÙIËÏ¿4,@"=;Y*®¶\x90½ÃÓÎÃ\x87´Ås\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00[0m" 400 -
+2026-06-03 02:03:47,132 127.0.0.1 - - [03/Jun/2026 02:03:47] code 400, message Bad request version ('\x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00')
+2026-06-03 02:03:47,133 127.0.0.1 - - [03/Jun/2026 02:03:47] code 400, message Bad request version ('´\x7f\x81ºª©³å\x9cýy®m\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00\xadÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00')
+2026-06-03 02:03:47,133 127.0.0.1 - - [03/Jun/2026 02:03:47] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j\x1f\x8b~>ü\x80\x06\x8cü=Û£¥I\x89]æ\x95í`DpA¢Ä\x17þûd.:\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00[0m" 400 -
+2026-06-03 02:03:47,133 127.0.0.1 - - [03/Jun/2026 02:03:47] "[31m[1m\x16\x03\x00\x00¥\x01\x00\x00¡\x03\x00j\x1f\x8b\x831\x09Q¥5\x0b¬ü÷\x1c-i^£\x0c´\x7f\x81ºª©³å\x9cýy®m\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00­ÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00[0m" 400 -
+2026-06-03 02:07:04,363 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.150:5000
+2026-06-03 02:07:04,405 [33mPress CTRL+C to quit[0m
+2026-06-03 02:07:04,407  * Restarting with stat
+2026-06-03 02:07:04,812  * Debugger is active!
+2026-06-03 02:07:04,813  * Debugger PIN: 748-209-846
+2026-06-03 02:07:08,152 127.0.0.1 - - [03/Jun/2026 02:07:08] "GET / HTTP/1.1" 200 -
+2026-06-03 02:07:08,404 127.0.0.1 - - [03/Jun/2026 02:07:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:08,412 127.0.0.1 - - [03/Jun/2026 02:07:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:08,419 127.0.0.1 - - [03/Jun/2026 02:07:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:08,588 127.0.0.1 - - [03/Jun/2026 02:07:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:11,828 127.0.0.1 - - [03/Jun/2026 02:07:11] "[32mGET /your-huddle HTTP/1.1[0m" 302 -
+2026-06-03 02:07:11,853 127.0.0.1 - - [03/Jun/2026 02:07:11] "GET /login.html?next=/your-huddle HTTP/1.1" 200 -
+2026-06-03 02:07:11,914 127.0.0.1 - - [03/Jun/2026 02:07:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:11,920 127.0.0.1 - - [03/Jun/2026 02:07:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:11,982 127.0.0.1 - - [03/Jun/2026 02:07:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:12,013 127.0.0.1 - - [03/Jun/2026 02:07:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:13,572 127.0.0.1 - - [03/Jun/2026 02:07:13] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-06-03 02:07:13,620 127.0.0.1 - - [03/Jun/2026 02:07:13] "GET /2fa.html HTTP/1.1" 200 -
+2026-06-03 02:07:13,667 127.0.0.1 - - [03/Jun/2026 02:07:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:13,669 127.0.0.1 - - [03/Jun/2026 02:07:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:13,673 127.0.0.1 - - [03/Jun/2026 02:07:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:13,700 127.0.0.1 - - [03/Jun/2026 02:07:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:43,150 127.0.0.1 - - [03/Jun/2026 02:07:43] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-06-03 02:07:43,173 127.0.0.1 - - [03/Jun/2026 02:07:43] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 02:07:43,221 127.0.0.1 - - [03/Jun/2026 02:07:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:43,226 127.0.0.1 - - [03/Jun/2026 02:07:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:43,227 127.0.0.1 - - [03/Jun/2026 02:07:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:43,267 127.0.0.1 - - [03/Jun/2026 02:07:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:45,214 127.0.0.1 - - [03/Jun/2026 02:07:45] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 02:07:45,258 127.0.0.1 - - [03/Jun/2026 02:07:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:45,262 127.0.0.1 - - [03/Jun/2026 02:07:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:45,264 127.0.0.1 - - [03/Jun/2026 02:07:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:45,312 127.0.0.1 - - [03/Jun/2026 02:07:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:45,337 127.0.0.1 - - [03/Jun/2026 02:07:45] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 02:07:49,135 127.0.0.1 - - [03/Jun/2026 02:07:49] "GET /huddle/1/members HTTP/1.1" 200 -
+2026-06-03 02:07:49,193 127.0.0.1 - - [03/Jun/2026 02:07:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:49,194 127.0.0.1 - - [03/Jun/2026 02:07:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:49,197 127.0.0.1 - - [03/Jun/2026 02:07:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:49,232 127.0.0.1 - - [03/Jun/2026 02:07:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:49,261 127.0.0.1 - - [03/Jun/2026 02:07:49] "[33mGET /huddle/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 02:07:52,631 127.0.0.1 - - [03/Jun/2026 02:07:52] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 02:07:52,677 127.0.0.1 - - [03/Jun/2026 02:07:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:52,688 127.0.0.1 - - [03/Jun/2026 02:07:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:52,695 127.0.0.1 - - [03/Jun/2026 02:07:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:52,725 127.0.0.1 - - [03/Jun/2026 02:07:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:52,747 127.0.0.1 - - [03/Jun/2026 02:07:52] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 02:07:54,276 127.0.0.1 - - [03/Jun/2026 02:07:54] "GET /huddle/1/propose HTTP/1.1" 200 -
+2026-06-03 02:07:54,318 127.0.0.1 - - [03/Jun/2026 02:07:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:54,322 127.0.0.1 - - [03/Jun/2026 02:07:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:54,325 127.0.0.1 - - [03/Jun/2026 02:07:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:54,358 127.0.0.1 - - [03/Jun/2026 02:07:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:54,379 127.0.0.1 - - [03/Jun/2026 02:07:54] "[33mGET /huddle/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 02:07:56,469 127.0.0.1 - - [03/Jun/2026 02:07:56] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-03 02:07:56,514 127.0.0.1 - - [03/Jun/2026 02:07:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:56,518 127.0.0.1 - - [03/Jun/2026 02:07:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:56,521 127.0.0.1 - - [03/Jun/2026 02:07:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:07:56,546 127.0.0.1 - - [03/Jun/2026 02:07:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:07:59,954 127.0.0.1 - - [03/Jun/2026 02:07:59] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 02:08:00,000 127.0.0.1 - - [03/Jun/2026 02:08:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:08:00,008 127.0.0.1 - - [03/Jun/2026 02:08:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:08:00,014 127.0.0.1 - - [03/Jun/2026 02:08:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:08:00,054 127.0.0.1 - - [03/Jun/2026 02:08:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:08:00,083 127.0.0.1 - - [03/Jun/2026 02:08:00] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 02:08:00,612 127.0.0.1 - - [03/Jun/2026 02:08:00] "GET /huddle/1/propose HTTP/1.1" 200 -
+2026-06-03 02:08:00,653 127.0.0.1 - - [03/Jun/2026 02:08:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:08:00,659 127.0.0.1 - - [03/Jun/2026 02:08:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:08:00,660 127.0.0.1 - - [03/Jun/2026 02:08:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:08:00,689 127.0.0.1 - - [03/Jun/2026 02:08:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:08:00,716 127.0.0.1 - - [03/Jun/2026 02:08:00] "[33mGET /huddle/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-03 02:08:02,156 127.0.0.1 - - [03/Jun/2026 02:08:02] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-03 02:08:02,203 127.0.0.1 - - [03/Jun/2026 02:08:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-03 02:08:02,217 127.0.0.1 - - [03/Jun/2026 02:08:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-03 02:08:02,221 127.0.0.1 - - [03/Jun/2026 02:08:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-03 02:08:02,249 127.0.0.1 - - [03/Jun/2026 02:08:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-03 02:08:02,274 127.0.0.1 - - [03/Jun/2026 02:08:02] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -

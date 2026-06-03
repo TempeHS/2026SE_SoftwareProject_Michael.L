@@ -440,12 +440,9 @@ def get_events_for_group(group_id):
 def get_event_in_group(event_id, group_id):
     with get_db_conn() as conn:
         return conn.execute(
-            "SELECT * FROM huddle_Events WHERE group_id = ? ORDER BY datetime(start_date) ASC",
-            (
-                event_id,
-                group_id,
-            ),
-        ).fetchall()
+            "SELECT * FROM huddle_events WHERE id = ? AND group_id = ?",
+            (event_id, group_id),
+        ).fetchone()
 
 
 def cast_vote(event_id, user_id, choice):
