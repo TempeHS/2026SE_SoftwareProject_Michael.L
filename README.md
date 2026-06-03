@@ -36,5 +36,5 @@ Huddle is a Progressive Web App (PWA) that helps friend groups organise and comm
 
 ## Backlog Files
 
-- [PRODUCTBACKLOG.md](./PRODUCTBACKLOG.md) — Full list of features, user stories, priorities, and acceptance criteria
-- [SPRINTBACKLOG.md](./SPRINTBACKLOG.md) — Sprint-by-sprint goals, tasks, test results, reviews, and retrospectives
+- [PRODUCTBACKLOG.md](./PRODUCTBACKLOG.md) - Full list of features, user stories, priorities, and acceptance criteria
+- [SPRINTBACKLOG.md](./SPRINTBACKLOG.md) - Sprint-by-sprint goals, tasks, test results, reviews, and retrospectives
