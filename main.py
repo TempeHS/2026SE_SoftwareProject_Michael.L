@@ -574,7 +574,7 @@ def is_user_in_group(user_id, group_id):
     with get_db_conn() as conn:
         return (
             conn.execute(
-                "SELECT 1 FROM huddle_membership WHERE user/_id = ? AND group_id = ?",
+                "SELECT 1 FROM huddle_memberships WHERE user_id = ? AND group_id = ?",
                 (user_id, group_id),
             ).fetchone()
             is not None
@@ -763,10 +763,9 @@ def join_huddle():
 
 @app.route("/huddle/<int:group_id>/event/<int:event_id>/vote", methods=["POST"])
 @login_required_2fa
-def vote_event(group_id: int, event_id: int):
+def vote_event(group_id, event_id):
     user_id = int(session["user_id"])
-    group = get_user_group_by_id(user_id, group_id)
-    if not group:
+    if not is_user_in_group(user_id, group_id):
         return redirect("/your-huddle")
 
     event = get_event_in_group(event_id, group_id)
@@ -774,8 +773,10 @@ def vote_event(group_id: int, event_id: int):
         return redirect(url_for("view_huddle", group_id=group_id))
 
     choice = (request.form.get("choice") or "").strip().lower()
-    cast_vote(event_id, user_id, choice)
-    return redirect(url_for("view_huddle", group_id=group_id))
+    if choice in ("yes", "no", "maybe"):
+        cast_vote(event_id, user_id, choice)
+
+    return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
 
 
 @app.route("/huddle/<int:group_id>/members", methods=["GET"])
