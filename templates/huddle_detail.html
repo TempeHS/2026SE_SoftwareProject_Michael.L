@@ -31,7 +31,12 @@
       <div class="d-flex justify-content-between align-items-start">
         <div>
           <div class="fw-semibold">
-            {{ ev.name }} {% if ev.category %}
+            <a
+              href="{{ url_for('view_event', group_id=group.id, event_id=ev.id) }}"
+              class="text-decoration-none"
+              >{{ ev.name }}</a
+            >
+            {% if ev.category %}
             <span class="badge bg-secondary ms-1">{{ ev.category }}</span>
             {% endif %}
           </div>

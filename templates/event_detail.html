@@ -1,0 +1,170 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container py-4">
+  <div class="mb-2 small text-muted">
+    Group leader: <strong>{{ leader_name }}</strong>
+  </div>
+
+  <div class="row g-4">
+    <!-- LEFT: Event info + voting -->
+    <div class="col-lg-7">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h1 class="h3 mb-0">
+              {{ event.name }}
+              {% if event.category %}
+              <span class="badge bg-secondary ms-1 align-middle"
+                >{{ event.category }}</span
+              >
+              {% endif %}
+            </h1>
+            {% if event.price_estimate is not none %}
+            <span class="badge bg-light text-dark fs-6"
+              >~${{ "%.2f"|format(event.price_estimate) }}</span
+            >
+            {% endif %}
+          </div>
+
+          <p class="text-muted mb-2">
+            📍 {{ event.location }}<br />
+            🗓 {{ event.start_date|prettydt }} {% if event.end_date %} → {{
+            event.end_date|prettydt }}{% endif %} {% if event.arrival_time %}
+            <br />⏰ Arrive by {{ event.arrival_time }} {% endif %}
+          </p>
+
+          {% set total = tallies.yes + tallies.no + tallies.maybe %}
+          <form
+            method="POST"
+            action="{{ url_for('vote_event', group_id=group.id, event_id=event.id) }}"
+            class="d-flex gap-2 flex-wrap align-items-center mb-3"
+          >
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+            <button
+              type="submit"
+              name="choice"
+              value="yes"
+              class="btn btn-sm {% if tallies.my_vote == 'yes' %}btn-success{% else %}btn-outline-success{% endif %}"
+            >
+              ✓ Yes ({{ tallies.yes }})
+            </button>
+            <button
+              type="submit"
+              name="choice"
+              value="no"
+              class="btn btn-sm {% if tallies.my_vote == 'no' %}btn-danger{% else %}btn-outline-danger{% endif %}"
+            >
+              ✗ No ({{ tallies.no }})
+            </button>
+            <button
+              type="submit"
+              name="choice"
+              value="maybe"
+              class="btn btn-sm {% if tallies.my_vote == 'maybe' %}btn-warning{% else %}btn-outline-warning{% endif %}"
+            >
+              ? Maybe ({{ tallies.maybe }})
+            </button>
+            <span class="small text-muted ms-2">
+              {% if total > 0 %} {{ total }} vote{{ '' if total == 1 else 's' }}
+              {% else %} No votes yet {% endif %}
+            </span>
+          </form>
+
+          <!-- Map placeholder -->
+          <div
+            class="border rounded bg-light d-flex align-items-center justify-content-center text-muted"
+            style="height: 280px"
+          >
+            <div class="text-center">
+              <div style="font-size: 2rem">🗺️</div>
+              <div class="small">Map coming soon</div>
+            </div>
+          </div>
+          <div class="small text-muted mt-2">{{ event.location }}</div>
+
+          {% if event.description %}
+          <hr />
+          <p class="mb-0">{{ event.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <a
+        href="{{ url_for('view_huddle', group_id=group.id) }}"
+        class="btn btn-outline-secondary mt-3"
+        >← Back to Huddle</a
+      >
+    </div>
+
+    <!-- RIGHT: Members, votes, roles -->
+    <div class="col-lg-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0">Members ({{ members|length }})</h2>
+            {% if is_leader %}
+            <span class="badge bg-primary">You can assign roles</span>
+            {% endif %}
+          </div>
+
+          <div class="list-group list-group-flush">
+            {% for m in members %}
+            <div class="list-group-item px-0">
+              <div
+                class="d-flex justify-content-between align-items-center flex-wrap gap-2"
+              >
+                <div class="flex-grow-1">
+                  <div class="fw-semibold">{{ m.full_name }}</div>
+                  <div class="small">
+                    {% if m.vote_choice == 'yes' %}
+                    <span class="text-success">✓ Yes</span>
+                    {% elif m.vote_choice == 'no' %}
+                    <span class="text-danger">✗ No</span>
+                    {% elif m.vote_choice == 'maybe' %}
+                    <span class="text-warning">? Maybe</span>
+                    {% else %}
+                    <span class="text-muted">— No vote</span>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div style="min-width: 160px">
+                  {% if is_leader %}
+                  <form
+                    method="POST"
+                    action="{{ url_for('assign_role', group_id=group.id, event_id=event.id) }}"
+                    class="d-flex gap-1"
+                  >
+                    <input
+                      type="hidden"
+                      name="csrf_token"
+                      value="{{ csrf_token() }}"
+                    />
+                    <input type="hidden" name="user_id" value="{{ m.id }}" />
+                    <select
+                      name="role"
+                      class="form-select form-select-sm"
+                      onchange="this.form.submit()"
+                    >
+                      <option value="">— No role —</option>
+                      {% for r in roles %}
+                      <!-- prettier-ignore -->
+                      <option value="{{ r }}" {% if m.role == r %}selected{% endif %}>{{ r }}</option>
+                      {% endfor %}
+                    </select>
+                  </form>
+                  {% else %} {% if m.role %}
+                  <span class="badge bg-info text-dark">{{ m.role }}</span>
+                  {% else %}
+                  <span class="small text-muted">No role</span>
+                  {% endif %} {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

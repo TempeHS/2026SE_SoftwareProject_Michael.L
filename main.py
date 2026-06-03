@@ -188,6 +188,19 @@ def init_auth_db():
             )
         """)
 
+        # event roles - assigned by group leader
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS huddle_event_roles (
+                event_id INTEGER NOT NULL,
+                user_id INTEGER NOT NULL,
+                role TEXT NOT NULL,
+                assigned_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (event_id, user_id),
+                FOREIGN KEY (event_id) REFERENCES huddle_events(id),
+                FOREIGN KEY (user_id) REFERENCES users(id)
+            )
+        """)
+
         # move old schema where user_id had UNIQUE (one huddle per user) --> should technically have more for UI purposes
         row = conn.execute(
             "SELECT sql FROM sqlite_master WHERE type='table' AND name='huddle_memberships'"
@@ -402,6 +415,19 @@ EVENT_CATEGORIES = [
     "Other",
 ]
 
+EVENT_ROLES = [
+    "Organiser",
+    "Driver",
+    "Food",
+    "Drinks",
+    "Snacks",
+    "Music",
+    "Photographer",
+    "Decorations",
+    "Tickets",
+    "Equipment",
+]
+
 
 def create_event(group_id, user_id, data):
     with get_db_conn() as conn:
@@ -502,6 +528,68 @@ def get_members_of_group(group_id):
             """,
             (group_id,),
         ).fetchall()
+
+
+def get_event_member_details(event_id, group_id):
+    """For each member in the group: their vote choice and assigned role for this event."""
+    with get_db_conn() as conn:
+        return conn.execute(
+            """
+            SELECT u.id, u.full_name, u.email,
+                   v.choice AS vote_choice,
+                   r.role AS role
+            FROM users u
+            INNER JOIN huddle_memberships m ON m.user_id = u.id
+            LEFT JOIN huddle_votes v ON v.user_id = u.id AND v.event_id = ?
+            LEFT JOIN huddle_event_roles r ON r.user_id = u.id AND r.event_id = ?
+            WHERE m.group_id = ?
+            ORDER BY u.full_name COLLATE NOCASE ASC
+            """,
+            (event_id, event_id, group_id),
+        ).fetchall()
+
+
+def assign_event_role(event_id, user_id, role):
+    with get_db_conn() as conn:
+        if not role:
+            conn.execute(
+                "DELETE FROM huddle_event_roles WHERE event_id = ? AND user_id = ?",
+                (event_id, user_id),
+            )
+        else:
+            conn.execute(
+                """
+                INSERT INTO huddle_event_roles (event_id, user_id, role)
+                VALUES (?, ?, ?)
+                ON CONFLICT(event_id, user_id) DO UPDATE SET
+                    role = excluded.role,
+                    assigned_at = CURRENT_TIMESTAMP
+                """,
+                (event_id, user_id, role),
+            )
+        conn.commit()
+
+
+def is_user_in_group(user_id, group_id):
+    with get_db_conn() as conn:
+        return (
+            conn.execute(
+                "SELECT 1 FROM huddle_membership WHERE user/_id = ? AND group_id = ?",
+                (user_id, group_id),
+            ).fetchone()
+            is not None
+        )
+
+
+def get_group_creator_name(group):
+    with get_db_conn() as conn:
+        row = conn.execute(
+            "SELECT full_name, email FROM users WHERE id = ?",
+            (int(group["created_by"]),),
+        ).fetchone()
+    if not row:
+        return "Unknown"
+    return (row["full_name"] or "").strip() or row["email"]
 
 
 def login_required_2fa(f):
@@ -699,6 +787,68 @@ def view_members(group_id: int):
         return redirect("/your-huddle")
     members = get_members_of_group(group_id)
     return render_template("huddle_members.html", group=group, members=members)
+
+
+@app.route("/huddle/<int:group_id>/event/<int:event_id>", methods=["GET"])
+@login_required_2fa
+def view_event(group_id: int, event_id: int):
+    user_id = int(session["user_id"])
+    group = get_user_group_by_id(user_id, group_id)
+    if not group:
+        return redirect("/your-huddle")
+
+    event = get_event_in_group(event_id, group_id)
+    if not event:
+        return redirect(url_for("view_huddle", group_id=group_id))
+
+    members = get_event_member_details(event_id, group_id)
+    tallies = get_vote_tallies_for_events([event_id], user_id).get(
+        event_id, {"yes": 0, "no": 0, "maybe": 0, "my_vote": None}
+    )
+    is_leader = int(group["created_by"]) == user_id
+    leader_name = get_group_creator_name(group)
+
+    return render_template(
+        "event_detail.html",
+        group=group,
+        event=event,
+        members=members,
+        tallies=tallies,
+        is_leader=is_leader,
+        leader_name=leader_name,
+        roles=EVENT_ROLES,
+    )
+
+
+@app.route("/huddle/<int:group_id>/event/<int:event_id>/assign_role", methods=["POST"])
+@login_required_2fa
+def assign_role(group_id: int, event_id: int):
+    user_id = int(session["user_id"])
+    group = get_user_group_by_id(user_id, group_id)
+    if not group:
+        return redirect("/your-huddle")
+
+    # only the group leader can assign a role
+    if int(group["created_by"]) != user_id:
+        return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
+
+    event = get_event_in_group(event_id, group_id)
+    if not event:
+        return redirect(url_for("view_huddle", group_id=group_id))
+
+    try:
+        target_user_id = int(request.form.get("user_id") or 0)
+    except ValueError:
+        target_user_id = 0
+    role = (request.form.get("role") or "").strip()
+
+    if role and role not in EVENT_ROLES:
+        return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
+
+    if target_user_id and is_user_in_group(target_user_id, group_id):
+        assign_event_role(event_id, target_user_id, role or None)
+
+    return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
 
 
 @app.route("/signup.html", methods=["GET", "POST"])
