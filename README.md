@@ -1,14 +1,14 @@
 # Huddle
 
-Huddle is a Progressive Web App (PWA) that helps friend groups organise and commit to social plans. Users can propose activities, vote on them (Yes/No/Maybe), and track attendance — all without relying on messy group chats.
+Huddle is a Progressive Web App (PWA) that helps friend groups organise and commit to social plans. Users can propose activities, vote on them (Yes/No/Maybe), and track attendance - all without relying on messy group chats.
 
 ---
 
 ## Status
 
-**Current Sprint:** Sprint 1 — Database + Skeleton  
+**Current Sprint:** Sprint 1 - Database + Skeleton  
 **Last Increment:** Project setup; systems report and UAT plan completed (Phases 0–2)  
-**Next Planned Increment:** Sprint 2 — Core event proposal and voting logic, group creation
+**Next Planned Increment:** Sprint 2 - Core event proposal and voting logic, group creation
 
 ---
 
