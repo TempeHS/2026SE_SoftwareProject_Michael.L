@@ -22,6 +22,7 @@ from urllib.parse import urlparse
 import sqlite3
 from io import BytesIO
 from werkzeug.security import check_password_hash, generate_password_hash
+import re
 
 load_dotenv()
 
@@ -56,6 +57,7 @@ app.config["WTF_CSRF_TIME_LIMIT"] = 3600
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
 
 csrf = CSRFProtect(app)
+ROLE_PATTERN = re.compile(r"^[A-Za-z0-9 \-]{1,50}$")
 
 
 # Redirect index.html to domain root for consistent UX
@@ -200,6 +202,22 @@ def init_auth_db():
                 FOREIGN KEY (user_id) REFERENCES users(id)
             )
         """)
+
+        # custom roles
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS huddle_group_roles (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                group_id INTEGER NOT NULL,
+                role TEXT NOT NULL,
+                created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(group_id, role),
+                FOREIGN KEY (group_id) REFERENCES huddle_groups(id)
+            )
+        """)
+        conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_huddle_group_roles_group "
+            "ON huddle_group_roles(group_id)"
+        )
 
         # move old schema where user_id had UNIQUE (one huddle per user) --> should technically have more for UI purposes
         row = conn.execute(
@@ -592,6 +610,37 @@ def get_group_creator_name(group):
     return (row["full_name"] or "").strip() or row["email"]
 
 
+def get_custom_roles_for_group(group_id):
+    with get_db_conn() as conn:
+        rows = conn.execute(
+            "SELECT role FROM huddle_group_roles WHERE group_id = ? "
+            "ORDER BY role COLLATE NOCASE ASC",
+            (group_id,),
+        ).fetchall()
+    return [r["role"] for r in rows]
+
+
+def get_merged_roles_for_group(group_id):
+    custom = get_custom_roles_for_group(group_id)
+    seen = set()
+    merged = []
+    for r in EVENT_ROLES + custom:
+        key = r.lower()
+        if key not in seen:
+            seen.add(key)
+            merged.append(r)
+    return merged
+
+
+def add_custom_role_for_group(group_id, role):
+    with get_db_conn() as conn:
+        conn.execute(
+            "INSERT OR IGNORE INTO huddle_group_roles (group_id, role) VALUES (?, ?)",
+            (group_id, role),
+        )
+        conn.commit()
+
+
 def login_required_2fa(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -817,7 +866,7 @@ def view_event(group_id: int, event_id: int):
         tallies=tallies,
         is_leader=is_leader,
         leader_name=leader_name,
-        roles=EVENT_ROLES,
+        roles=get_merged_roles_for_group(group_id),
     )
 
 
@@ -843,8 +892,13 @@ def assign_role(group_id: int, event_id: int):
         target_user_id = 0
     role = (request.form.get("role") or "").strip()
 
-    if role and role not in EVENT_ROLES:
-        return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
+    if role:
+        if not ROLE_PATTERN.match(role):
+            return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
+
+        existing_lower = {r.lower() for r in EVENT_ROLES}
+        if role.lower() not in existing_lower:
+            add_custom_role_for_group(group_id, role)
 
     if target_user_id and is_user_in_group(target_user_id, group_id):
         assign_event_role(event_id, target_user_id, role or None)

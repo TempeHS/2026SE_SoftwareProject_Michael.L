@@ -117,19 +117,19 @@
                   <span
                     class="badge rounded-pill bg-success-subtle text-success border border-success-subtle"
                   >
-                    ✓ Yes
+                    Yes
                   </span>
                   {% elif m.vote_choice == 'no' %}
                   <span
                     class="badge rounded-pill bg-danger-subtle text-danger border border-danger-subtle"
                   >
-                    ✗ No
+                    No
                   </span>
                   {% elif m.vote_choice == 'maybe' %}
                   <span
                     class="badge rounded-pill bg-warning-subtle text-warning-emphasis border border-warning-subtle"
                   >
-                    ? Maybe
+                    Maybe
                   </span>
                   {% else %}
                   <span class="badge rounded-pill bg-light text-muted border">
@@ -142,7 +142,7 @@
                 <form
                   method="POST"
                   action="{{ url_for('assign_role', group_id=group.id, event_id=event.id) }}"
-                  class="d-flex align-items-center gap-2"
+                  class="d-flex align-items-center gap-2 flex-wrap role-form"
                 >
                   <input
                     type="hidden"
@@ -150,18 +150,34 @@
                     value="{{ csrf_token() }}"
                   />
                   <input type="hidden" name="user_id" value="{{ m.id }}" />
+
+                  {% set current_role = m.role or '' %} {% set is_custom =
+                  current_role and current_role not in roles %}
+                  <!--prettier-ignore-->
                   <select
-                    name="role"
-                    class="form-select form-select-sm"
-                    style="min-width: 140px"
+                    class="form-select form-select-sm role-select"
+                    style="min-width: 160px"
+                    aria-label="Select role"
                   >
                     <option value="">— No role —</option>
-                    {% for r in roles %} {% if m.role == r %}
-                    <option value="{{ r }}" selected>{{ r }}</option>
-                    {% else %}
-                    <option value="{{ r }}">{{ r }}</option>
-                    {% endif %} {% endfor %}
+                    {% for r in roles %}
+                    <option value="{{ r }}" {% if not is_custom and current_role == r %}selected{% endif %}>{{ r }}</option>
+                    {% endfor %}
+                    <option value="__custom__" {% if is_custom %}selected{% endif %}>+ Custom…</option>
                   </select>
+
+                  <input
+                    type="text"
+                    name="role"
+                    class="form-control form-control-sm role-custom"
+                    value="{{ current_role }}"
+                    placeholder="Custom role"
+                    maxlength="50"
+                    pattern="[A-Za-z0-9 \-]{1,50}"
+                    autocomplete="off"
+                    style="max-width: 160px; {% if not is_custom %}display:none;{% endif %}"
+                  />
+
                   <button type="submit" class="btn btn-sm btn-primary">
                     Save
                   </button>
@@ -183,5 +199,6 @@
       </div>
     </div>
   </div>
-  {% endblock %}
+  <script src="{{ url_for('static', filename='js/role-form.js') }}"></script>
 </div>
+{% endblock %}
