@@ -29,11 +29,6 @@
 
 | Test ID | Test Name | What It Tests | Input | Expected Output | Actual Output | Pass / Fail |
 |---------|-----------|---------------|-------|-----------------|---------------|-------------|
-| T1-01 | Valid Registration | PB-001 criterion 1 - account creation with valid email/password | New email + strong password | Account created; user redirected to 2FA setup | Account created successfully; user redirected to 2FA setup page | Pass |
-| T1-02 | Duplicate Email Rejection | PB-001 criterion 1 - duplicate email handling | Already-registered email + any password | Error: "Email already in use" displayed; no duplicate account created | Error displayed; no duplicate account created | Pass |
-| T1-03 | 2FA Setup | PB-002 criterion 1 - QR code generated and valid TOTP accepted | Scan QR with Google Authenticator; enter 6-digit code | 2FA setup confirmed; user account marked as 2FA-enabled in DB | QR code generated; TOTP verified; account marked 2FA-enabled in DB | Pass |
-| T1-04 | Valid Login with 2FA | PB-003 criterion 1 - successful login flow | Valid email, password, and current 6-digit TOTP code | User authenticated; redirected to dashboard within 3 seconds | User authenticated and redirected to dashboard successfully | Pass |
-| T1-05 | Invalid 2FA Code Rejected | PB-003 criterion 1 - expired/wrong TOTP handling | Valid email + password + incorrect/expired 6-digit code | Error: "Invalid or expired code" displayed; login blocked | Error displayed; login blocked for invalid/expired code | Pass |
 
 **Sprint Review:**
 
