@@ -126,6 +126,23 @@ def init_auth_db():
             )
         """)
 
+        conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_huddle_group_roles_group "
+            "ON huddle_group_roles(group_id)"
+        )
+
+        # event close status (closed means gruop leader has finalised it)
+        cols_events = {
+            row["name"]
+            for row in conn.execute("PRAGMA table_info(huddle_events)").fetchall()
+        }
+        if "is_closed" not in cols_events:
+            conn.execute(
+                "ALTER TABLE huddle_events ADD COLUMN is_closed INTEGER NOT NULL DEFAULT 0"
+            )
+        if "closed_at" not in cols_events:
+            conn.execute("ALTER TABLE huddle_events ADD COLUMN closed_at TEXT")
+
         # moving existing dbs created before full_name existed
         cols = {
             row["name"] for row in conn.execute("PRAGMA table_info(users)").fetchall()
@@ -218,6 +235,19 @@ def init_auth_db():
             "CREATE INDEX IF NOT EXISTS idx_huddle_group_roles_group "
             "ON huddle_group_roles(group_id)"
         )
+
+        # attendance records
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS huddle_attendance (
+                event_id INTEGER NOT NULL,
+                user_id INTEGER NOT NULL,
+                attended INTEGER NOT NULL CHECK(attended IN (0,1)),
+                marked_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (event_id, user_id),
+                FOREIGN KEY (event_id) REFERENCES huddle_events(id),
+                FOREIGN KEY (user_id) REFERENCES users(id)
+            )
+        """)
 
         # move old schema where user_id had UNIQUE (one huddle per user) --> should technically have more for UI purposes
         row = conn.execute(
@@ -549,21 +579,23 @@ def get_members_of_group(group_id):
 
 
 def get_event_member_details(event_id, group_id):
-    """For each member in the group: their vote choice and assigned role for this event."""
+    """For each member in the group: their vote choice, role, and attendance for this event."""
     with get_db_conn() as conn:
         return conn.execute(
             """
             SELECT u.id, u.full_name, u.email,
                    v.choice AS vote_choice,
-                   r.role AS role
+                   r.role AS role,
+                   a.attended AS attended
             FROM users u
             INNER JOIN huddle_memberships m ON m.user_id = u.id
             LEFT JOIN huddle_votes v ON v.user_id = u.id AND v.event_id = ?
             LEFT JOIN huddle_event_roles r ON r.user_id = u.id AND r.event_id = ?
+            LEFT JOIN huddle_attendance a ON a.user_id = u.id AND a.event_id = ?
             WHERE m.group_id = ?
             ORDER BY u.full_name COLLATE NOCASE ASC
             """,
-            (event_id, event_id, group_id),
+            (event_id, event_id, event_id, group_id),
         ).fetchall()
 
 
@@ -639,6 +671,157 @@ def add_custom_role_for_group(group_id, role):
             (group_id, role),
         )
         conn.commit()
+
+
+# the members who said yes or maybe
+def get_committed_members_for_event(event_id, group_id):
+    with get_db_conn() as conn:
+        return conn.execute(
+            """
+            SELECT u.id, u.full_name, u.email, v.choice AS vote_choice,
+                a.attended AS attended
+            FROM users u
+            INNER JOIN huddle_memberships m ON m.user_id = u.id
+            INNER JOIN huddle_votes v ON v.user_id = u.id AND v.event_id = ?
+            LEFT JOIN huddle_attendance a ON a.user_id = u.id AND a.event_id = ?
+            WHERE m.group_id = ? AND v.choice IN ('yes','maybe')
+            ORDER BY u.full_name COLLATE NOCASE ASC
+            """,
+            (event_id, event_id, group_id),
+        ).fetchall()
+
+
+def close_event_and_record_attendance(event_id, group_id, attendance_map):
+    """
+    attendance_map: dict[int user_id -> bool attended]
+    the attendance maps purpose is to only records attendance for users who actually committed (voted yes/maybe).
+    Otherwise there would be "no" voters in the attendance logging but they were already never going.
+    """
+
+    committed = get_committed_members_for_event(event_id, group_id)
+    committed_ids = {int(r["id"]) for r in committed}
+
+    with get_db_conn() as conn:
+        for uid, attended in attendance_map.items():
+            if int(uid) not in committed_ids:
+                continue
+            conn.execute(
+                """
+                INSERT INTO huddle_attendance (event_id, user_id, attended)
+                VALUES (?, ?, ?)
+                ON CONFLICT(event_id, user_id) DO UPDATE SET
+                    attended = excluded.attended,
+                    marked_at = CURRENT_TIMESTAMP
+                """,
+                (event_id, int(uid), 1 if attended else 0),
+            )
+        conn.execute(
+            "UPDATE huddle_events SET is_closed = 1, closed_at = CURRENT_TIMESTAMP "
+            "WHERE id = ? AND group_id = ?",
+            (event_id, group_id),
+        )
+        conn.commit()
+
+
+def delete_event(event_id, group_id):
+    with get_db_conn() as conn:
+        conn.execute("DELETE FROM huddle_attendance WHERE event_id = ?", (event_id,))
+        conn.execute("DELETE FROM huddle_event_roles WHERE event_id = ?", (event_id,))
+        conn.execute("DELETE FROM huddle_votes WHERE event_id = ?", (event_id,))
+        conn.execute(
+            "DELETE FROM huddle_events WHERE id = ? AND group_id = ?",
+            (event_id, group_id),
+        )
+        conn.commit()
+
+
+def get_user_attendance_stats(user_id):
+    """Returns attended_count, committed_count, and the percentage across all closed events."""
+    with get_db_conn() as conn:
+        row = conn.execute(
+            """
+            SELECT
+                COALESCE(SUM(attended), 0) AS attended_count,
+                COUNT(*) AS committed_count
+            FROM huddle_attendance
+            WHERE user_id = ?
+            """,
+            (user_id,),
+        ).fetchone()
+    attended = int(row["attended_count"] or 0)
+    committed = int(row["committed_count"] or 0)
+    pct = round((attended / committed) * 100, 1) if committed > 0 else None
+    return attended, committed, pct
+
+
+def get_attendance_stats_for_group(group_id):
+    """Returns list of {user_id, full_name, email, attended, committed, percentage}."""
+    with get_db_conn() as conn:
+        rows = conn.execute(
+            """
+            SELECT u.id, u.full_name, u.email,
+                COALESCE(SUM(a.attended), 0) AS attended_count,
+                COUNT(a.user_id) AS committed_count
+            FROM users u
+            INNER JOIN huddle_memberships m ON m.user_id = u.id
+            LEFT JOIN huddle_attendance a ON a.user_id = u.id
+            LEFT JOIN huddle_events e ON e.id = a.event_id AND e.group_id = ?
+            WHERE m.group_id = ?
+            GROUP BY u.id, u.full_name, u.email
+            ORDER BY u.full_name COLLATE NOCASE ASC
+            """,
+            (group_id, group_id),
+        ).fetchall()
+
+    out = []
+    for r in rows:
+        attended = int(r["attended_count"] or 0)
+        committed = int(r["committed_count"] or 0)
+        pct = round((attended / committed) * 100, 1) if committed > 0 else None
+        out.append(
+            {
+                "user_id": r["id"],
+                "full_name": r["full_name"],
+                "email": r["email"],
+                "attended": attended,
+                "committed": committed,
+                "percentage": pct,
+            }
+        )
+    return out
+
+
+def get_attendance_percentages_for_group(group_id):
+    with get_db_conn() as conn:
+        rows = conn.execute(
+            """
+            SELECT u.id AS user_id,
+                COUNT(a.event_id) AS committed,
+                COALESCE(SUM(a.attended), 0) AS attended
+            FROM users u
+            INNER JOIN huddle_memberships m ON m.user_id = u.id
+            LEFT JOIN huddle_attendance a
+                ON a.user_id = u.id
+            LEFT JOIN huddle_events e
+                ON e.id = a.event_id
+                AND e.group_id = ?
+                AND e.is_closed = 1
+            WHERE m.group_id = ?
+            AND (a.event_id IS NULL OR e.id IS NOT NULL)
+            GROUP BY u.id
+            """,
+            (group_id, group_id),
+        ).fetchall()
+
+    result = {}
+    for r in rows:
+        committed = int(r["committed"] or 0)
+        attended = int(r["attended"] or 0)
+        if committed == 0:
+            result[int(r["user_id"])] = None
+        else:
+            result[int(r["user_id"])] = round((attended / committed) * 100)
+    return result
 
 
 def login_required_2fa(f):
@@ -852,11 +1035,17 @@ def view_event(group_id: int, event_id: int):
         return redirect(url_for("view_huddle", group_id=group_id))
 
     members = get_event_member_details(event_id, group_id)
-    tallies = get_vote_tallies_for_events([event_id], user_id).get(
+    tallies_map = get_vote_tallies_for_events([event_id], user_id)
+    tallies = tallies_map.get(
         event_id, {"yes": 0, "no": 0, "maybe": 0, "my_vote": None}
     )
-    is_leader = int(group["created_by"]) == user_id
     leader_name = get_group_creator_name(group)
+    is_leader = int(group["created_by"]) == user_id
+
+    custom_roles = get_custom_roles_for_group(group_id)
+    roles = list(EVENT_ROLES) + [r for r in custom_roles if r not in EVENT_ROLES]
+
+    attendance_pct = get_attendance_percentages_for_group(group_id)  # NEW
 
     return render_template(
         "event_detail.html",
@@ -864,9 +1053,10 @@ def view_event(group_id: int, event_id: int):
         event=event,
         members=members,
         tallies=tallies,
-        is_leader=is_leader,
         leader_name=leader_name,
-        roles=get_merged_roles_for_group(group_id),
+        is_leader=is_leader,
+        roles=roles,
+        attendance_pct=attendance_pct,  # NEW
     )
 
 
@@ -904,6 +1094,79 @@ def assign_role(group_id: int, event_id: int):
         assign_event_role(event_id, target_user_id, role or None)
 
     return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
+
+
+@app.route("/huddle/<int:group_id>/event/<int:event_id>/close", methods=["GET", "POST"])
+@login_required_2fa
+def close_event(group_id: int, event_id: int):
+    user_id = int(session["user_id"])
+    group = get_user_group_by_id(user_id, group_id)
+    if not group:
+        return redirect("/your-huddle")
+
+    # only the group leader can close the event
+    if int(group["created_by"]) != user_id:
+        return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
+
+    event = get_event_in_group(event_id, group_id)
+    if not event:
+        return redirect(url_for("view_huddle", group_id=group_id))
+
+    # if already closed, theres no point reopening the close form
+    if int(event["is_closed"] or 0) == 1:
+        return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
+
+    committed = get_committed_members_for_event(event_id, group_id)
+
+    if request.method == "POST":
+        attendance_map = {}
+        for member in committed:
+            uid = int(member["id"])
+            # checkbox present means attended; absent means did not attend
+            attended = request.form.get(f"attended_{uid}") == "on"
+            attendance_map[uid] = attended
+
+        close_event_and_record_attendance(event_id, group_id, attendance_map)
+        return redirect(url_for("view_huddle", group_id=group_id))
+
+    return render_template(
+        "close_event.html",
+        group=group,
+        event=event,
+        committed=committed,
+    )
+
+
+@app.route("/huddle/<int:group_id>/event/<int:event_id>/delete", methods=["POST"])
+@login_required_2fa
+def delete_event_route(group_id: int, event_id: int):
+    user_id = int(session["user_id"])
+    group = get_user_group_by_id(user_id, group_id)
+    if not group:
+        return redirect("/your-huddle")
+
+    # only the group leader can delete the event
+    if int(group["created_by"]) != user_id:
+        return redirect(url_for("view_event", group_id=group_id, event_id=event_id))
+
+    event = get_event_in_group(event_id, group_id)
+    if not event:
+        return redirect(url_for("view_huddle", group_id=group_id))
+
+    delete_event(event_id, group_id)
+    return redirect(url_for("view_huddle", group_id=group_id))
+
+
+@app.route("/huddle/<int:group_id>/attendance", methods=["GET"])
+@login_required_2fa
+def view_attendance(group_id: int):
+    user_id = int(session["user_id"])
+    group = get_user_group_by_id(user_id, group_id)
+    if not group:
+        return redirect("/your-huddle")
+
+    stats = get_attendance_stats_for_group(group_id)
+    return render_template("attendance_stats.html", group=group, stats=stats)
 
 
 @app.route("/signup.html", methods=["GET", "POST"])

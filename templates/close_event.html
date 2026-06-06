@@ -1,0 +1,89 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container py-4" style="max-width: 760px">
+  <h1 class="display-6 mb-2">Close Event & Take Attendance</h1>
+  <p class="text-muted">
+    Event: <strong>{{ event.name }}</strong> · Group:
+    <strong>{{ group.name }}</strong>
+  </p>
+
+  <div class="alert alert-info">
+    Confirm who actually attended. Only members who voted
+    <strong>Yes</strong> or <strong>Maybe</strong> are shown. Once closed,
+    attendance is recorded and the event is finalised.
+  </div>
+
+  {% if committed and committed|length > 0 %}
+  <form
+    method="POST"
+    action="{{ url_for('close_event', group_id=group.id, event_id=event.id) }}"
+  >
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+
+    <div class="list-group mb-4">
+      {% for m in committed %}
+      <label
+        class="list-group-item d-flex justify-content-between align-items-center"
+        for="attended_{{ m.id }}"
+      >
+        <div>
+          <div class="fw-semibold">{{ m.full_name or m.email }}</div>
+          <div class="small text-muted">
+            Vote: {% if m.vote_choice == 'yes' %}
+            <span
+              class="badge bg-success-subtle text-success border border-success-subtle"
+              >Yes</span
+            >
+            {% elif m.vote_choice == 'maybe' %}
+            <span
+              class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle"
+              >Maybe</span
+            >
+            {% endif %}
+          </div>
+        </div>
+        <!-- prettier-ignore -->
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="attended_{{ m.id }}"
+            name="attended_{{ m.id }}"
+            {% if m.attended == 1 %}checked{% endif %}
+          />
+          <span class="form-check-label small ms-2">Attended</span>
+        </div>
+      </label>
+      {% endfor %}
+    </div>
+
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-success">
+        Save Attendance & Close Event
+      </button>
+      <a
+        href="{{ url_for('view_event', group_id=group.id, event_id=event.id) }}"
+        class="btn btn-outline-secondary"
+        >Cancel</a
+      >
+    </div>
+  </form>
+  {% else %}
+  <div class="alert alert-secondary">
+    No members voted Yes or Maybe - there is no attendance to record.
+  </div>
+  <form
+    method="POST"
+    action="{{ url_for('close_event', group_id=group.id, event_id=event.id) }}"
+    class="d-inline"
+  >
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    <button type="submit" class="btn btn-success">Close Event Anyway</button>
+  </form>
+  <a
+    href="{{ url_for('view_event', group_id=group.id, event_id=event.id) }}"
+    class="btn btn-outline-secondary"
+    >Cancel</a
+  >
+  {% endif %}
+</div>
+{% endblock %}

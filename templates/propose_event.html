@@ -34,7 +34,7 @@
     <div class="mb-3">
       <label for="category" class="form-label">Category</label>
       <select id="category" name="category" class="form-select">
-        <option value="">— Select a category —</option>
+        <option value="">- Select a category -</option>
         {% for cat in categories %}
         <!-- prettier-ignore -->
         <option value="{{ cat }}" {% if form.category == cat %}selected{% endif %}>{{ cat }}</option>
