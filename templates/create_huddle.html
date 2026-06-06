@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container py-4" style="max-width: 680px">
+  <h1 class="display-6 mb-3">Create a Huddle</h1>
+  <p class="text-muted">Create your group and get a 6-character invite code.</p>
+
+  {% if error %}
+  <div class="alert alert-danger">{{ error }}</div>
+  {% endif %}
+
+  <form method="POST" action="{{ url_for('create_huddle') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    <div class="mb-3">
+      <label for="group_name" class="form-label">Group Name</label>
+      <input
+        type="text"
+        id="group_name"
+        name="group_name"
+        class="form-control"
+        maxlength="50"
+        minlength="2"
+        required
+        placeholder="e.g. Friday Night Crew"
+      />
+    </div>
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">Create Huddle</button>
+      <a href="/your-huddle" class="btn btn-outline-secondary">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

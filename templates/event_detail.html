@@ -1,0 +1,285 @@
+{% extends "layout.html" %} {% block content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/leaflet.css') }}"
+/>
+<div class="container py-4">
+  <div class="mb-2 small text-muted">
+    Group leader: <strong>{{ leader_name }}</strong>
+  </div>
+
+  <div class="row g-4">
+    <!-- LEFT: Event info + voting -->
+    <div class="col-lg-7">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h1 class="h3 mb-0">
+              {{ event.name }} {% if event.category %}
+              <span class="badge bg-secondary ms-1 align-middle"
+                >{{ event.category }}</span
+              >
+              {% endif %} {% if event.is_closed == 1 %}
+              <span class="badge bg-dark ms-1 align-middle">Closed</span>
+              {% endif %}
+            </h1>
+            {% if event.price_estimate is not none %}
+            <span class="badge bg-light text-dark fs-6"
+              >~${{ "%.2f"|format(event.price_estimate) }}</span
+            >
+            {% endif %}
+          </div>
+
+          <p class="text-muted mb-2">
+            📍 {{ event.location }}<br />
+            🗓 {{ event.start_date|prettydt }} {% if event.end_date %} → {{
+            event.end_date|prettydt }}{% endif %} {% if event.arrival_time %}
+            <br />⏰ Arrive by {{ event.arrival_time }} {% endif %}
+          </p>
+
+          {% set total = tallies.yes + tallies.no + tallies.maybe %} {% if
+          event.is_closed != 1 %}
+          <form
+            method="POST"
+            action="{{ url_for('vote_event', group_id=group.id, event_id=event.id) }}"
+            class="d-flex gap-2 flex-wrap align-items-center mb-3"
+          >
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+            <button
+              type="submit"
+              name="choice"
+              value="yes"
+              class="btn btn-sm {% if tallies.my_vote == 'yes' %}btn-success{% else %}btn-outline-success{% endif %}"
+            >
+              ✓ Yes ({{ tallies.yes }})
+            </button>
+            <button
+              type="submit"
+              name="choice"
+              value="no"
+              class="btn btn-sm {% if tallies.my_vote == 'no' %}btn-danger{% else %}btn-outline-danger{% endif %}"
+            >
+              ✗ No ({{ tallies.no }})
+            </button>
+            <button
+              type="submit"
+              name="choice"
+              value="maybe"
+              class="btn btn-sm {% if tallies.my_vote == 'maybe' %}btn-warning{% else %}btn-outline-warning{% endif %}"
+            >
+              ? Maybe ({{ tallies.maybe }})
+            </button>
+            <span class="small text-muted ms-2">
+              {% if total > 0 %} {{ total }} vote{{ '' if total == 1 else 's' }}
+              {% else %} No votes yet {% endif %}
+            </span>
+          </form>
+          {% else %}
+          <div class="alert alert-secondary py-2 small mb-3">
+            This event has been closed. Voting is locked.
+          </div>
+          {% endif %}
+
+          <!-- Map -->
+          <div
+            id="event-map"
+            data-address="{{ event.location }}"
+            class="border rounded"
+            style="height: 280px"
+          ></div>
+          <div id="map-status" class="small text-muted mt-2"></div>
+          <div class="small text-muted mt-1">{{ event.location }}</div>
+
+          {% if event.description %}
+          <hr />
+          <p class="mb-0">{{ event.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="d-flex gap-2 mt-3 flex-wrap">
+        <a
+          href="{{ url_for('view_huddle', group_id=group.id) }}"
+          class="btn btn-outline-secondary"
+          >← Back to Huddle</a
+        >
+
+        {% if is_leader %} {% if event.is_closed != 1 %}
+        <a
+          href="{{ url_for('close_event', group_id=group.id, event_id=event.id) }}"
+          class="btn btn-success"
+        >
+          Close Event & Take Attendance
+        </a>
+        {% endif %}
+
+        <form
+          method="POST"
+          action="{{ url_for('delete_event_route', group_id=group.id, event_id=event.id) }}"
+          onsubmit="
+            return confirm(
+              'Delete this event? This cannot be undone and will remove all votes, roles, and attendance records.',
+            );
+          "
+          class="d-inline"
+        >
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+          <button type="submit" class="btn btn-outline-danger">
+            Delete Event
+          </button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- RIGHT: Members, votes, roles -->
+    <div class="col-lg-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0">Members ({{ members|length }})</h2>
+            {% if is_leader %}
+            <span class="badge bg-primary">You can assign roles</span>
+            {% endif %}
+          </div>
+
+          <ul class="list-group list-group-flush">
+            {% for m in members %}
+            <li class="list-group-item px-0 py-3">
+              <div
+                class="d-flex justify-content-between align-items-center flex-wrap gap-2"
+              >
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <strong>{{ m.full_name or m.email }}</strong>
+
+                  {# All-time attendance percentage for this group #} {% set pct
+                  = attendance_pct.get(m.id) %} {% if pct is not none %}
+                  <span
+                    class="badge rounded-pill {% if pct >= 75 %}bg-success-subtle text-success border border-success-subtle{% elif pct >= 50 %}bg-warning-subtle text-warning-emphasis border border-warning-subtle{% else %}bg-danger-subtle text-danger border border-danger-subtle{% endif %}"
+                    title="Overall attendance for this huddle"
+                  >
+                    {{ pct }}% attendance
+                  </span>
+                  {% else %}
+                  <span
+                    class="badge rounded-pill bg-light text-muted border"
+                    title="No closed events yet"
+                  >
+                    — attendance
+                  </span>
+                  {% endif %} {% if m.vote_choice == 'yes' %}
+                  <span
+                    class="badge rounded-pill bg-success-subtle text-success border border-success-subtle"
+                  >
+                    Yes
+                  </span>
+                  {% elif m.vote_choice == 'no' %}
+                  <span
+                    class="badge rounded-pill bg-danger-subtle text-danger border border-danger-subtle"
+                  >
+                    No
+                  </span>
+                  {% elif m.vote_choice == 'maybe' %}
+                  <span
+                    class="badge rounded-pill bg-warning-subtle text-warning-emphasis border border-warning-subtle"
+                  >
+                    Maybe
+                  </span>
+                  {% else %}
+                  <span class="badge rounded-pill bg-light text-muted border">
+                    No vote
+                  </span>
+                  {% endif %}
+
+                  <!-- Attendance pill (only shown once event is closed) -->
+                  {% if event.is_closed == 1 %} {% if m.attended == 1 %}
+                  <span
+                    class="badge rounded-pill bg-success text-white"
+                    title="Attended this event"
+                  >
+                    ✓ Attended
+                  </span>
+                  {% elif m.attended == 0 %}
+                  <span
+                    class="badge rounded-pill bg-danger text-white"
+                    title="Did not attend this event"
+                  >
+                    ✗ Missed
+                  </span>
+                  {% elif m.vote_choice in ('yes', 'maybe') %}
+                  <span
+                    class="badge rounded-pill bg-secondary text-white"
+                    title="No attendance recorded"
+                  >
+                    Not recorded
+                  </span>
+                  {% endif %} {% endif %}
+                </div>
+
+                {% if is_leader and event.is_closed != 1 %}
+                <form
+                  method="POST"
+                  action="{{ url_for('assign_role', group_id=group.id, event_id=event.id) }}"
+                  class="d-flex align-items-center gap-2 flex-wrap role-form"
+                >
+                  <input
+                    type="hidden"
+                    name="csrf_token"
+                    value="{{ csrf_token() }}"
+                  />
+                  <input type="hidden" name="user_id" value="{{ m.id }}" />
+
+                  {% set current_role = m.role or '' %} {% set is_custom =
+                  current_role and current_role not in roles %}
+                  <!--prettier-ignore-->
+                  <select
+                    class="form-select form-select-sm role-select"
+                    style="min-width: 160px"
+                    aria-label="Select role"
+                  >
+                    <option value="">— No role —</option>
+                    {% for r in roles %}
+                    <option value="{{ r }}" {% if not is_custom and current_role == r %}selected{% endif %}>{{ r }}</option>
+                    {% endfor %}
+                    <option value="__custom__" {% if is_custom %}selected{% endif %}>+ Custom…</option>
+                  </select>
+
+                  <input
+                    type="text"
+                    name="role"
+                    class="form-control form-control-sm role-custom"
+                    value="{{ current_role }}"
+                    placeholder="Custom role"
+                    maxlength="50"
+                    pattern="[A-Za-z0-9 \-]{1,50}"
+                    autocomplete="off"
+                    style="max-width: 160px; {% if not is_custom %}display:none;{% endif %}"
+                  />
+
+                  <button type="submit" class="btn btn-sm btn-primary">
+                    Save
+                  </button>
+                </form>
+                {% else %} {% if m.role %}
+                <span
+                  class="badge bg-info-subtle text-info-emphasis border border-info-subtle"
+                >
+                  {{ m.role }}
+                </span>
+                {% else %}
+                <span class="text-muted small">No role</span>
+                {% endif %} {% endif %}
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/role-form.js') }}"></script>
+</div>
+{% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/leaflet.js') }}"></script>
+<script src="{{ url_for('static', filename='js/event-map.js') }}"></script>
+{% endblock %}

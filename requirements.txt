@@ -8,5 +8,6 @@ qrcode
 pyotp
 vscode-icons
 autopep8
+Pillow
 
 # make sure you add the .env file which holds your secret keys and database credentials.

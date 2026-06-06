@@ -1,0 +1,58 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container py-4">
+  <h1 class="display-6 mb-2">Attendance Stats - {{ group.name }}</h1>
+  <p class="text-muted mb-4">
+    Attendance percentages are based on closed events where each member voted
+    Yes or Maybe.
+  </p>
+
+  <div class="d-flex gap-2 mb-4">
+    <a
+      href="{{ url_for('view_huddle', group_id=group.id) }}"
+      class="btn btn-outline-secondary"
+      >← Back to Huddle</a
+    >
+  </div>
+
+  {% if stats and stats|length > 0 %}
+  <div class="list-group">
+    {% for s in stats %}
+    <div class="list-group-item">
+      <div
+        class="d-flex justify-content-between align-items-center flex-wrap gap-2"
+      >
+        <div>
+          <div class="fw-semibold">{{ s.full_name or s.email }}</div>
+          <div class="small text-muted">{{ s.email }}</div>
+        </div>
+        <div class="text-end">
+          {% if s.percentage is not none %}
+          <div class="fw-semibold">{{ s.percentage }}%</div>
+          <div class="small text-muted">
+            {{ s.attended }} of {{ s.committed }} attended
+          </div>
+          {% else %}
+          <div class="small text-muted">No closed events yet</div>
+          {% endif %}
+        </div>
+      </div>
+      {% if s.percentage is not none %}
+      <div class="progress mt-2" style="height: 8px">
+        <div
+          class="progress-bar {% if s.percentage >= 75 %}bg-success{% elif s.percentage >= 50 %}bg-warning{% else %}bg-danger{% endif %}"
+          role="progressbar"
+          style="width: {{ s.percentage }}%"
+          aria-valuenow="{{ s.percentage }}"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="alert alert-secondary">No members in this huddle.</div>
+  {% endif %}
+</div>
+{% endblock %}

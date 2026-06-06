@@ -2,27 +2,55 @@
 <div class="container py-4">
   <div class="row mb-3">
     <div class="col">
-      <h1 class="display-6">Your Huddle</h1>
-      <p class="text-muted mb-0">Recent activity from your friend group.</p>
+      <h1 class="display-6">Your Huddles</h1>
+      <p class="text-muted mb-0">Groups you belong to.</p>
     </div>
   </div>
 
   <div class="row">
     <div class="col">
-      {% if group_activity %}
+      {% if not in_group %}
+      <div class="alert alert-secondary">You are not in any huddles yet.</div>
+      <div class="d-flex gap-2">
+        <a class="btn btn-primary" href="{{ url_for('create_huddle') }}"
+          >Create a Huddle</a
+        >
+        <a class="btn btn-outline-primary" href="{{ url_for('join_huddle') }}"
+          >Join a Huddle</a
+        >
+      </div>
+      {% else %}
+      <div class="d-flex gap-2 mb-3">
+        <a class="btn btn-primary btn-sm" href="{{ url_for('create_huddle') }}"
+          >Create Another Huddle</a
+        >
+        <a
+          class="btn btn-outline-primary btn-sm"
+          href="{{ url_for('join_huddle') }}"
+          >Join Another Huddle</a
+        >
+      </div>
+
       <div class="list-group">
-        {% for item in group_activity %}
-        <div class="list-group-item">
-          <div class="d-flex w-100 justify-content-between">
-            <h2 class="h6 mb-1">{{ item.user }}</h2>
-            <small class="text-muted">{{ item.time }}</small>
+        {% for group in groups %}
+        <div
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <div>
+            <div class="fw-semibold">{{ group.name }}</div>
+            <div class="small text-muted">
+              Invite code: <code>{{ group.invite_code }}</code>
+            </div>
           </div>
-          <p class="mb-0">{{ item.action }}</p>
+          <a
+            class="btn btn-sm btn-outline-secondary"
+            href="{{ url_for('view_huddle', group_id=group.id) }}"
+          >
+            Open
+          </a>
         </div>
         {% endfor %}
       </div>
-      {% else %}
-      <div class="alert alert-secondary mb-0">No friend activity yet.</div>
       {% endif %}
     </div>
   </div>
