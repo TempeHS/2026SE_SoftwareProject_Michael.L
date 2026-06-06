@@ -52,11 +52,15 @@
         name="location"
         class="form-control"
         maxlength="100"
+        minlength="1"
         required
         value="{{ form.location or '' }}"
-        placeholder="e.g. Central Park, NYC"
+        placeholder="e.g. McDonald's Parramatta, or 1 George St Sydney NSW"
       />
-      <div class="form-text">Max 100 characters.</div>
+      <div class="form-text">
+        Include a suburb or full address for the map to find it (max 100
+        characters).
+      </div>
     </div>
 
     <div class="row">
@@ -151,4 +155,6 @@
     </div>
   </form>
 </div>
+{% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/location-autocomplete.js') }}"></script>
 {% endblock %}

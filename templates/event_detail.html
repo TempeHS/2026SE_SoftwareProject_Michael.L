@@ -1,4 +1,8 @@
 {% extends "layout.html" %} {% block content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/leaflet.css') }}"
+/>
 <div class="container py-4">
   <div class="mb-2 small text-muted">
     Group leader: <strong>{{ leader_name }}</strong>
@@ -76,17 +80,15 @@
           </div>
           {% endif %}
 
-          <!-- Map placeholder -->
+          <!-- Map -->
           <div
-            class="border rounded bg-light d-flex align-items-center justify-content-center text-muted"
+            id="event-map"
+            data-address="{{ event.location }}"
+            class="border rounded"
             style="height: 280px"
-          >
-            <div class="text-center">
-              <div style="font-size: 2rem">🗺️</div>
-              <div class="small">Map coming soon</div>
-            </div>
-          </div>
-          <div class="small text-muted mt-2">{{ event.location }}</div>
+          ></div>
+          <div id="map-status" class="small text-muted mt-2"></div>
+          <div class="small text-muted mt-1">{{ event.location }}</div>
 
           {% if event.description %}
           <hr />
@@ -277,4 +279,7 @@
   </div>
   <script src="{{ url_for('static', filename='js/role-form.js') }}"></script>
 </div>
+{% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/leaflet.js') }}"></script>
+<script src="{{ url_for('static', filename='js/event-map.js') }}"></script>
 {% endblock %}
