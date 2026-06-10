@@ -1,61 +1,63 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="container">
-  {% if is_done %}
-  <div class="alert alert-info">Signup Successful</div>
-  {% elif dupe %}
-  <div class="alert alert-danger">Email already registered</div>
-  {% endif %}
-  <form action="/signup.html" method="POST">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1>Sign up</h1>
+<div class="card auth-card shadow-sm">
+  <div class="card-body p-4 p-md-5">
+    <h1 class="h3 fw-bold mb-1">Create your account</h1>
+    <p class="text-muted mb-4">Start planning with your group.</p>
+
+    {% if is_done %}
+    <div class="alert alert-success">
+      Signup successful! You can now log in.
     </div>
-    <div class="col-auto">
-      <label for="fullName" class="form-label">Full name</label>
-      <input
-        type="text"
-        name="full_name"
-        class="form-control"
-        id="fullName"
-        minlength="2"
-        maxlength="100"
-        required
-      />
-    </div>
-    <div class="col-auto">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input
-        type="email"
-        name="email"
-        class="form-control"
-        id="exampleInputEmail1"
-        aria-describedby="emailHelp"
-        required
-      />
-      <div id="emailHelp" class="form-text">
-        We'll never share your email with anyone else.
+    {% elif dupe %}
+    <div class="alert alert-danger">Email already registered.</div>
+    {% endif %}
+
+    <form action="/signup.html" method="POST">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fullName"
+          name="full_name"
+          required
+        />
       </div>
-    </div>
-    <div class="col-auto">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input
-        type="password"
-        name="password"
-        class="form-control"
-        id="exampleInputPassword1"
-        minlength="8"
-        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-        title="Password must be at least 8 characters and include uppercase, lowercase, number, and special character (@$!%*?&)"
-        required
-      />
-      <div id="passwordHelp" class="form-text">
-        Must be at least 8 characters with uppercase, lowercase, number, and
-        special characters
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          aria-describedby="emailHelp"
+          required
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
       </div>
-    </div>
-    <div class="mt-3">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-  </form>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          aria-describedby="passwordHelp"
+          required
+        />
+        <div id="passwordHelp" class="form-text">
+          Use 8 or more characters with a mix of letters and numbers.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Sign up</button>
+    </form>
+
+    <p class="text-center text-muted mt-4 mb-0">
+      Already have an account? <a href="/login.html">Log in</a>
+    </p>
+  </div>
 </div>
 {% endblock %}

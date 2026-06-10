@@ -1,44 +1,46 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="container">
-  <div class="row">
-    <h1 class="display-1">Two-Factor Authentication</h1>
-  </div>
-  <div class="row mt-4">
-    <div class="col-md-6">
-      <h3>Scan this QR Code for Google Authentication</h3>
-      <img
-        src="data:image/png;base64,{{ qr_code }}"
-        alt="QR Code"
-        class="img-fluid"
-      />
-    </div>
-    <div class="col-md-6">
-      <form method="POST" action="/2fa.html">
-        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-        <div class="mb-3">
-          <label for="otp" class="form-label"
-            >Enter the code from your app:</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="otp"
-            name="otp"
-            required
-            maxlength="6"
-            pattern="[0-9]{6}"
-          />
-          <div class="form-text">
-            Enter the 6-digit code from Google Authenticator
+<div class="card auth-card shadow-sm" style="max-width: 720px">
+  <div class="card-body p-4 p-md-5">
+    <h1 class="h3 fw-bold mb-1">Two-factor authentication</h1>
+    <p class="text-muted mb-4">
+      Scan the QR code with Google Authenticator, then enter your code.
+    </p>
+
+    <div class="row g-4 align-items-center">
+      <div class="col-md-6 text-center">
+        <img
+          src="data:image/png;base64,{{ qr_code }}"
+          alt="QR Code"
+          class="img-fluid border rounded-3 p-2 bg-white"
+        />
+      </div>
+      <div class="col-md-6">
+        <form method="POST" action="/2fa.html">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+          <div class="mb-3">
+            <label for="otp" class="form-label">Authentication code</label>
+            <input
+              type="text"
+              class="form-control form-control-lg text-center"
+              id="otp"
+              name="otp"
+              required
+              maxlength="6"
+              pattern="[0-9]{6}"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              placeholder="000000"
+            />
+            <div class="form-text">Enter the 6-digit code from your app.</div>
           </div>
-        </div>
 
-        {% if error %}
-        <div class="alert alert-danger">{{ error }}</div>
-        {% endif %}
+          {% if error %}
+          <div class="alert alert-danger">{{ error }}</div>
+          {% endif %}
 
-        <button type="submit" class="btn btn-primary">Verify</button>
-      </form>
+          <button type="submit" class="btn btn-primary w-100">Verify</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

@@ -7952,3 +7952,218 @@
 2026-06-10 01:37:14,165 127.0.0.1 - - [10/Jun/2026 01:37:14] "[33mGET /huddle/1/event/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
 2026-06-10 01:37:15,586 127.0.0.1 - - [10/Jun/2026 01:37:15] "GET /static/images/marker-shadow.png HTTP/1.1" 200 -
 2026-06-10 01:37:15,588 127.0.0.1 - - [10/Jun/2026 01:37:15] "GET /static/images/marker-icon-2x.png HTTP/1.1" 200 -
+2026-06-10 02:02:07,038 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.204:5000
+2026-06-10 02:02:07,038 [33mPress CTRL+C to quit[0m
+2026-06-10 02:02:07,039  * Restarting with stat
+2026-06-10 02:02:07,572  * Debugger is active!
+2026-06-10 02:02:07,572  * Debugger PIN: 639-035-884
+2026-06-10 02:02:10,055 127.0.0.1 - - [10/Jun/2026 02:02:10] "GET / HTTP/1.1" 200 -
+2026-06-10 02:02:10,338 127.0.0.1 - - [10/Jun/2026 02:02:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:10,349 127.0.0.1 - - [10/Jun/2026 02:02:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:10,354 127.0.0.1 - - [10/Jun/2026 02:02:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:10,523 127.0.0.1 - - [10/Jun/2026 02:02:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:12,014 127.0.0.1 - - [10/Jun/2026 02:02:12] "[32mGET /your-huddle HTTP/1.1[0m" 302 -
+2026-06-10 02:02:12,076 127.0.0.1 - - [10/Jun/2026 02:02:12] "GET /login.html?next=/your-huddle HTTP/1.1" 200 -
+2026-06-10 02:02:12,178 127.0.0.1 - - [10/Jun/2026 02:02:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:12,195 127.0.0.1 - - [10/Jun/2026 02:02:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:12,199 127.0.0.1 - - [10/Jun/2026 02:02:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:12,277 127.0.0.1 - - [10/Jun/2026 02:02:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:24,117 127.0.0.1 - - [10/Jun/2026 02:02:24] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-06-10 02:02:24,221 127.0.0.1 - - [10/Jun/2026 02:02:24] "GET /2fa.html HTTP/1.1" 200 -
+2026-06-10 02:02:24,453 127.0.0.1 - - [10/Jun/2026 02:02:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:24,456 127.0.0.1 - - [10/Jun/2026 02:02:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:24,459 127.0.0.1 - - [10/Jun/2026 02:02:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:24,620 127.0.0.1 - - [10/Jun/2026 02:02:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:30,952 127.0.0.1 - - [10/Jun/2026 02:02:30] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-06-10 02:02:31,025 127.0.0.1 - - [10/Jun/2026 02:02:31] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-10 02:02:31,156 127.0.0.1 - - [10/Jun/2026 02:02:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:31,161 127.0.0.1 - - [10/Jun/2026 02:02:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:31,162 127.0.0.1 - - [10/Jun/2026 02:02:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:31,229 127.0.0.1 - - [10/Jun/2026 02:02:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:36,017 127.0.0.1 - - [10/Jun/2026 02:02:36] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-10 02:02:36,112 127.0.0.1 - - [10/Jun/2026 02:02:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:36,116 127.0.0.1 - - [10/Jun/2026 02:02:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:36,118 127.0.0.1 - - [10/Jun/2026 02:02:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:36,291 127.0.0.1 - - [10/Jun/2026 02:02:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:36,370 127.0.0.1 - - [10/Jun/2026 02:02:36] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-10 02:02:39,626 127.0.0.1 - - [10/Jun/2026 02:02:39] "GET /huddle/1/propose HTTP/1.1" 200 -
+2026-06-10 02:02:39,746 127.0.0.1 - - [10/Jun/2026 02:02:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:39,749 127.0.0.1 - - [10/Jun/2026 02:02:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:39,833 127.0.0.1 - - [10/Jun/2026 02:02:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:39,912 127.0.0.1 - - [10/Jun/2026 02:02:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:39,972 127.0.0.1 - - [10/Jun/2026 02:02:39] "GET /static/js/location-autocomplete.js HTTP/1.1" 200 -
+2026-06-10 02:02:40,051 127.0.0.1 - - [10/Jun/2026 02:02:40] "[33mGET /huddle/1/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-10 02:02:41,811 127.0.0.1 - - [10/Jun/2026 02:02:41] "GET /huddle/1/event/3 HTTP/1.1" 200 -
+2026-06-10 02:02:41,927 127.0.0.1 - - [10/Jun/2026 02:02:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:41,931 127.0.0.1 - - [10/Jun/2026 02:02:41] "[36mGET /static/css/leaflet.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:41,935 127.0.0.1 - - [10/Jun/2026 02:02:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:42,019 127.0.0.1 - - [10/Jun/2026 02:02:42] "[36mGET /static/js/role-form.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:42,082 127.0.0.1 - - [10/Jun/2026 02:02:42] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-06-10 02:02:42,192 127.0.0.1 - - [10/Jun/2026 02:02:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:42,260 127.0.0.1 - - [10/Jun/2026 02:02:42] "[36mGET /static/js/leaflet.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:42,367 127.0.0.1 - - [10/Jun/2026 02:02:42] "[36mGET /static/js/event-map.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:42,517 127.0.0.1 - - [10/Jun/2026 02:02:42] "[33mGET /huddle/1/event/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-10 02:02:46,891 127.0.0.1 - - [10/Jun/2026 02:02:46] "GET /huddle/1/event/5 HTTP/1.1" 200 -
+2026-06-10 02:02:47,046 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:47,053 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:47,054 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/css/leaflet.css HTTP/1.1[0m" 304 -
+2026-06-10 02:02:47,147 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/js/role-form.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:47,210 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:47,281 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:47,369 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/js/leaflet.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:47,453 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/js/event-map.js HTTP/1.1[0m" 304 -
+2026-06-10 02:02:47,562 127.0.0.1 - - [10/Jun/2026 02:02:47] "[33mGET /huddle/1/event/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-10 02:02:47,670 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/images/marker-icon-2x.png HTTP/1.1[0m" 304 -
+2026-06-10 02:02:47,675 127.0.0.1 - - [10/Jun/2026 02:02:47] "[36mGET /static/images/marker-shadow.png HTTP/1.1[0m" 304 -
+2026-06-10 02:03:15,581 127.0.0.1 - - [10/Jun/2026 02:03:15] "[32mPOST /huddle/1/event/5/assign_role HTTP/1.1[0m" 302 -
+2026-06-10 02:03:15,678 127.0.0.1 - - [10/Jun/2026 02:03:15] "GET /huddle/1/event/5 HTTP/1.1" 200 -
+2026-06-10 02:03:15,828 127.0.0.1 - - [10/Jun/2026 02:03:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:03:15,907 127.0.0.1 - - [10/Jun/2026 02:03:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:03:15,923 127.0.0.1 - - [10/Jun/2026 02:03:15] "[36mGET /static/css/leaflet.css HTTP/1.1[0m" 304 -
+2026-06-10 02:03:15,985 127.0.0.1 - - [10/Jun/2026 02:03:15] "[36mGET /static/js/role-form.js HTTP/1.1[0m" 304 -
+2026-06-10 02:03:16,061 127.0.0.1 - - [10/Jun/2026 02:03:16] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:03:16,155 127.0.0.1 - - [10/Jun/2026 02:03:16] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:03:16,223 127.0.0.1 - - [10/Jun/2026 02:03:16] "[36mGET /static/js/leaflet.js HTTP/1.1[0m" 304 -
+2026-06-10 02:03:16,328 127.0.0.1 - - [10/Jun/2026 02:03:16] "[36mGET /static/js/event-map.js HTTP/1.1[0m" 304 -
+2026-06-10 02:03:16,423 127.0.0.1 - - [10/Jun/2026 02:03:16] "[33mGET /huddle/1/event/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-10 02:03:16,540 127.0.0.1 - - [10/Jun/2026 02:03:16] "[36mGET /static/images/marker-shadow.png HTTP/1.1[0m" 304 -
+2026-06-10 02:03:16,544 127.0.0.1 - - [10/Jun/2026 02:03:16] "[36mGET /static/images/marker-icon-2x.png HTTP/1.1[0m" 304 -
+2026-06-10 02:40:55,527 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.204:5000
+2026-06-10 02:40:55,528 [33mPress CTRL+C to quit[0m
+2026-06-10 02:40:55,528  * Restarting with stat
+2026-06-10 02:40:56,138  * Debugger is active!
+2026-06-10 02:40:56,139  * Debugger PIN: 639-035-884
+2026-06-10 02:40:57,876 127.0.0.1 - - [10/Jun/2026 02:40:57] "GET / HTTP/1.1" 200 -
+2026-06-10 02:40:58,100 127.0.0.1 - - [10/Jun/2026 02:40:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:40:58,101 127.0.0.1 - - [10/Jun/2026 02:40:58] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-10 02:40:58,133 {"csp-report":{"document-uri":"https://cuddly-funicular-7qqjp95qrr92rw57-5000.app.github.dev/","referrer":"https://cuddly-funicular-7qqjp95qrr92rw57.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":64,"source-file":"https://cuddly-funicular-7qqjp95qrr92rw57-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-10 02:40:58,133 127.0.0.1 - - [10/Jun/2026 02:40:58] "POST /csp_report HTTP/1.1" 200 -
+2026-06-10 02:40:58,135 127.0.0.1 - - [10/Jun/2026 02:40:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:40:58,374 127.0.0.1 - - [10/Jun/2026 02:40:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:27,091 127.0.0.1 - - [10/Jun/2026 02:41:27] "GET /login.html HTTP/1.1" 200 -
+2026-06-10 02:41:27,150 127.0.0.1 - - [10/Jun/2026 02:41:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:27,162 127.0.0.1 - - [10/Jun/2026 02:41:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:27,165 127.0.0.1 - - [10/Jun/2026 02:41:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:27,218 127.0.0.1 - - [10/Jun/2026 02:41:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:28,542 127.0.0.1 - - [10/Jun/2026 02:41:28] "GET / HTTP/1.1" 200 -
+2026-06-10 02:41:28,604 {"csp-report":{"document-uri":"https://cuddly-funicular-7qqjp95qrr92rw57-5000.app.github.dev/","referrer":"https://cuddly-funicular-7qqjp95qrr92rw57.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":64,"source-file":"https://cuddly-funicular-7qqjp95qrr92rw57-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-10 02:41:28,604 127.0.0.1 - - [10/Jun/2026 02:41:28] "POST /csp_report HTTP/1.1" 200 -
+2026-06-10 02:41:31,716 127.0.0.1 - - [10/Jun/2026 02:41:31] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-06-10 02:41:31,744 127.0.0.1 - - [10/Jun/2026 02:41:31] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-06-10 02:41:31,809 127.0.0.1 - - [10/Jun/2026 02:41:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:31,823 127.0.0.1 - - [10/Jun/2026 02:41:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:31,826 127.0.0.1 - - [10/Jun/2026 02:41:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:31,859 127.0.0.1 - - [10/Jun/2026 02:41:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:32,178 127.0.0.1 - - [10/Jun/2026 02:41:32] "[32mGET /your-huddle HTTP/1.1[0m" 302 -
+2026-06-10 02:41:32,207 127.0.0.1 - - [10/Jun/2026 02:41:32] "GET /login.html?next=/your-huddle HTTP/1.1" 200 -
+2026-06-10 02:41:32,280 127.0.0.1 - - [10/Jun/2026 02:41:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:32,289 127.0.0.1 - - [10/Jun/2026 02:41:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:32,300 127.0.0.1 - - [10/Jun/2026 02:41:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:32,342 127.0.0.1 - - [10/Jun/2026 02:41:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:32,987 127.0.0.1 - - [10/Jun/2026 02:41:32] "[32mGET /your-huddle HTTP/1.1[0m" 302 -
+2026-06-10 02:41:33,017 127.0.0.1 - - [10/Jun/2026 02:41:33] "GET /login.html?next=/your-huddle HTTP/1.1" 200 -
+2026-06-10 02:41:33,097 127.0.0.1 - - [10/Jun/2026 02:41:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:33,100 127.0.0.1 - - [10/Jun/2026 02:41:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:33,103 127.0.0.1 - - [10/Jun/2026 02:41:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:33,136 127.0.0.1 - - [10/Jun/2026 02:41:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:33,232 127.0.0.1 - - [10/Jun/2026 02:41:33] "[32mGET /account.html HTTP/1.1[0m" 302 -
+2026-06-10 02:41:33,330 127.0.0.1 - - [10/Jun/2026 02:41:33] "GET /login.html?next=/account.html HTTP/1.1" 200 -
+2026-06-10 02:41:33,403 127.0.0.1 - - [10/Jun/2026 02:41:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:33,407 127.0.0.1 - - [10/Jun/2026 02:41:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:41:33,411 127.0.0.1 - - [10/Jun/2026 02:41:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:33,442 127.0.0.1 - - [10/Jun/2026 02:41:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:41:35,606 127.0.0.1 - - [10/Jun/2026 02:41:35] "GET /login.html?next=/your-huddle HTTP/1.1" 200 -
+2026-06-10 02:49:35,017 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.204:5000
+2026-06-10 02:49:35,018 [33mPress CTRL+C to quit[0m
+2026-06-10 02:49:35,018  * Restarting with stat
+2026-06-10 02:49:35,362  * Debugger is active!
+2026-06-10 02:49:35,362  * Debugger PIN: 639-035-884
+2026-06-10 02:49:37,824 127.0.0.1 - - [10/Jun/2026 02:49:37] "GET / HTTP/1.1" 200 -
+2026-06-10 02:49:38,022 {"csp-report":{"document-uri":"https://cuddly-funicular-7qqjp95qrr92rw57-5000.app.github.dev/","referrer":"https://cuddly-funicular-7qqjp95qrr92rw57.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":53,"source-file":"https://cuddly-funicular-7qqjp95qrr92rw57-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-10 02:49:38,023 127.0.0.1 - - [10/Jun/2026 02:49:38] "POST /csp_report HTTP/1.1" 200 -
+2026-06-10 02:49:38,065 127.0.0.1 - - [10/Jun/2026 02:49:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:49:38,066 127.0.0.1 - - [10/Jun/2026 02:49:38] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-10 02:49:38,066 127.0.0.1 - - [10/Jun/2026 02:49:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:49:38,260 127.0.0.1 - - [10/Jun/2026 02:49:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:49:42,132 127.0.0.1 - - [10/Jun/2026 02:49:42] "GET / HTTP/1.1" 200 -
+2026-06-10 02:49:42,201 {"csp-report":{"document-uri":"https://cuddly-funicular-7qqjp95qrr92rw57-5000.app.github.dev/","referrer":"https://cuddly-funicular-7qqjp95qrr92rw57-5000.app.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":53,"source-file":"https://cuddly-funicular-7qqjp95qrr92rw57-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-10 02:49:42,201 127.0.0.1 - - [10/Jun/2026 02:49:42] "POST /csp_report HTTP/1.1" 200 -
+2026-06-10 02:49:42,203 127.0.0.1 - - [10/Jun/2026 02:49:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:49:42,209 127.0.0.1 - - [10/Jun/2026 02:49:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:49:42,270 127.0.0.1 - - [10/Jun/2026 02:49:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:49:42,301 127.0.0.1 - - [10/Jun/2026 02:49:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:49:44,134 127.0.0.1 - - [10/Jun/2026 02:49:44] "GET /login.html HTTP/1.1" 200 -
+2026-06-10 02:49:44,197 127.0.0.1 - - [10/Jun/2026 02:49:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:49:44,200 127.0.0.1 - - [10/Jun/2026 02:49:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:49:44,203 127.0.0.1 - - [10/Jun/2026 02:49:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:49:44,245 127.0.0.1 - - [10/Jun/2026 02:49:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:00,874 127.0.0.1 - - [10/Jun/2026 02:50:00] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-06-10 02:50:00,930 127.0.0.1 - - [10/Jun/2026 02:50:00] "GET /2fa.html HTTP/1.1" 200 -
+2026-06-10 02:50:01,018 127.0.0.1 - - [10/Jun/2026 02:50:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:01,021 127.0.0.1 - - [10/Jun/2026 02:50:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:01,024 127.0.0.1 - - [10/Jun/2026 02:50:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:01,091 127.0.0.1 - - [10/Jun/2026 02:50:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:22,766 127.0.0.1 - - [10/Jun/2026 02:50:22] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-06-10 02:50:22,802 127.0.0.1 - - [10/Jun/2026 02:50:22] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-10 02:50:22,880 127.0.0.1 - - [10/Jun/2026 02:50:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:22,885 127.0.0.1 - - [10/Jun/2026 02:50:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:22,885 127.0.0.1 - - [10/Jun/2026 02:50:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:23,010 127.0.0.1 - - [10/Jun/2026 02:50:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:25,171 127.0.0.1 - - [10/Jun/2026 02:50:25] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-10 02:50:25,230 127.0.0.1 - - [10/Jun/2026 02:50:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:25,243 127.0.0.1 - - [10/Jun/2026 02:50:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:25,246 127.0.0.1 - - [10/Jun/2026 02:50:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:25,279 127.0.0.1 - - [10/Jun/2026 02:50:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:25,308 127.0.0.1 - - [10/Jun/2026 02:50:25] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-10 02:50:31,833 127.0.0.1 - - [10/Jun/2026 02:50:31] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-10 02:50:31,897 127.0.0.1 - - [10/Jun/2026 02:50:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:31,900 127.0.0.1 - - [10/Jun/2026 02:50:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:31,903 127.0.0.1 - - [10/Jun/2026 02:50:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:31,945 127.0.0.1 - - [10/Jun/2026 02:50:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:32,947 127.0.0.1 - - [10/Jun/2026 02:50:32] "GET /account.html HTTP/1.1" 200 -
+2026-06-10 02:50:33,042 127.0.0.1 - - [10/Jun/2026 02:50:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:33,045 127.0.0.1 - - [10/Jun/2026 02:50:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:33,047 127.0.0.1 - - [10/Jun/2026 02:50:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:33,091 127.0.0.1 - - [10/Jun/2026 02:50:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:34,955 127.0.0.1 - - [10/Jun/2026 02:50:34] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-10 02:50:35,026 127.0.0.1 - - [10/Jun/2026 02:50:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:35,031 127.0.0.1 - - [10/Jun/2026 02:50:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:35,033 127.0.0.1 - - [10/Jun/2026 02:50:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:35,076 127.0.0.1 - - [10/Jun/2026 02:50:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:37,347 127.0.0.1 - - [10/Jun/2026 02:50:37] "GET /huddle/1 HTTP/1.1" 200 -
+2026-06-10 02:50:37,418 127.0.0.1 - - [10/Jun/2026 02:50:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:37,473 127.0.0.1 - - [10/Jun/2026 02:50:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:37,476 127.0.0.1 - - [10/Jun/2026 02:50:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:37,521 127.0.0.1 - - [10/Jun/2026 02:50:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:37,585 127.0.0.1 - - [10/Jun/2026 02:50:37] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-10 02:50:43,714 127.0.0.1 - - [10/Jun/2026 02:50:43] "GET /huddle/1/event/3 HTTP/1.1" 200 -
+2026-06-10 02:50:43,772 127.0.0.1 - - [10/Jun/2026 02:50:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:43,789 127.0.0.1 - - [10/Jun/2026 02:50:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:43,792 127.0.0.1 - - [10/Jun/2026 02:50:43] "[36mGET /static/css/leaflet.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:43,825 127.0.0.1 - - [10/Jun/2026 02:50:43] "[36mGET /static/js/role-form.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:43,852 127.0.0.1 - - [10/Jun/2026 02:50:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:43,879 127.0.0.1 - - [10/Jun/2026 02:50:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:43,901 127.0.0.1 - - [10/Jun/2026 02:50:43] "[36mGET /static/js/leaflet.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:43,989 127.0.0.1 - - [10/Jun/2026 02:50:43] "[36mGET /static/js/event-map.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:44,069 127.0.0.1 - - [10/Jun/2026 02:50:44] "[33mGET /huddle/1/event/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-10 02:50:49,231 127.0.0.1 - - [10/Jun/2026 02:50:49] "GET /huddle/1/event/5 HTTP/1.1" 200 -
+2026-06-10 02:50:49,286 127.0.0.1 - - [10/Jun/2026 02:50:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:49,303 127.0.0.1 - - [10/Jun/2026 02:50:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:49,306 127.0.0.1 - - [10/Jun/2026 02:50:49] "[36mGET /static/css/leaflet.css HTTP/1.1[0m" 304 -
+2026-06-10 02:50:49,343 127.0.0.1 - - [10/Jun/2026 02:50:49] "[36mGET /static/js/role-form.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:49,372 127.0.0.1 - - [10/Jun/2026 02:50:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:49,396 127.0.0.1 - - [10/Jun/2026 02:50:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:49,421 127.0.0.1 - - [10/Jun/2026 02:50:49] "[36mGET /static/js/leaflet.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:49,457 127.0.0.1 - - [10/Jun/2026 02:50:49] "[36mGET /static/js/event-map.js HTTP/1.1[0m" 304 -
+2026-06-10 02:50:49,510 127.0.0.1 - - [10/Jun/2026 02:50:49] "[33mGET /huddle/1/event/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-10 02:50:50,206 127.0.0.1 - - [10/Jun/2026 02:50:50] "[36mGET /static/images/marker-icon-2x.png HTTP/1.1[0m" 304 -
+2026-06-10 02:50:50,209 127.0.0.1 - - [10/Jun/2026 02:50:50] "[36mGET /static/images/marker-shadow.png HTTP/1.1[0m" 304 -

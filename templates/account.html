@@ -1,6 +1,17 @@
 {% extends "layout.html" %} {% block content %}
-<h1>Account</h1>
-<p>Name: {{ session.get('user_name', 'Unknown') }}</p>
-<p>Email: {{ session.get('user_email', 'Unknown') }}</p>
-<p>Manage your account settings here.</p>
+<div class="page-header">
+  <h1 class="display-6 fw-bold mb-1">Account</h1>
+  <p class="text-muted mb-0">Manage your account settings.</p>
+</div>
+
+<div class="card shadow-sm" style="max-width: 560px">
+  <div class="card-body">
+    <dl class="row mb-0">
+      <dt class="col-sm-4 text-muted">Name</dt>
+      <dd class="col-sm-8">{{ session.get('user_name', 'Unknown') }}</dd>
+      <dt class="col-sm-4 text-muted">Email</dt>
+      <dd class="col-sm-8">{{ session.get('user_email', 'Unknown') }}</dd>
+    </dl>
+  </div>
+</div>
 {% endblock %}
