@@ -101,3 +101,34 @@
 - What went well: All four core committed backlog items (PB-004 through PB-007) were delivered. Several client-requested enhancements (map view, role assignment, attendance tracking) were implemented as nice-to-haves on top of the committed scope.
 - What didn't go well: A routing bug was introduced when the detailed event view was added - voting from that screen redirected users back to the original voting page instead of staying in context. This wasn't caught before it was committed. The real-time voting tally feature was started before it was confirmed as feasible, leading to wasted effort before it was scoped out.
 - What will be improved in Sprint 3: Test all routing paths after adding new screens before committing. Assess technical feasibility of a feature before beginning implementation to avoid scope creep and abandoned work.
+
+## Sprint 3 - Finalisation
+
+**Sprint Goal:** Complete PWA responsiveness across all screen sizes, finalise the UI/UX design, and build the front home page.
+
+**Committed Items (from Product Backlog):**
+
+| PB ID | User Story |
+|-------|------------|
+| PB-008 | View the app correctly on any device screen size (320px–1920px) |
+| PB-009 | Experience a consistent and intuitive UI across all app screens |
+
+**Sprint Plan:**
+
+| # | Task | PB ID |
+|---|------|-------|
+| 1 | Implement responsive CSS/layout so all screens render correctly from 320px to 1920px | PB-008 |
+| 2 | Test and fix layout breakpoints on mobile, tablet, and desktop | PB-008 |
+| 3 | Design and build the front home/landing page | PB-009 |
+| 4 | Apply consistent UI styling (typography, colours, spacing) across all screens | PB-009 |
+| 5 | Conduct pre-review navigation and routing check across all pages | - |
+
+**Unit Test Summary Table:**
+
+| Test ID | Test Name | What It Tests | Input | Expected Output | Actual Output | Pass / Fail |
+|---------|-----------|---------------|-------|-----------------|---------------|-------------|
+| T3-01 | Mobile Responsiveness (320px) | PB-008 criterion 1 – layout renders correctly at minimum width | Browser resized to 320px; navigate all core screens | No overlapping elements, cut-off text, or broken layouts; all buttons usable | | |
+| T3-02 | Desktop Responsiveness (1920px) | PB-008 criterion 1 – layout renders correctly at maximum width | Browser at full 1920px; navigate all core screens | Content is readable, well-spaced, and no layout breaks | | |
+| T3-03 | Cross-Browser Compatibility | PB-008 criterion 1 – consistent rendering across browsers | Open app in Chrome, Firefox, and Safari; perform login and vote | All features and layouts function identically across all three browsers | | |
+| T3-04 | Home Page Load | PB-009 criterion 1 – landing page displays correctly | Navigate to the app's root URL | Home page loads with correct layout, navigation links, and branding | | |
+| T3-05 | UI Consistency Across Screens | PB-009 criterion 1 – consistent styling across all views | Navigate through all screens (login, dashboard, group view, event feed, vote screen) | Typography, colours, and spacing are consistent; no unstyled or broken elements | | |
