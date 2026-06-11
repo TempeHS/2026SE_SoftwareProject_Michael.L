@@ -1,43 +1,41 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{ url_for('index') }}">Huddle</a>
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="/">
+      <span class="navbar-logo">H</span> Huddle
+    </a>
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('account') }}">Account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('your_huddle') }}"
-            >Your Huddle</a
-          >
-        </li>
-      </ul>
-
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
         {% if session.get('user_id') and session.get('2fa_verified') %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+          <a class="nav-link" href="{{ url_for('your_huddle') }}">My Huddles</a>
         </li>
-        {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('login', next=request.path) }}"
-            >Login</a
+          <a class="nav-link" href="/account.html">Account</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary btn-sm" href="/logout.html"
+            >Log out</a
           >
         </li>
+        {% else %}
+        <li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('signup') }}">Sign Up</a>
+          <a class="nav-link" href="/login.html">Log in</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary btn-sm" href="/signup.html">Sign up</a>
         </li>
         {% endif %}
       </ul>

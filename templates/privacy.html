@@ -1,11 +1,25 @@
-{% extends 'layout.html' %}
-{% block content %}
-<div class="container">
-    <div class="row">
-        <h1 class="display-1">Privacy Policy</h1>
-    </div>
-    <div class="row">
+{% extends 'layout.html' %} {% block content %}
+<div class="page-header">
+  <h1 class="display-6 fw-bold mb-1">Privacy Policy</h1>
+  <p class="text-muted mb-0">How we handle your data.</p>
+</div>
 
-    </div>
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h3 class="h5">What we collect</h3>
+    <p class="text-muted">
+      We store your name, email and the groups and events you take part in, so
+      the app can function.
+    </p>
+    <h3 class="h5">How we use it</h3>
+    <p class="text-muted">
+      Your data is only used to run Huddle. We never share your email with third
+      parties.
+    </p>
+    <h3 class="h5 mb-0">Your control</h3>
+    <p class="text-muted mb-0">
+      You can request removal of your account and data at any time.
+    </p>
+  </div>
 </div>
 {% endblock %}

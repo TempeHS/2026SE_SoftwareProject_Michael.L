@@ -1,44 +1,223 @@
-* {
+/*
+  Huddle Theme - "Calm Tech"
+  Overlays Bootstrap with brand styling.
+  Load AFTER bootstrap.min.css. */
+
+:root {
+  /* Brand palette mapped onto Bootstrap variables */
+  --bs-primary: #4f46e5;
+  --bs-primary-rgb: 79, 70, 229;
+
+  --c-primary: #4f46e5;
+  --c-primary-dark: #4338ca;
+  --c-primary-light: #eef2ff;
+  --c-accent: #f59e0b;
+  --c-accent-light: #fef3c7;
+
+  --c-bg: #f8fafc;
+  --c-surface: #ffffff;
+  --c-border: #e2e8f0;
+  --c-text: #0f172a;
+  --c-text-muted: #64748b;
+
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --transition: 160ms ease;
 }
+
+html,
+body {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  line-height: 1.6;
 }
 
 main {
   flex: 1;
 }
 
-.container {
+/* Accessibility: visible focus for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
-.row {
+/* --- reskining the buttons --- */
+.btn-primary {
+  --bs-btn-bg: var(--c-primary);
+  --bs-btn-border-color: var(--c-primary);
+  --bs-btn-hover-bg: var(--c-primary-dark);
+  --bs-btn-hover-border-color: var(--c-primary-dark);
+  --bs-btn-active-bg: var(--c-primary-dark);
+  --bs-btn-active-border-color: var(--c-primary-dark);
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--c-primary);
+  --bs-btn-border-color: var(--c-border);
+  --bs-btn-hover-bg: var(--c-primary-light);
+  --bs-btn-hover-border-color: var(--c-primary);
+  --bs-btn-hover-color: var(--c-primary-dark);
+}
+.btn-accent {
+  --bs-btn-bg: var(--c-accent);
+  --bs-btn-color: var(--c-text);
+  --bs-btn-border-color: var(--c-accent);
+  --bs-btn-hover-bg: #e08e08;
+  --bs-btn-hover-border-color: #e08e08;
+  --bs-btn-hover-color: var(--c-text);
 }
 
-/* Footer styles */
+a {
+  color: var(--c-primary);
+}
+a:hover {
+  color: var(--c-primary-dark);
+}
+
+/* --- reskingin the cards --- */
+.card {
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- Form controls' --- */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px var(--c-primary-light);
+}
+
+/* --- List the groups --- */
+.list-group-item {
+  border-color: var(--c-border);
+}
+
+/* Landing page components */
+.hero {
+  background:
+    radial-gradient(circle at 20% 20%, var(--c-primary-light), transparent 50%),
+    radial-gradient(circle at 80% 0%, var(--c-accent-light), transparent 45%),
+    var(--c-bg);
+  border-radius: var(--radius-lg);
+}
+.hero .highlight {
+  color: var(--c-primary);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  font-size: 1.5rem;
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: var(--c-accent);
+  color: var(--c-text);
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.cta-band {
+  background: var(--c-primary);
+  color: #fff;
+  border-radius: var(--radius-lg);
+}
+.cta-band h2 {
+  color: #fff;
+}
+.cta-band p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Footer */
 .footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #f8f9fa; /* Light gray background */
-  border-top: 1px solid #dee2e6; /* Subtle border */
+  background-color: var(--c-surface);
+  border-top: 1px solid var(--c-border);
 }
-
 .footer a {
-  color: #6c757d; /* Muted text color */
-  transition: color 0.2s;
+  color: var(--c-text-muted);
+  transition: color var(--transition);
 }
-
 .footer a:hover {
-  color: #0d6efd; /* Bootstrap primary color */
+  color: var(--c-primary);
 }
-
 .footer small {
-  font-size: 0.875rem; /* Smaller text for copyright */
+  font-size: 0.875rem;
 }
 
-/* Ensure the footer stays at the bottom */
-html,
-body {
-  height: 100%;
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* --- Navbar brand logo --- */
+.navbar-logo {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: var(--c-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+}
+.navbar .nav-link {
+  color: var(--c-text-muted);
+  font-weight: 500;
+}
+.navbar .nav-link:hover {
+  color: var(--c-text);
+}
+
+/* --- Auth pages: centred card layout --- */
+.auth-card {
+  max-width: 440px;
+  margin: var(--sp-12, 3rem) auto;
+}
+
+/* --- Page header helper --- */
+.page-header {
+  margin-bottom: 2rem;
 }

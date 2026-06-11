@@ -1,40 +1,135 @@
 {% extends "layout.html" %} {% block content %}
-<div class="container py-4">
-  <div class="row mb-3">
-    <div class="col">
-      <h1 class="display-4">Huddle</h1>
-      <p class="lead mb-0">Friend group activity and updates in one place.</p>
-    </div>
+<section class="hero text-center py-5 px-3 mb-5">
+  {% if is_logged_in %}
+  <span class="badge text-bg-primary mb-3">👋 Welcome back! </span>
+  <h1 class="display-4 fw-bold">
+    Your <span class="highlight">Huddles</span> at a glance
+  </h1>
+  <p class="lead text-muted mx-auto" style="max-width: 560px">
+    Catch up on the latest activity 🎧😎🔥 then jump back into planning 💯
+  </p>
+  <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+    <a href="{{ url_for('your_huddle') }}" class="btn btn-primary btn-lg"
+      >Go to my Huddles</a
+    >
+    <a
+      href="{{ url_for('create_huddle') }}"
+      class="btn btn-outline-primary btn-lg"
+      >Create a Huddle</a
+    >
   </div>
 
-  <div class="row mb-4">
-    <div class="col d-flex justify-content-between align-items-center">
-      <h2 class="h5 text-muted mb-0">Dashboard</h2>
-      <a class="btn btn-primary btn-sm" href="{{ url_for('your_huddle') }}"
-        >Go to Your Huddle</a
-      >
+  {% if dashboard_updates %}
+  <div class="card text-start mx-auto mt-5" style="max-width: 480px">
+    <div class="card-body">
+      <h3 class="h5 mb-3">Recent activity</h3>
+      {% for update in dashboard_updates %}
+      <div class="d-flex justify-content-between py-2 border-bottom">
+        <span>{{ update.message }}</span>
+        <small class="text-muted">{{ update.time }}</small>
+      </div>
+      {% endfor %}
     </div>
   </div>
+  {% endif %} {% else %}
+  <span class="badge text-bg-primary mb-3">✨ Plan together, effortlessly</span>
+  <h1 class="display-4 fw-bold">
+    Bring your group together with <span class="highlight">Huddle</span>
+  </h1>
+  <p class="lead text-muted mx-auto" style="max-width: 560px">
+    Organise meetups, vote on plans, assign roles and track who's coming - all
+    in one calm, simple space. Built for friends, teams and everyone in between.
+  </p>
+  <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+    <a href="/signup.html" class="btn btn-primary btn-lg">Get started free</a>
+    <a href="/login.html" class="btn btn-outline-primary btn-lg">Log in</a>
+  </div>
+  {% endif %}
+</section>
 
-  <div class="row">
-    <div class="col">
-      {% if is_logged_in %} {% if dashboard_updates %}
-      <ul class="list-group">
-        {% for update in dashboard_updates %}
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-        >
-          <span>{{ update.message }}</span>
-          <small class="text-muted">{{ update.time }}</small>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <div class="alert alert-secondary mb-0">No live notifications yet.</div>
-      {% endif %} {% else %}
-      <p><a href="{{ url_for('login') }}">Log in</a> to view your dashboard.</p>
-      {% endif %}
+{% if not is_logged_in %}
+<!-- FEATURES -->
+<section class="mb-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Everything you need to plan</h2>
+    <p class="text-muted">
+      Simple enough for a movie night & powerful enough for a team office.
+    </p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="feature-icon mb-3">🗳</div>
+          <h3 class="h5">Vote on plans</h3>
+          <p class="text-muted mb-0">
+            Propose events and let everyone vote yes, no or maybe. No more
+            endless group chats.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="feature-icon mb-3">💭</div>
+          <h3 class="h5">Assign roles</h3>
+          <p class="text-muted mb-0">
+            Give everyone a role! driver, snacks, music. nothing gets forgotten!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="feature-icon mb-3">📊</div>
+          <h3 class="h5">Track attendance</h3>
+          <p class="text-muted mb-0">
+            See who showed up and keep tabs on reliability over time
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-{% endblock %}
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="bg-white border rounded-3 p-4 p-md-5 mb-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Get going in three steps</h2>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="step-number mb-3">1</div>
+      <h3 class="h5">Create a Huddle</h3>
+      <p class="text-muted">
+        Start a group and get a simple invite code to share.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <div class="step-number mb-3">2</div>
+      <h3 class="h5">Invite your friends</h3>
+      <p class="text-muted">
+        Friends or colleagues join in seconds with the code.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <div class="step-number mb-3">3</div>
+      <h3 class="h5">Plan & assign</h3>
+      <p class="text-muted">
+        Propose events, vote, assign roles and you're set.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band text-center p-5 mb-4">
+  <h2 class="fw-bold">Ready to get organised?</h2>
+  <p>Join Huddle today! free for groups of any size</p>
+  <a href="/signup.html" class="btn btn-accent btn-lg mt-2"
+    >Create your account</a
+  >
+</section>
+{% endif %} {% endblock %}

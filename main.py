@@ -94,16 +94,8 @@ def root():
 def index():
     is_logged_in = "user_id" in session and session.get("2fa_verified", False)
 
-    dashboard_updates = []
-    if is_logged_in:
-        dashboard_updates = [
-            {"message": "New invite from Alex", "time": "2m ago"},
-            {"message": "Sam accepted your event", "time": "10m ago"},
-        ]
-
     return render_template(
         "index.html",
-        dashboard_updates=dashboard_updates,
         is_logged_in=is_logged_in,
     )
 

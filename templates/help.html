@@ -1,4 +1,52 @@
 {% extends "layout.html" %} {% block content %}
-<h1>Help</h1>
-<p>Use this page for FAQ, support links, and onboarding guidance.</p>
+<div class="page-header">
+  <h1 class="display-6 fw-bold mb-1">Help &amp; FAQ</h1>
+  <p class="text-muted mb-0">Support, guidance and getting started.</p>
+</div>
+
+<div class="row g-4">
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="h5">Getting started</h3>
+        <p class="text-muted mb-0">
+          Create a Huddle, share the invite code, and your friend group can join
+          in seconds!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="h5">Voting on events</h3>
+        <p class="text-muted mb-0">
+          Propose an event and let group members vote yes, no, or maybe to find
+          the best plan
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="h5">Roles &amp; attendance</h3>
+        <p class="text-muted mb-0">
+          Assign roles so nothing is forgotten, and track who actually shows up
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="h5">Need more help?</h3>
+        <p class="text-muted mb-0">
+          Check the <a href="/privacy.html">privacy policy</a> or contact your
+          group organiser.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
