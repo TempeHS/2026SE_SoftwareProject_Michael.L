@@ -127,8 +127,4 @@
 
 | Test ID | Test Name | What It Tests | Input | Expected Output | Actual Output | Pass / Fail |
 |---------|-----------|---------------|-------|-----------------|---------------|-------------|
-| T3-01 | Mobile Responsiveness (320px) | PB-008 criterion 1 – layout renders correctly at minimum width | Browser resized to 320px; navigate all core screens | No overlapping elements, cut-off text, or broken layouts; all buttons usable | Pages respond successfully to all mobile screen sizes | Pass |
-| T3-02 | Desktop Responsiveness (1920px) | PB-008 criterion 1 – layout renders correctly at maximum width | Browser at full 1920px; navigate all core screens | Content is readable, well-spaced, and no layout breaks | Pages respond successfully to all desktop screen sizes | Pass |
-| T3-03 | Cross-Browser Compatibility | PB-008 criterion 1 – consistent rendering across browsers | Open app in Chrome, Firefox, and Safari; perform login and vote | All features and layouts function identically across all three browsers |  | |
-| T3-04 | Home Page Load | PB-009 criterion 1 – landing page displays correctly | Navigate to the app's root URL | Home page loads with correct layout, navigation links, and branding | All pages load clearly and correctly across the web app | Pass |
-| T3-05 | UI Consistency Across Screens | PB-009 criterion 1 – consistent styling across all views | Navigate through all screens (login, dashboard, group view, event feed, vote screen) | Typography, colours, and spacing are consistent; no unstyled or broken elements | Pages display a consistent solour scheme and theme | Pass |
+
