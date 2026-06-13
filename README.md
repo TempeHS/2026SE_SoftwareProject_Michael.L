@@ -27,7 +27,7 @@ Huddle is a Progressive Web App (PWA) that helps friend groups organise and comm
 2. Open a terminal in the project root directory.
 3. Install dependancies:
    `pip install -r requirements.txt`
-4. Set up your environment variables — copy `.env` and fill in your secret key and database config.
+4. Set up your environment variables - copy `.env` and fill in your secret key and database config.
 5. Run the app:
    `python main.py`
 6. Open your browser and navigate to `http://localhost:5000`
