@@ -177,7 +177,7 @@ http://localhost:5000
 
 ![Event Voting](screenshots/event-voting.png)
 
-#### Event Voting
+#### Event Detials
 
 ![Event Voting](screenshots/event-details.png)
 
@@ -212,10 +212,9 @@ Huddle/
 ```
 
 
-## Backlog Documentation
-
-- **PRODUCTBACKLOG.md** – User stories, priorities, acceptance criteria, and feature roadmap.
-- **SPRINTBACKLOG.md** – Sprint goals, task allocation, testing results, reviews, and retrospectives.
+## Backlog Files 
+- [PRODUCTBACKLOG.md](./PRODUCTBACKLOG.md) - Full list of features, user stories, priorities, and acceptance criteria
+- [SPRINTBACKLOG.md](./SPRINTBACKLOG.md) - Sprint-by-sprint goals, tasks, test results, reviews, and retrospectives
 
 ---
 
