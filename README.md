@@ -1,40 +1,240 @@
 # Huddle
-Huddle is a Progressive Web App (PWA) that helps friend groups organise and commit to social plans. Users can propose activities, vote on them (Yes/No/Maybe), and track attendance - all without relying on messy group chats.
+
+**Huddle** is a Progressive Web App (PWA) designed to help friend groups organise social events and improve commitment to plans. Instead of relying on busy group chats, users can create groups, propose activities, vote on events, assign roles, and track attendance in a single platform.
+
+**Target Users:** Friend groups, clubs, sporting teams, and social communities who regularly organise events together.
 
 ---
 
-## Status
-**Current Sprint:** Sprint 3 - PWA Responsiveness & UI/UX Design ✅ Complete  
-**Last Increment:** Sprint 3 - Fully responsive layout (320px–2560px), unified frontend theme across all pages, cross-platform breakpoint testing (PB-009)  
-**Next Planned Increment:** Sprint 4 - Documentation (finalise Systems Report, Client Log, Developer Diary)
+## Project Status
+
+**Current Sprint:** Sprint 3 – PWA Responsiveness & UI/UX Design ✅ Complete
+
+**Last Increment:**
+- Fully responsive interface (320px–2560px)
+- Unified frontend theme across all pages
+- Cross-platform breakpoint testing completed (PB-009)
+
+**Next Planned Increment:**
+- Sprint 4 – Documentation
+- Systems Report completion
+- Client Log finalisation
+- Developer Diary completion
+
+---
+
+## Technologies Used
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+
+### Backend
+- Python
+- Flask
+
+### Database
+- SQLite
+
+### APIs & Libraries
+- Leaflet.js
+- OpenStreetMap
+- PyOTP (Google Authenticator 2FA)
+
+### Development Tools
+- Git
+- GitHub
 
 ---
 
 ## Features
-- User authentication with Google Authenticator 2FA
-- Group creation with unique 6-character invite codes
-- Event proposal system (name, date/time, location with address autofill)
-- Yes/No/Maybe voting with vote tallies and percentage breakdown
-- Detailed event view with interactive location map (Leaflet.js + OpenStreetMap)
-- Role assignment by group leaders (custom roles, saved per group)
-- Attendance tracking with per-member attendance percentage
-- Fully responsive UI from 320px (mobile) to 2560px (desktop)
+
+### User Management
+- Secure user registration and login
+- Google Authenticator Two-Factor Authentication (2FA)
+
+### Group Management
+- Create groups
+- Join groups using unique 6-character invite codes
+- Assign custom member roles
+
+### Event Planning
+- Create event proposals
+- Date and time scheduling
+- Location selection with address autofill
+- Interactive event map integration
+
+### Voting System
+- Yes / No / Maybe voting
+- Live vote tally updates
+- Percentage breakdown of responses
+
+### Attendance Tracking
+- Record attendance for completed events
+- View individual attendance percentages
+- Monitor participation across the group
+
+### Responsive Design
+- Mobile-first design
+- Supports screen sizes from 320px to 2560px
+- Progressive Web App functionality
 
 ---
 
-## How to Run
-1. Clone this repository to your local machine.
-2. Open a terminal in the project root directory.
-3. Install dependancies:
-   `pip install -r requirements.txt`
-4. Set up your environment variables - copy `.env` and fill in your secret key and database config.
-5. Run the app:
-   `python main.py`
-6. Open your browser and navigate to `http://localhost:5000`
-7. To use 2FA, you will need Google Authenticator installed on your phone. Scan the QR code shown on registration.
+## Installation
+
+### Prerequisites
+- Python 3.11+
+- Git
+
+### Setup
+
+1. Clone the repository:
+
+```bash
+git clone
+```
+
+2. Navigate to the project directory
+   
+
+4. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Configure environment variables:
+
+```bash
+cp .env.example .env
+```
+
+Add your:
+- Secret key
+- Database configuration
+- Authentication settings
+
+5. Run the application:
+
+```bash
+python main.py
+```
+
+6. Open your browser and navigate to:
+
+```text
+http://localhost:5000
+```
 
 ---
 
-## Backlog Files
-- [PRODUCTBACKLOG.md](./PRODUCTBACKLOG.md) - Full list of features, user stories, priorities, and acceptance criteria
-- [SPRINTBACKLOG.md](./SPRINTBACKLOG.md) - Sprint-by-sprint goals, tasks, test results, reviews, and retrospectives
+## Usage
+
+### Creating a Group
+
+1. Register an account.
+2. Set up Google Authenticator using the generated QR code.
+3. Create a new group.
+4. Share the generated invite code with friends.
+
+### Creating an Event
+
+1. Open your group dashboard.
+2. Select **Create Event**.
+3. Enter event details.
+4. Choose a date, time, and location.
+5. Submit the proposal.
+
+### Voting on an Event
+
+1. Open an event.
+2. Select **Yes**, **No**, or **Maybe**.
+3. View live voting statistics and attendance predictions.
+
+### Tracking Attendance
+
+1. Mark attendance after an event.
+2. View attendance percentages in the group dashboard.
+
+### Screenshots
+
+#### Home page
+
+![Login Page](screenshots/home.png)
+
+#### Login Page
+
+![Login Page](screenshots/login.png)
+
+#### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+#### Event Voting
+
+![Event Voting](screenshots/event-voting.png)
+
+#### Event Voting
+
+![Event Voting](screenshots/event-details.png)
+
+#### Attendance Tracking
+
+![Attendance Tracking](screenshots/attendance.png)
+
+---
+
+## Project Structure
+
+```text
+Huddle/
+│
+├── .devcontainer/
+├── .vscode/
+├── data/
+├── dist/
+├── static/
+├── templates/
+│
+├── .env
+├── .gitattributes
+├── .gitignore
+├── LICENSE
+├── main.py
+├── PRODUCTBACKLOG.md
+├── README.md
+├── requirements.txt
+├── security_log.log
+└── SPRINTBACKLOG.md
+```
+
+
+## Backlog Documentation
+
+- **PRODUCTBACKLOG.md** – User stories, priorities, acceptance criteria, and feature roadmap.
+- **SPRINTBACKLOG.md** – Sprint goals, task allocation, testing results, reviews, and retrospectives.
+
+---
+
+## Licence
+
+This project was developed for educational purposes as part of the HSC Software Engineering course.
+
+Copyright © 2026
+
+All Rights Reserved.
+
+---
+
+## Acknowledgements
+
+- Project Clients: My Friends
+- Mr Jones
+- OpenStreetMap
+- Leaflet.js
+- Flask Community
+- GitHub
+- Bootstrap Development Team
