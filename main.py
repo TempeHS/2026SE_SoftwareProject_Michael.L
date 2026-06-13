@@ -58,6 +58,10 @@ app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
 
 csrf = CSRFProtect(app)
 ROLE_PATTERN = re.compile(r"^[A-Za-z0-9 \-]{1,50}$")
+FULL_NAME_PATTERN = re.compile(r"^[A-Za-z ,.'\-]{2,80}$")
+EMAIL_PATTERN = re.compile(
+    r"^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]{1,64}@[A-Za-z0-9-]{1,63}(?:\.[A-Za-z0-9-]{1,63})+$"
+)
 
 
 # Redirect index.html to domain root for consistent UX
@@ -1168,9 +1172,18 @@ def signup():
         email = request.form.get("email", "").strip().lower()
         password = request.form.get("password", "")
 
+        validation_error = validate_signup_input(full_name, email, password)
+        if validation_error:
+            return render_template(
+                "signup.html",
+                is_done=False,
+                dupe=False,
+                error=validation_error,
+            )
+
         ok = create_user(email=email, password=password, full_name=full_name)
         if not ok:
-            return render_template("signup.html", is_done=False, dupe=True)
+            return render_template("signup.html", is_done=False, dupe=True, error=None)
 
         user = get_user_by_email(email)
 
@@ -1181,7 +1194,6 @@ def signup():
         session["2fa_verified"] = False
         session.permanent = True
 
-        # Correct endpoint name
         return redirect(url_for("two_factor_auth"))
 
     return render_template("signup.html", is_done=False, dupe=False, error=None)
@@ -1195,6 +1207,14 @@ def login():
         next_url = (request.form.get("next_url") or "").strip()
         if is_safe_next(next_url):
             session["next_url"] = next_url
+
+        validation_error = validate_login_input(email, password)
+        if validation_error:
+            return render_template(
+                "login.html",
+                error="Invalid Email or Password",
+                next_url=session.get("next_url", ""),
+            )
 
         user = verify_user(email, password)
         if user:
@@ -1276,7 +1296,47 @@ def prettydt(value):
         return value
 
 
+def validate_signup_input(full_name: str, email: str, password: str):
+    full_name = (full_name or "").strip()
+    email = (email or "").strip().lower()
+    password = password or ""
+
+    if not FULL_NAME_PATTERN.fullmatch(full_name):
+        return "Name must be 2-80 chars and use letters/basic punctuation only."
+
+    if len(email) > 254 or not EMAIL_PATTERN.fullmatch(email):
+        return "Please enter a valid email address."
+
+    # Example policy: 12-128 + upper/lower/digit/symbol
+    if len(password) < 12 or len(password) > 128:
+        return "Password must be 12-128 characters."
+    if not re.search(r"[a-z]", password):
+        return "Password must include a lowercase letter."
+    if not re.search(r"[A-Z]", password):
+        return "Password must include an uppercase letter."
+    if not re.search(r"\d", password):
+        return "Password must include a number."
+    if not re.search(r"[^A-Za-z0-9]", password):
+        return "Password must include a symbol."
+
+    return None
+
+
+def validate_login_input(email: str, password: str):
+    email = (email or "").strip().lower()
+    password = password or ""
+
+    # Keep response generic later to avoid account enumeration
+    if len(email) > 254 or not EMAIL_PATTERN.fullmatch(email):
+        return "Invalid Email or Password"
+    if len(password) < 1 or len(password) > 128:
+        return "Invalid Email or Password"
+
+    return None
+
+
 init_auth_db()
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    debug_mode = os.environ.get("FLASK_DEBUG", "0") == "1"
+    app.run(debug=debug_mode, host="0.0.0.0", port=5000)

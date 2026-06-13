@@ -10,6 +10,8 @@
     </div>
     {% elif dupe %}
     <div class="alert alert-danger">Email already registered.</div>
+    {% elif error %}
+    <div class="alert alert-danger">{{ error }}</div>
     {% endif %}
 
     <form action="/signup.html" method="POST">

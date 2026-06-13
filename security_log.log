@@ -8980,3 +8980,195 @@
 2026-06-11 00:03:21,458 127.0.0.1 - - [11/Jun/2026 00:03:21] "GET / HTTP/1.1" 200 -
 2026-06-11 00:03:21,460 127.0.0.1 - - [11/Jun/2026 00:03:21] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
 2026-06-11 00:03:21,478 127.0.0.1 - - [11/Jun/2026 00:03:21] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2026-06-13 05:58:27,678 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.98:5000
+2026-06-13 05:58:27,679 [33mPress CTRL+C to quit[0m
+2026-06-13 05:58:27,679  * Restarting with stat
+2026-06-13 05:58:28,021  * Debugger is active!
+2026-06-13 05:58:28,021  * Debugger PIN: 132-619-743
+2026-06-13 05:58:32,811 127.0.0.1 - - [13/Jun/2026 05:58:32] "GET / HTTP/1.1" 200 -
+2026-06-13 05:58:33,081 {"csp-report":{"document-uri":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","referrer":"https://effective-space-halibut-j66pq576r762q599.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":53,"source-file":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-13 05:58:33,082 127.0.0.1 - - [13/Jun/2026 05:58:33] "POST /csp_report HTTP/1.1" 200 -
+2026-06-13 05:58:33,105 127.0.0.1 - - [13/Jun/2026 05:58:33] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2026-06-13 05:58:33,106 127.0.0.1 - - [13/Jun/2026 05:58:33] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-13 05:58:33,107 127.0.0.1 - - [13/Jun/2026 05:58:33] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-06-13 05:58:33,324 127.0.0.1 - - [13/Jun/2026 05:58:33] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-06-13 05:58:33,378 127.0.0.1 - - [13/Jun/2026 05:58:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 05:58:33,398 127.0.0.1 - - [13/Jun/2026 05:58:33] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-13 05:58:35,469 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,476 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,482 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,483 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,486 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,488 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,489 127.0.0.1 - - [13/Jun/2026 05:58:35] "GET / HTTP/1.1" 200 -
+2026-06-13 05:58:35,495 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,506 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,514 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,519 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,523 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2026-06-13 05:58:35,532 127.0.0.1 - - [13/Jun/2026 05:58:35] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2026-06-13 05:58:41,587 127.0.0.1 - - [13/Jun/2026 05:58:41] "GET /login.html HTTP/1.1" 200 -
+2026-06-13 05:58:41,656 127.0.0.1 - - [13/Jun/2026 05:58:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 05:58:41,660 127.0.0.1 - - [13/Jun/2026 05:58:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 05:58:41,662 127.0.0.1 - - [13/Jun/2026 05:58:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 05:58:41,713 127.0.0.1 - - [13/Jun/2026 05:58:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 05:58:45,941 127.0.0.1 - - [13/Jun/2026 05:58:45] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-06-13 05:58:46,002 127.0.0.1 - - [13/Jun/2026 05:58:46] "GET /2fa.html HTTP/1.1" 200 -
+2026-06-13 05:58:46,080 127.0.0.1 - - [13/Jun/2026 05:58:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 05:58:46,082 127.0.0.1 - - [13/Jun/2026 05:58:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 05:58:46,084 127.0.0.1 - - [13/Jun/2026 05:58:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 05:58:46,124 127.0.0.1 - - [13/Jun/2026 05:58:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 05:58:56,693 127.0.0.1 - - [13/Jun/2026 05:58:56] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-06-13 05:58:56,724 127.0.0.1 - - [13/Jun/2026 05:58:56] "GET / HTTP/1.1" 200 -
+2026-06-13 05:58:56,813 127.0.0.1 - - [13/Jun/2026 05:58:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 05:58:56,815 {"csp-report":{"document-uri":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","referrer":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/2fa.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":58,"source-file":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-13 05:58:56,815 127.0.0.1 - - [13/Jun/2026 05:58:56] "POST /csp_report HTTP/1.1" 200 -
+2026-06-13 05:58:56,819 127.0.0.1 - - [13/Jun/2026 05:58:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 05:58:56,821 127.0.0.1 - - [13/Jun/2026 05:58:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 05:58:56,883 127.0.0.1 - - [13/Jun/2026 05:58:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 05:58:58,536 127.0.0.1 - - [13/Jun/2026 05:58:58] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-13 05:58:58,594 127.0.0.1 - - [13/Jun/2026 05:58:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 05:58:58,598 127.0.0.1 - - [13/Jun/2026 05:58:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 05:58:58,601 127.0.0.1 - - [13/Jun/2026 05:58:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 05:58:58,654 127.0.0.1 - - [13/Jun/2026 05:58:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 05:59:01,553 127.0.0.1 - - [13/Jun/2026 05:59:01] "GET /huddle/3 HTTP/1.1" 200 -
+2026-06-13 05:59:01,616 127.0.0.1 - - [13/Jun/2026 05:59:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 05:59:01,619 127.0.0.1 - - [13/Jun/2026 05:59:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 05:59:01,620 127.0.0.1 - - [13/Jun/2026 05:59:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 05:59:01,675 127.0.0.1 - - [13/Jun/2026 05:59:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 05:59:01,708 127.0.0.1 - - [13/Jun/2026 05:59:01] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-13 05:59:02,439 127.0.0.1 - - [13/Jun/2026 05:59:02] "GET /huddle/3/propose HTTP/1.1" 200 -
+2026-06-13 05:59:02,498 127.0.0.1 - - [13/Jun/2026 05:59:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 05:59:02,504 127.0.0.1 - - [13/Jun/2026 05:59:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 05:59:02,509 127.0.0.1 - - [13/Jun/2026 05:59:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 05:59:02,565 127.0.0.1 - - [13/Jun/2026 05:59:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 05:59:02,598 127.0.0.1 - - [13/Jun/2026 05:59:02] "GET /static/js/location-autocomplete.js HTTP/1.1" 200 -
+2026-06-13 05:59:02,643 127.0.0.1 - - [13/Jun/2026 05:59:02] "[33mGET /huddle/3/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-13 07:08:11,736 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.241:5000
+2026-06-13 07:08:11,766 [33mPress CTRL+C to quit[0m
+2026-06-13 07:08:11,767  * Restarting with stat
+2026-06-13 07:08:12,092  * Debugger is active!
+2026-06-13 07:08:12,092  * Debugger PIN: 303-032-941
+2026-06-13 07:08:14,546 127.0.0.1 - - [13/Jun/2026 07:08:14] "GET / HTTP/1.1" 200 -
+2026-06-13 07:08:14,767 {"csp-report":{"document-uri":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","referrer":"https://effective-space-halibut-j66pq576r762q599.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":53,"source-file":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-13 07:08:14,768 127.0.0.1 - - [13/Jun/2026 07:08:14] "POST /csp_report HTTP/1.1" 200 -
+2026-06-13 07:08:14,790 127.0.0.1 - - [13/Jun/2026 07:08:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:14,792 127.0.0.1 - - [13/Jun/2026 07:08:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:14,798 127.0.0.1 - - [13/Jun/2026 07:08:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:15,019 127.0.0.1 - - [13/Jun/2026 07:08:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:17,608 127.0.0.1 - - [13/Jun/2026 07:08:17] "GET /login.html HTTP/1.1" 200 -
+2026-06-13 07:08:17,693 127.0.0.1 - - [13/Jun/2026 07:08:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:17,694 127.0.0.1 - - [13/Jun/2026 07:08:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:17,698 127.0.0.1 - - [13/Jun/2026 07:08:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:17,751 127.0.0.1 - - [13/Jun/2026 07:08:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:25,102 127.0.0.1 - - [13/Jun/2026 07:08:25] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2026-06-13 07:08:25,209 127.0.0.1 - - [13/Jun/2026 07:08:25] "GET /2fa.html HTTP/1.1" 200 -
+2026-06-13 07:08:25,297 127.0.0.1 - - [13/Jun/2026 07:08:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:25,301 127.0.0.1 - - [13/Jun/2026 07:08:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:25,302 127.0.0.1 - - [13/Jun/2026 07:08:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:25,365 127.0.0.1 - - [13/Jun/2026 07:08:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:34,628 127.0.0.1 - - [13/Jun/2026 07:08:34] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2026-06-13 07:08:34,663 127.0.0.1 - - [13/Jun/2026 07:08:34] "GET / HTTP/1.1" 200 -
+2026-06-13 07:08:34,741 127.0.0.1 - - [13/Jun/2026 07:08:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:34,754 {"csp-report":{"document-uri":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","referrer":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/2fa.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":58,"source-file":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-13 07:08:34,755 127.0.0.1 - - [13/Jun/2026 07:08:34] "POST /csp_report HTTP/1.1" 200 -
+2026-06-13 07:08:34,757 127.0.0.1 - - [13/Jun/2026 07:08:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:34,770 127.0.0.1 - - [13/Jun/2026 07:08:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:34,829 127.0.0.1 - - [13/Jun/2026 07:08:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:36,114 127.0.0.1 - - [13/Jun/2026 07:08:36] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-13 07:08:36,182 127.0.0.1 - - [13/Jun/2026 07:08:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:36,186 127.0.0.1 - - [13/Jun/2026 07:08:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:36,189 127.0.0.1 - - [13/Jun/2026 07:08:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:36,232 127.0.0.1 - - [13/Jun/2026 07:08:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:37,138 127.0.0.1 - - [13/Jun/2026 07:08:37] "GET /huddle/join HTTP/1.1" 200 -
+2026-06-13 07:08:37,207 127.0.0.1 - - [13/Jun/2026 07:08:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:37,217 127.0.0.1 - - [13/Jun/2026 07:08:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:08:37,220 127.0.0.1 - - [13/Jun/2026 07:08:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:37,258 127.0.0.1 - - [13/Jun/2026 07:08:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:08:37,300 127.0.0.1 - - [13/Jun/2026 07:08:37] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-13 07:09:23,746 127.0.0.1 - - [13/Jun/2026 07:09:23] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-13 07:09:23,822 127.0.0.1 - - [13/Jun/2026 07:09:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:23,826 127.0.0.1 - - [13/Jun/2026 07:09:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:23,828 127.0.0.1 - - [13/Jun/2026 07:09:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:23,879 127.0.0.1 - - [13/Jun/2026 07:09:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:25,415 127.0.0.1 - - [13/Jun/2026 07:09:25] "GET /huddle/join HTTP/1.1" 200 -
+2026-06-13 07:09:25,604 127.0.0.1 - - [13/Jun/2026 07:09:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:25,604 127.0.0.1 - - [13/Jun/2026 07:09:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:25,607 127.0.0.1 - - [13/Jun/2026 07:09:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:25,664 127.0.0.1 - - [13/Jun/2026 07:09:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:25,723 127.0.0.1 - - [13/Jun/2026 07:09:25] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-13 07:09:31,861 127.0.0.1 - - [13/Jun/2026 07:09:31] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-13 07:09:31,933 127.0.0.1 - - [13/Jun/2026 07:09:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:31,944 127.0.0.1 - - [13/Jun/2026 07:09:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:31,947 127.0.0.1 - - [13/Jun/2026 07:09:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:31,991 127.0.0.1 - - [13/Jun/2026 07:09:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:35,960 127.0.0.1 - - [13/Jun/2026 07:09:35] "GET /huddle/join HTTP/1.1" 200 -
+2026-06-13 07:09:36,025 127.0.0.1 - - [13/Jun/2026 07:09:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:36,044 127.0.0.1 - - [13/Jun/2026 07:09:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:36,047 127.0.0.1 - - [13/Jun/2026 07:09:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:36,088 127.0.0.1 - - [13/Jun/2026 07:09:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:36,128 127.0.0.1 - - [13/Jun/2026 07:09:36] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-13 07:09:37,746 127.0.0.1 - - [13/Jun/2026 07:09:37] "POST /huddle/join HTTP/1.1" 200 -
+2026-06-13 07:09:37,820 127.0.0.1 - - [13/Jun/2026 07:09:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:37,824 127.0.0.1 - - [13/Jun/2026 07:09:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:37,827 127.0.0.1 - - [13/Jun/2026 07:09:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:37,871 127.0.0.1 - - [13/Jun/2026 07:09:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:37,907 127.0.0.1 - - [13/Jun/2026 07:09:37] "[33mGET /huddle/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2026-06-13 07:09:40,120 127.0.0.1 - - [13/Jun/2026 07:09:40] "GET /your-huddle HTTP/1.1" 200 -
+2026-06-13 07:09:40,182 127.0.0.1 - - [13/Jun/2026 07:09:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:40,199 127.0.0.1 - - [13/Jun/2026 07:09:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:09:40,202 127.0.0.1 - - [13/Jun/2026 07:09:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:09:40,242 127.0.0.1 - - [13/Jun/2026 07:09:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:16:09,276  * Detected change in '/workspaces/2026SE_SoftwareProject_Michael.L/main.py', reloading
+2026-06-13 07:16:09,316  * Restarting with stat
+2026-06-13 07:21:27,203 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.241:5000
+2026-06-13 07:21:27,203 [33mPress CTRL+C to quit[0m
+2026-06-13 07:21:28,829 127.0.0.1 - - [13/Jun/2026 07:21:28] "GET / HTTP/1.1" 200 -
+2026-06-13 07:21:29,128 {"csp-report":{"document-uri":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","referrer":"https://effective-space-halibut-j66pq576r762q599.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":58,"source-file":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-13 07:21:29,128 127.0.0.1 - - [13/Jun/2026 07:21:29] "POST /csp_report HTTP/1.1" 200 -
+2026-06-13 07:21:29,143 127.0.0.1 - - [13/Jun/2026 07:21:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:29,155 127.0.0.1 - - [13/Jun/2026 07:21:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:29,165 127.0.0.1 - - [13/Jun/2026 07:21:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:21:29,309 127.0.0.1 - - [13/Jun/2026 07:21:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:21:33,802 127.0.0.1 - - [13/Jun/2026 07:21:33] "[32mGET /logout.html HTTP/1.1[0m" 302 -
+2026-06-13 07:21:33,894 127.0.0.1 - - [13/Jun/2026 07:21:33] "GET /login.html HTTP/1.1" 200 -
+2026-06-13 07:21:33,972 127.0.0.1 - - [13/Jun/2026 07:21:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:33,975 127.0.0.1 - - [13/Jun/2026 07:21:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:21:33,977 127.0.0.1 - - [13/Jun/2026 07:21:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:34,038 127.0.0.1 - - [13/Jun/2026 07:21:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:21:35,739 127.0.0.1 - - [13/Jun/2026 07:21:35] "GET / HTTP/1.1" 200 -
+2026-06-13 07:21:35,835 127.0.0.1 - - [13/Jun/2026 07:21:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:35,839 127.0.0.1 - - [13/Jun/2026 07:21:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:21:35,842 127.0.0.1 - - [13/Jun/2026 07:21:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:35,844 {"csp-report":{"document-uri":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","referrer":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/login.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self' https://nominatim.openstreetmap.org https://tile.openstreetmap.org https://*.tile.openstreetmap.org; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":53,"source-file":"https://effective-space-halibut-j66pq576r762q599-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2026-06-13 07:21:35,845 127.0.0.1 - - [13/Jun/2026 07:21:35] "POST /csp_report HTTP/1.1" 200 -
+2026-06-13 07:21:35,914 127.0.0.1 - - [13/Jun/2026 07:21:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:21:37,145 127.0.0.1 - - [13/Jun/2026 07:21:37] "GET /signup.html HTTP/1.1" 200 -
+2026-06-13 07:21:37,215 127.0.0.1 - - [13/Jun/2026 07:21:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:37,227 127.0.0.1 - - [13/Jun/2026 07:21:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:37,229 127.0.0.1 - - [13/Jun/2026 07:21:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:21:37,266 127.0.0.1 - - [13/Jun/2026 07:21:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:21:48,519 127.0.0.1 - - [13/Jun/2026 07:21:48] "POST /signup.html HTTP/1.1" 200 -
+2026-06-13 07:21:48,600 127.0.0.1 - - [13/Jun/2026 07:21:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:21:48,605 127.0.0.1 - - [13/Jun/2026 07:21:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:48,616 127.0.0.1 - - [13/Jun/2026 07:21:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:21:48,653 127.0.0.1 - - [13/Jun/2026 07:21:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:25:07,965 127.0.0.1 - - [13/Jun/2026 07:25:07] "POST /signup.html HTTP/1.1" 200 -
+2026-06-13 07:25:08,170 127.0.0.1 - - [13/Jun/2026 07:25:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:25:08,171 127.0.0.1 - - [13/Jun/2026 07:25:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:25:08,196 127.0.0.1 - - [13/Jun/2026 07:25:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:25:08,295 127.0.0.1 - - [13/Jun/2026 07:25:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 07:25:19,551 127.0.0.1 - - [13/Jun/2026 07:25:19] "POST /signup.html HTTP/1.1" 200 -
+2026-06-13 07:25:19,661 127.0.0.1 - - [13/Jun/2026 07:25:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 07:25:19,666 127.0.0.1 - - [13/Jun/2026 07:25:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-13 07:25:19,669 127.0.0.1 - - [13/Jun/2026 07:25:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-13 07:25:19,760 127.0.0.1 - - [13/Jun/2026 07:25:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
