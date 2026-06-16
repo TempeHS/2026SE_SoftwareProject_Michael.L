@@ -5,21 +5,19 @@
 **Target Users:** Friend groups, clubs, sporting teams, and social communities who regularly organise events together.
 
 ---
-
+   
 ## Project Status
 
-**Current Sprint:** Sprint 3 – PWA Responsiveness & UI/UX Design ✅ Complete
+**Current Sprint:** Sprint 4 – Documentation ✅ Complete
 
 **Last Increment:**
-- Fully responsive interface (320px–2560px)
-- Unified frontend theme across all pages
-- Cross-platform breakpoint testing completed (PB-009)
+- Security review and codebase hardening
+- Application screenshots added
+- README finalised
+- Developer Diary completion
 
 **Next Planned Increment:**
-- Sprint 4 – Documentation
-- Systems Report completion
-- Client Log finalisation
-- Developer Diary completion
+- N/A – Project complete
 
 ---
 
@@ -177,7 +175,7 @@ http://localhost:5000
 
 ![Event Voting](screenshots/event-voting.png)
 
-#### Event Detials
+#### Event Details
 
 ![Event Voting](screenshots/event-details.png)
 
