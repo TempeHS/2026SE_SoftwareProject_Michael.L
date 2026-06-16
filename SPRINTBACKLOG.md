@@ -132,3 +132,48 @@
 | T3-03   | Cross-Browser Compatibility     | PB-008 criterion 1 – consistent rendering across browsers      | Open app in Chrome, Firefox, and Safari; perform login and vote                      | All features and layouts function identically across all three browsers         | Pages load and fuction successfully across multiple browsers                                       | Pass        |
 | T3-04   | Home Page Load                  | PB-009 criterion 1 – landing page displays correctly           | Navigate to the app's root URL                                                       | Home page loads with correct layout, navigation links, and branding             | Home page loads succsffully with all navigation links working in order; correct layout is diplayed | Pass        |
 | T3-05   | UI Consistency Across Screens   | PB-009 criterion 1 – consistent styling across all views       | Navigate through all screens (login, dashboard, group view, event feed, vote screen) | Typography, colours, and spacing are consistent; no unstyled or broken elements | Moern UI and theme is displayed across all pages of the web app                                    | Pass        |
+
+
+## Sprint 4 - Security Review & Final Documentation
+
+**Sprint Goal:** Conduct a security review of the codebase and complete all final documentation for project submission.
+
+**Committed Items (from Product Backlog):**
+
+| PB ID  | User Story                                      |
+| ------ | ----------------------------------------------- |
+| PB-010 | Review and harden the codebase for security     |
+| PB-011 | Complete all documentation for final submission |
+
+**Sprint Plan:**
+
+| #   | Task                                                                              | PB ID  |
+| --- | --------------------------------------------------------------------------------- | ------ |
+| 1   | Review codebase for security issues and remove sensitive committed files           | PB-010 |
+| 2   | Harden main.py with improved input handling and security controls                 | PB-010 |
+| 3   | Update PRODUCTBACKLOG.md with final sprint details and status                     | PB-011 |
+| 4   | Expand README.md with full project overview, features, setup instructions         | PB-011 |
+| 5   | Add application screenshots to repository                                         | PB-011 |
+| 6   | Complete Developer Diary entries for all sprints                                  | PB-011 |
+
+**Unit Test Summary Table:**
+
+| Test ID | Test Name                        | What It Tests                                                              | Input                                              | Expected Output                                                              | Actual Output                                                                 | Pass / Fail |
+| ------- | -------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------- |
+| T4-01   | Sensitive File Removal           | PB-010 – committed sensitive files removed from repository                 | Review repository for sensitive files              | Systems Report, commit CSV, and document scan image no longer in repository  | All three sensitive files successfully removed from repository                | Pass        |
+| T4-02   | Security Hardening               | PB-010 – main.py hardened against common vulnerabilities                   | Review and extend main.py security controls        | Improved input handling and security controls added without breaking the app | 66 lines of security hardening added; app functions correctly                 | Pass        |
+| T4-03   | README Completeness              | PB-011 – README accurately documents the full project                      | Review README against delivered features           | All features, setup steps, and screenshots are documented and render on GitHub | README expanded with 226 lines; all sections present and correctly formatted | Pass        |
+| T4-04   | Screenshots Display Correctly    | PB-011 – application screenshots render in README                          | View README.md on GitHub after screenshots committed | All 6 screenshots display inline in the README                              | All screenshots (attendance, dashboard, event-details, event-voting, home, login) render correctly | Pass |
+| T4-05   | Documentation Accuracy           | PB-011 – PRODUCTBACKLOG and SPRINTBACKLOG reflect completed project state   | Review backlog files against delivered features    | All backlog items have correct status, sprint assignments, and test results  | PRODUCTBACKLOG and SPRINTBACKLOG updated and accurate                         | Pass        |
+
+**Sprint Review:**
+
+- What was built and demonstrated: A full security review was completed - sensitive files (Systems Report.pdf, commit_history.csv, and a document scan image) were removed from the repository, and main.py was extended with 66 lines of additional security hardening. All final documentation was completed, including a major README expansion (226 lines added) with full project overview, feature list, setup instructions, and 6 application screenshots. PRODUCTBACKLOG.md and SPRINTBACKLOG.md were updated to reflect the completed project.
+- Client/stakeholder feedback: N/A - this was a documentation and security sprint with no new user-facing features.
+- Items not completed and reason: None - all Sprint 4 items were completed.
+
+**Sprint Retrospective:**
+
+- What went well: The security review caught real issues - sensitive files that should not have been committed were identified and cleanly removed. Treating the security review as a formal sprint activity rather than an afterthought ensured it was done thoroughly. The README expansion brings the documentation up to the same standard as the codebase.
+- What didn't go well: Sensitive files (Systems Report.pdf and commit_history.csv) should not have been committed to the repository in the first place during earlier sprints. More careful file hygiene during development would have avoided this.
+- What will be improved in future projects: Add a .gitignore rule for report PDFs, CSVs, and scan images from the start of the project to prevent accidental commits of sensitive files.
