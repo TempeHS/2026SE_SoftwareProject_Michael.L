@@ -8,7 +8,7 @@
    
 ## Project Status
 
-**Current Sprint:** Sprint 4 – Documentation ✅ Complete
+**Current Sprint:** Sprint 4 - Documentation ✅ Complete
 
 **Last Increment:**
 - Security review and codebase hardening
@@ -17,7 +17,7 @@
 - Developer Diary completion
 
 **Next Planned Increment:**
-- N/A – Project complete
+- N/A - Project complete
 
 ---
 
