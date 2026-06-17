@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+    Bandit Report
+</title>
+
+<style>
+
+html * {
+    font-family: "Arial", sans-serif;
+}
+
+pre {
+    font-family: "Monaco", monospace;
+}
+
+.bordered-box {
+    border: 1px solid black;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:1em;
+}
+
+.metrics-box {
+    font-size: 1.1em;
+    line-height: 130%;
+}
+
+.metrics-title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: .25em;
+}
+
+.issue-description {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.candidate-issues {
+    margin-left: 2em;
+    border-left: solid 1px; LightGray;
+    padding-left: 5%;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+
+.issue-block {
+    border: 1px solid LightGray;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+
+.issue-sev-high {
+    background-color: Pink;
+}
+
+.issue-sev-medium {
+    background-color: NavajoWhite;
+}
+
+.issue-sev-low {
+    background-color: LightCyan;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="metrics">
+    <div class="metrics-box bordered-box">
+        <div class="metrics-title">
+            Metrics:<br>
+        </div>
+        Total lines of code: <span id="loc">1160</span><br>
+        Total lines skipped (#nosec): <span id="nosec">0</span>
+    </div>
+</div>
+
+
+
+
+<br>
+<div id="results">
+    
+<div id="issue-0">
+<div class="issue-block issue-sev-medium">
+    <b>hardcoded_sql_expressions: </b> Possible SQL injection vector through string-based query construction.<br>
+    <b>Test ID:</b> B608<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/89.html" target="_blank">CWE-89</a><br>
+    <b>File: </b><a href="./main.py" target="_blank">./main.py</a><br>
+    <b>Line number: </b>546<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b608_hardcoded_sql_expressions.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b608_hardcoded_sql_expressions.html</a><br>
+
+<div class="code">
+<pre>
+545	        rows = conn.execute(
+546	            f&quot;SELECT event_id, choice, COUNT(*) AS c FROM huddle_votes &quot;
+547	            f&quot;WHERE event_id IN ({placeholders}) GROUP BY event_id, choice&quot;,
+548	            event_ids,
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-1">
+<div class="issue-block issue-sev-medium">
+    <b>hardcoded_sql_expressions: </b> Possible SQL injection vector through string-based query construction.<br>
+    <b>Test ID:</b> B608<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/89.html" target="_blank">CWE-89</a><br>
+    <b>File: </b><a href="./main.py" target="_blank">./main.py</a><br>
+    <b>Line number: </b>554<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b608_hardcoded_sql_expressions.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b608_hardcoded_sql_expressions.html</a><br>
+
+<div class="code">
+<pre>
+553	        my_rows = conn.execute(
+554	            f&quot;SELECT event_id, choice FROM huddle_votes &quot;
+555	            f&quot;WHERE user_id = ? AND event_id IN ({placeholders})&quot;,
+556	            [user_id, *event_ids],
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-2">
+<div class="issue-block issue-sev-medium">
+    <b>hardcoded_bind_all_interfaces: </b> Possible binding to all interfaces.<br>
+    <b>Test ID:</b> B104<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/605.html" target="_blank">CWE-605</a><br>
+    <b>File: </b><a href="./main.py" target="_blank">./main.py</a><br>
+    <b>Line number: </b>1342<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b104_hardcoded_bind_all_interfaces.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b104_hardcoded_bind_all_interfaces.html</a><br>
+
+<div class="code">
+<pre>
+1341	    debug_mode = os.environ.get(&quot;FLASK_DEBUG&quot;, &quot;0&quot;) == &quot;1&quot;
+1342	    app.run(debug=debug_mode, host=&quot;0.0.0.0&quot;, port=5000)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-3">
+<div class="issue-block issue-sev-low">
+    <b>assert_used: </b> Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.<br>
+    <b>Test ID:</b> B101<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
+    <b>File: </b><a href="./tests/test_main.py" target="_blank">./tests/test_main.py</a><br>
+    <b>Line number: </b>5<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html</a><br>
+
+<div class="code">
+<pre>
+4	    )
+5	    assert err is None
+6	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-4">
+<div class="issue-block issue-sev-low">
+    <b>assert_used: </b> Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.<br>
+    <b>Test ID:</b> B101<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
+    <b>File: </b><a href="./tests/test_main.py" target="_blank">./tests/test_main.py</a><br>
+    <b>Line number: </b>12<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html</a><br>
+
+<div class="code">
+<pre>
+11	    )
+12	    assert err is not None
+13	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-5">
+<div class="issue-block issue-sev-low">
+    <b>assert_used: </b> Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.<br>
+    <b>Test ID:</b> B101<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
+    <b>File: </b><a href="./tests/test_main.py" target="_blank">./tests/test_main.py</a><br>
+    <b>Line number: </b>16<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html</a><br>
+
+<div class="code">
+<pre>
+15	def test_is_safe_next(app_module):
+16	    assert app_module.is_safe_next(&quot;/your-huddle&quot;) is True
+17	    assert app_module.is_safe_next(&quot;https://evil.com&quot;) is False
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-6">
+<div class="issue-block issue-sev-low">
+    <b>assert_used: </b> Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.<br>
+    <b>Test ID:</b> B101<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
+    <b>File: </b><a href="./tests/test_main.py" target="_blank">./tests/test_main.py</a><br>
+    <b>Line number: </b>17<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html</a><br>
+
+<div class="code">
+<pre>
+16	    assert app_module.is_safe_next(&quot;/your-huddle&quot;) is True
+17	    assert app_module.is_safe_next(&quot;https://evil.com&quot;) is False
+18	    assert app_module.is_safe_next(&quot;//evil.com&quot;) is False
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-7">
+<div class="issue-block issue-sev-low">
+    <b>assert_used: </b> Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.<br>
+    <b>Test ID:</b> B101<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
+    <b>File: </b><a href="./tests/test_main.py" target="_blank">./tests/test_main.py</a><br>
+    <b>Line number: </b>18<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html</a><br>
+
+<div class="code">
+<pre>
+17	    assert app_module.is_safe_next(&quot;https://evil.com&quot;) is False
+18	    assert app_module.is_safe_next(&quot;//evil.com&quot;) is False
+19	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-8">
+<div class="issue-block issue-sev-low">
+    <b>assert_used: </b> Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.<br>
+    <b>Test ID:</b> B101<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
+    <b>File: </b><a href="./tests/test_main.py" target="_blank">./tests/test_main.py</a><br>
+    <b>Line number: </b>23<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html</a><br>
+
+<div class="code">
+<pre>
+22	    code = app_module.generate_invite_code()
+23	    assert len(code) == 6
+24	    assert all(c in app_module.INVITE_CODE_ALPHABET for c in code)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-9">
+<div class="issue-block issue-sev-low">
+    <b>assert_used: </b> Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.<br>
+    <b>Test ID:</b> B101<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
+    <b>File: </b><a href="./tests/test_main.py" target="_blank">./tests/test_main.py</a><br>
+    <b>Line number: </b>24<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html</a><br>
+
+<div class="code">
+<pre>
+23	    assert len(code) == 6
+24	    assert all(c in app_module.INVITE_CODE_ALPHABET for c in code)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

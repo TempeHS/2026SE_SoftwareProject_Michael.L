@@ -1,0 +1,121 @@
+Run started:2026-06-17 02:13:50.927648
+
+Test results:
+>> Issue: [B608:hardcoded_sql_expressions] Possible SQL injection vector through string-based query construction.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-89 (https://cwe.mitre.org/data/definitions/89.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b608_hardcoded_sql_expressions.html
+   Location: ./main.py:546:12
+545	        rows = conn.execute(
+546	            f"SELECT event_id, choice, COUNT(*) AS c FROM huddle_votes "
+547	            f"WHERE event_id IN ({placeholders}) GROUP BY event_id, choice",
+548	            event_ids,
+
+--------------------------------------------------
+>> Issue: [B608:hardcoded_sql_expressions] Possible SQL injection vector through string-based query construction.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-89 (https://cwe.mitre.org/data/definitions/89.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b608_hardcoded_sql_expressions.html
+   Location: ./main.py:554:12
+553	        my_rows = conn.execute(
+554	            f"SELECT event_id, choice FROM huddle_votes "
+555	            f"WHERE user_id = ? AND event_id IN ({placeholders})",
+556	            [user_id, *event_ids],
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: ./main.py:1342:35
+1341	    debug_mode = os.environ.get("FLASK_DEBUG", "0") == "1"
+1342	    app.run(debug=debug_mode, host="0.0.0.0", port=5000)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html
+   Location: ./tests/test_main.py:5:4
+4	    )
+5	    assert err is None
+6	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html
+   Location: ./tests/test_main.py:12:4
+11	    )
+12	    assert err is not None
+13	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html
+   Location: ./tests/test_main.py:16:4
+15	def test_is_safe_next(app_module):
+16	    assert app_module.is_safe_next("/your-huddle") is True
+17	    assert app_module.is_safe_next("https://evil.com") is False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html
+   Location: ./tests/test_main.py:17:4
+16	    assert app_module.is_safe_next("/your-huddle") is True
+17	    assert app_module.is_safe_next("https://evil.com") is False
+18	    assert app_module.is_safe_next("//evil.com") is False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html
+   Location: ./tests/test_main.py:18:4
+17	    assert app_module.is_safe_next("https://evil.com") is False
+18	    assert app_module.is_safe_next("//evil.com") is False
+19	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html
+   Location: ./tests/test_main.py:23:4
+22	    code = app_module.generate_invite_code()
+23	    assert len(code) == 6
+24	    assert all(c in app_module.INVITE_CODE_ALPHABET for c in code)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.5/plugins/b101_assert_used.html
+   Location: ./tests/test_main.py:24:4
+23	    assert len(code) == 6
+24	    assert all(c in app_module.INVITE_CODE_ALPHABET for c in code)
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 1160
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 7
+		Medium: 3
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 3
+		High: 7
+Files skipped (0):
